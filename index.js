@@ -3,27 +3,54 @@ var express = require('express');
 const app = express();
  
 //=============== The routes =================
+
+// test GET functions to check things are working
 app.get('/whichWeekAreWe', (req, res) => {
-   var onejan = new Date(new Date().getFullYear(),0,1);
-   res.send(String(Math.ceil((((new Date() - onejan) / 86400000) + onejan.getDay()+1)/7)));
+   res.send(whichWeekAreWe());
 });
 
 app.get('/displayMyModuleGrades', (req, res) => {
-   var myGrades = ['72%','34%','56%','89%','90%','72%']
-   res.send(JSON.stringify(myGrades));
+   res.send(displayMyModuleGrades());
 });
 
 
 app.get('/displayMyModuleDeadlines', (req, res) => {
-    var myDeadlines = ['01/01/2021 - Mid Term 1','01/02/2021 - Mid Term 2','01/03/2021 - Mid Term 3','01/04/2021 - Mid Term 4','01/05/2021 - Mid Term ','01/06/2021 - Mid Term 6']
-  res.send(JSON.stringify(myDeadlines))
+  res.send(displayMyModuleDeadlines())
 });
 
 
 app.get('/displayMyModuleProgress', (req, res) => {
-   var myProgress = ['SDD - 85%','Agile - 58%','Computer Security - 20%']
-  res.send(JSON.stringify(myProgress))
+   res.send(displayMyModuleProgress())
 });
+
+// main POST function from slack
+app.post('/slackconnect', (req, res) => {
+   console.log(req.body)
+   res.send(req.body)
+});
+
+
+//=============== The Functions  =================
+function whichWeekAreWe() {
+   var onejan = new Date(new Date().getFullYear(),0,1);
+   return String(Math.ceil((((new Date() - onejan) / 86400000) + onejan.getDay()+1)/7));
+}
+
+function displayMyModuleGrades() {
+    var myGrades = ['72%','34%','56%','89%','90%','72%']
+   return JSON.stringify(myGrades);
+}
+
+function displayMyModuleDeadlines() {
+    var myDeadlines = ['01/01/2021 - Mid Term 1','01/02/2021 - Mid Term 2','01/03/2021 - Mid Term 3','01/04/2021 - Mid Term 4','01/05/2021 - Mid Term ','01/06/2021 - Mid Term 6']
+  return JSON.stringify(myDeadlines)
+}
+
+function displayMyModuleProgress() {
+  var myProgress = ['SDD - 85%','Agile - 58%','Computer Security - 20%']
+  return JSON.stringify(myProgress)
+}
+
 
 
 //===============PORT and SERVER =================
