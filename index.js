@@ -5,8 +5,8 @@ const app = express();
 //=============== The routes =================
 
 // test GET functions to check things are working
-app.get('/whichWeekAreWe', (req, res) => {
-   res.send(whichWeekAreWe());
+app.get('/getCurrentWeek', (req, res) => {
+   res.send(getCurrentWeek());
 });
 
 app.get('/displayMyModuleGrades', (req, res) => {
@@ -23,6 +23,26 @@ app.get('/displayMyModuleProgress', (req, res) => {
    res.send(displayMyModuleProgress())
 });
 
+// test GET functions to check things are working
+app.post('/getCurrentWeek', (req, res) => {
+   res.send(getCurrentWeek());
+});
+
+app.post('/displayMyModuleGrades', (req, res) => {
+   res.send(displayMyModuleGrades());
+});
+
+
+app.post('/displayMyModuleDeadlines', (req, res) => {
+  res.send(displayMyModuleDeadlines())
+});
+
+
+app.post('/displayMyModuleProgress', (req, res) => {
+   res.send(displayMyModuleProgress())
+});
+
+
 // main POST function from slack
 app.post('/slackconnect', (req, res) => {
    console.log(req.body)
@@ -31,7 +51,7 @@ app.post('/slackconnect', (req, res) => {
 
 
 //=============== The Functions  =================
-function whichWeekAreWe() {
+function getCurrentWeek() {
    var onejan = new Date(new Date().getFullYear(),0,1);
    return String(Math.ceil((((new Date() - onejan) / 86400000) + onejan.getDay()+1)/7));
 }
