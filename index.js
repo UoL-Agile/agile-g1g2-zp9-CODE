@@ -2,7 +2,7 @@
 var express = require('express');
 const app = express();
  
-//=============== The routes for express =================
+//=============== The routes =================
 app.get('/whichWeekAreWe', (req, res) => {
    var onejan = new Date(new Date().getFullYear(),0,1);
    res.send(String(Math.ceil((((new Date() - onejan) / 86400000) + onejan.getDay()+1)/7)));
