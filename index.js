@@ -25,20 +25,24 @@ app.get('/displayMyModuleProgress', (req, res) => {
 
 // test GET functions to check things are working
 app.post('/getCurrentWeek', (req, res) => {
+   console.log(req.body)
    res.send(getCurrentWeek());
 });
 
 app.post('/displayMyModuleGrades', (req, res) => {
+   console.log(req.body)
    res.send(displayMyModuleGrades());
 });
 
 
 app.post('/displayMyModuleDeadlines', (req, res) => {
+  console.log(req.body)
   res.send(displayMyModuleDeadlines())
 });
 
 
 app.post('/displayMyModuleProgress', (req, res) => {
+   console.log(req.body)
    res.send(displayMyModuleProgress())
 });
 
