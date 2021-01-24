@@ -4,12 +4,9 @@ const app = express();
  
 //=============== The routes =================
 app.get('/whichWeekAreWe', (req, res) => {
-  var today = new Date();
-  var weekNumber = today.getWeek();
-  res.send(weekNumber);
+   var onejan = new Date(new Date().getFullYear(),0,1);
+   res.send(String(Math.ceil((((new Date() - onejan) / 86400000) + onejan.getDay()+1)/7)));
 });
-
-
 
 
 //===============PORT and SERVER =================
