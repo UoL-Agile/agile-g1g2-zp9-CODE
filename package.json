@@ -1,0 +1,22 @@
+{
+  "name": "agile-g1g2-zp9-code",
+  "version": "1.0.0",
+  "description": "Slack Application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UoL-Agile/agile-g1g2-zp9-CODE.git"
+  },
+  "author": "Team 4 - UoL",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UoL-Agile/agile-g1g2-zp9-CODE/issues"
+  },
+  "homepage": "https://github.com/UoL-Agile/agile-g1g2-zp9-CODE#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
