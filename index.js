@@ -80,6 +80,30 @@ var db_conn = require('./dbConnection.js');
 db_conn.connectDB_Pool(); // open a DB pool for us to use
 
 
+//DB call
+
+ // EXAMPLE SQL - 'SELECT * FROM this_table'
+function makeaDBCallWithSQL(theSQL) {
+   db_pool.connect((err, client, release) => {
+        if (err) {
+            console.log('Error acquiring client', err)
+            return callback(err)
+        }
+        client.query(theSQL, (err, result) => {
+            release()
+            if (err) {
+                console.log('Error withe SQL Queryt', err)
+                return callback(err)
+            }
+
+            return callback(null, JSON.stringify(result.rows))
+        })
+    }) 
+}
+    
+
+
+
 //===============PORT and SERVER =================
 var port = process.env.PORT || 3000; // need to get the port that Heroku gives us
 app.listen(port);
