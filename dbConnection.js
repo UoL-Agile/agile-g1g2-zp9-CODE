@@ -6,7 +6,7 @@ This uses the pool in order to have a single connection to the DB pooled for the
 const Pool = require('pg-pool');
 const url = require('url')
 
-const params = url.parse(process.env.DATABASE_URL;); // Gets the DB URL from the process.env
+const params = url.parse(process.env.DATABASE_URL); // Gets the DB URL from the process.env
 
 const auth = params.auth.split(':');
 
