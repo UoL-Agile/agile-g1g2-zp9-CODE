@@ -57,7 +57,7 @@ app.post('/slackconnect', (req, res) => {
 //=============== The Functions  =================
 function getCurrentWeek() {
    var onejan = new Date(new Date().getFullYear(),0,1);
-   return String(Math.ceil((((new Date() - onejan) / 86400000) + onejan.getDay()+1)/7));
+   return 4;
 }
 
 function displayMyModuleGrades() {
