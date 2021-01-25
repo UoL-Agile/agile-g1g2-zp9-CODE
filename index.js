@@ -75,6 +75,9 @@ function displayMyModuleProgress() {
   return JSON.stringify(myProgress)
 }
 
+// load the DB module
+var db_conn = require('./dbConnection.js');
+db_conn.connectDB_Pool(); // open a DB pool for us to use
 
 
 //===============PORT and SERVER =================
