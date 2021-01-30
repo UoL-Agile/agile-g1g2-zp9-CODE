@@ -160,7 +160,53 @@ slack_app.shortcut('prototype_uol_shortcut', async ({ shortcut, ack,client }) =>
     console.error(error);
   }
 });
- 
+
+
+//=============== The home page =================
+
+app.event('app_home_opened', async ({ event, client, context }) => {
+  try {
+	/* view.publish is the method that your app uses to push a view to the Home tab */
+	const result = await client.views.publish({
+
+	  /* the user that opened your app's app home */
+	  user_id: event.user,
+
+	  /* the view object that appears in the app home*/
+	  view: {
+		type: 'home',
+		callback_id: 'home_view',
+
+		/* body of the view */
+	"blocks": [
+		{
+			"type": "header",
+			"text": {
+				"type": "plain_text",
+				"text": "👋 Welcome!",
+				"emoji": true
+			}
+		},
+		{
+			"type": "section",
+			"text": {
+				"type": "mrkdwn",
+				"text": "This is a home for the Prototype application. Here you can check your university course progress."
+			}
+		},
+		{
+			"type": "divider"
+		}
+	]
+	  }
+	});
+  }
+	catch (error) {
+	console.error(error);
+	}
+});
+
+
 //=============== The routes =================
 
 // test GET functions to check things are working
