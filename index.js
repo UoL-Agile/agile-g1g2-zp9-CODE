@@ -1,6 +1,126 @@
 //=============== ADD EXPRESS =================
-var express = require('express');
-const app = express();
+/*var express = require('express');
+const app = express();*/
+
+// ==== BOLT APP  AND EXPRESS RECEIVER ===========
+// Require the Bolt package (github.com/slackapi/bolt)
+const { App, ExpressReceiver } = require("@slack/bolt");
+
+// Create a Bolt Receiver
+const receiver = new ExpressReceiver({
+  signingSecret:  process.env.SLACK_SIGNING_SECRET
+});
+
+// Create the Bolt App, using the receiver
+const slack_app = new App({
+  receiver,
+  token: process.env.SLACK_BOT_TOKEN
+});
+
+ // for express route
+ app = receiver.app;
+
+
+ //============= Slack app event listener====
+ 
+ // Slack command : get help
+slack_app.command('/prototype-help', async ({ command, ack,respond}) => {
+   // Acknowledge command request
+   await ack();
+   await respond({
+    "blocks": [
+       {
+          "type": "header",
+          "text": {
+             "type": "plain_text",
+             "text": "Welcome to prototype :tada:",
+             "emoji": true
+          }
+       },
+       {
+          "type": "section",
+          "text": {
+             "type": "plain_text",
+             "text": "Visit Prototype Home tab or type following commands to get common UOL FAQs",
+             "emoji": true
+          }
+       },
+       {
+          "type": "section",
+          "text": {
+             "type": "plain_text",
+             "text": "Following are the available commands:",
+             "emoji": true
+          }
+       },
+       {
+          "type": "section",
+          "text": {
+             "type": "mrkdwn",
+             "text": " • prototype-help : View help \n • prototype-currww : Get UOL current week \n • prototype-deadline: Get UOL module assignments deadline \n • prototype-grade: Get UOL module grade "
+          }
+       }
+    ]
+   }
+   );
+ });
+ 
+// Slack command : Get current week
+ slack_app.command('/prototype-currww', async ({ command, ack,respond}) => {
+   // Acknowledge command request
+   await ack();
+   await respond({
+    "blocks": [
+       {
+          "type": "section",
+          "text": {
+             "type": "plain_text",
+             "text": "Current week :date: : xxx",
+             "emoji": true
+          }
+       },		
+    ]
+   }
+   );
+ });
+ 
+ // Slack command, get module deadline
+ slack_app.command('/prototype-deadline', async ({ command, ack,respond}) => {
+   // Acknowledge command request
+   await ack();
+   await respond({
+    "blocks": [
+       {
+          "type": "section",
+          "text": {
+             "type": "plain_text",
+             "text": "Assignments deadline :book: : xxx",
+             "emoji": true
+          }
+       },		
+    ]
+   }
+   );
+ });
+ 
+ // Slack command: get grade
+ slack_app.command('/prototype-grade', async ({ command, ack,respond}) => {
+   // Acknowledge command request
+   await ack();
+   await respond({
+    "blocks": [
+       {
+          "type": "section",
+          "text": {
+             "type": "plain_text",
+             "text": "Module grades :bar_chart: : xxx",
+             "emoji": true
+          }
+       },		
+    ]
+   }
+   );
+ });
  
 //=============== The routes =================
 
@@ -106,5 +226,13 @@ function makeaDBCallWithSQL(theSQL) {
 
 //===============PORT and SERVER =================
 var port = process.env.PORT || 3000; // need to get the port that Heroku gives us
-app.listen(port);
-console.log('index.js','listening on ' + port + '!');
+/*app.listen(port);
+console.log('index.js','listening on ' + port + '!');*/
+
+(async () => {
+   // Start your app
+   await slack_app.start(port);
+ 
+   console.log("⚡️ Bolt app is running on "+ + port + '!');
+ })();
+ 
