@@ -232,6 +232,22 @@ function getCurrentWeek(num) {
     
     var str = "Today is " + String(currWeek) + " week!";
     
+    return str + "\r" + myWeekInfo();
+}
+
+// function will get info from DB for every user
+// and return it back.
+function myWeekInfo() {
+    var moduls = ["Modle 1", "Modle 2", "Modle 3", "Modle 4"];
+    var modulsWeeks = ["week 1", "week 4", "week 10", "week 5"];
+    var toRead = ["nothing", "Book 1, p. 123", "nothing", "nothing"];
+    
+    var str = "";
+    
+    for (var i=0; i < moduls.length; i++) {
+        str = str + moduls[i] + ":" + "\r" + "    Your current week is: " + modulsWeeks[i] + "\r" + "    To read at this week: " + toRead[i] + "\r";
+    }
+    
     return str;
 }
 
