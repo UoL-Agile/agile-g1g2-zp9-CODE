@@ -232,7 +232,7 @@ function getCurrentWeek(num) {
     
     var str = "Today is " + String(currWeek) + " week!";
     
-    return str + "\rhi all";
+    return str + "\rparagraph test";
 }
 
 
