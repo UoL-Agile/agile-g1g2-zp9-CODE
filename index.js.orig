@@ -231,7 +231,10 @@ function getCurrentWeek(num) {
     }
     
     var str = "Today is " + String(currWeek) + " week!";
-
+    
+<<<<<<< HEAD
+    return str + "\rparagraph test";
+=======
     return str + "\r" + myWeekInfo();
 }
 
@@ -249,6 +252,7 @@ function myWeekInfo() {
     }
     
     return str;
+>>>>>>> home/get-cur-week-maxim
 }
 
 
