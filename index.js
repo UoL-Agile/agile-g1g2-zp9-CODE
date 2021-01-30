@@ -164,7 +164,7 @@ slack_app.shortcut('prototype_uol_shortcut', async ({ shortcut, ack,client }) =>
 
 //=============== The home page =================
 
-app.event('app_home_opened', async ({ event, client, context }) => {
+slack_app.event('app_home_opened', async ({ event, client, context }) => {
   try {
 	/* view.publish is the method that your app uses to push a view to the Home tab */
 	const result = await client.views.publish({
