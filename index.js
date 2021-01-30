@@ -75,7 +75,7 @@ slack_app.command('/prototype-help', async ({ command, ack,respond}) => {
           "type": "section",
           "text": {
              "type": "plain_text",
-             "text": "Current week :date: : xxx",
+             "text": "Current week :date: : " + getCurrentWeek(true),
              "emoji": true
           }
        },		
@@ -165,7 +165,7 @@ slack_app.shortcut('prototype_uol_shortcut', async ({ shortcut, ack,client }) =>
 
 // test GET functions to check things are working
 app.get('/getCurrentWeek', (req, res) => {
-   res.send(getCurrentWeek());
+   res.send(getCurrentWeek(false));
 });
 
 app.get('/displayMyModuleGrades', (req, res) => {
@@ -185,7 +185,7 @@ app.get('/displayMyModuleProgress', (req, res) => {
 // test GET functions to check things are working
 app.post('/getCurrentWeek', (req, res) => {
    console.log(req.body)
-   res.send(getCurrentWeek());
+   res.send(getCurrentWeek(false));
 });
 
 app.post('/displayMyModuleGrades', (req, res) => {
@@ -214,10 +214,27 @@ app.post('/slackconnect', (req, res) => {
 
 
 //=============== The Functions  =================
-function getCurrentWeek() {
-   var onejan = new Date(new Date().getFullYear(),0,1);
-   return String(Math.ceil((((new Date() - onejan) / 86400000) + onejan.getDay()+1)/7));
+
+//in num = true, then return only the week number in string format
+//else return the string str
+function getCurrentWeek(num) {
+    //The date of the first week in format
+    //{YYYY-MM-DD}T{HH:MM:SS.MsMsMs}Z in GMT +00
+    var firstWeek = new Date("2020-10-12T00:00:00.000Z");
+    //current date of the client
+    var currDate = new Date();
+    //current week
+    var currWeek = Math.ceil(((currDate - firstWeek)/86400000)/7);
+    
+    if(num == true) {
+        return String(currWeek);
+    }
+    
+    var str = "Today is " + String(currWeek) + " week!";
+    
+    return str;
 }
+
 
 function displayMyModuleGrades() {
     var myGrades = ['72%','34%','56%','89%','90%','72%']
