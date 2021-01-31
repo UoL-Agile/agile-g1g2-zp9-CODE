@@ -21,7 +21,7 @@ const slack_app = new App({
  app = receiver.app;
 
 // Import the app home file
-const appHome = require('./appHome');
+// const appHome = require('./appHome');
 
 
  //============= Slack app event listener====
@@ -167,20 +167,62 @@ slack_app.shortcut('prototype_uol_shortcut', async ({ shortcut, ack,client }) =>
 
 //=============== The home page =================
 
+// slack_app.event('app_home_opened', async ({ event, client, context }) => {
+  
+//   // Display App Home
+//   const homeView = await appHome.displayHome(event.user);
+  
+//   try {
+//     const result = await client.views.publish({
+//       user_id: event.user,
+//       view: homeView
+//     });
+//   }
+//   catch (error) {
+// 	console.error(error);
+//   }
+// });
+
 slack_app.event('app_home_opened', async ({ event, client, context }) => {
-  
-  // Display App Home
-  const homeView = await appHome.displayHome(event.user);
-  
   try {
-    const result = await client.views.publish({
-      user_id: event.user,
-      view: homeView
-    });
+	/* view.publish is the method that your app uses to push a view to the Home tab */
+	const result = await client.views.publish({
+
+	  /* the user that opened your app's app home */
+	  user_id: event.user,
+
+	  /* the view object that appears in the app home*/
+	  view: {
+		type: 'home',
+		callback_id: 'home_view',
+
+		/* body of the view */
+	"blocks": [
+		{
+			"type": "header",
+			"text": {
+				"type": "plain_text",
+				"text": "👋 Welcome!",
+				"emoji": true
+			}
+		},
+		{
+			"type": "section",
+			"text": {
+				"type": "mrkdwn",
+				"text": "This is a home for the Prototype application. Here you can check your university course progress - Updated."
+			}
+		},
+		{
+			"type": "divider"
+		}
+	]
+	  }
+	});
   }
-  catch (error) {
+	catch (error) {
 	console.error(error);
-  }
+	}
 });
 
 
