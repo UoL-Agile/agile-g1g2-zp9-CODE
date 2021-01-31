@@ -210,7 +210,7 @@ slack_app.event('app_home_opened', async ({ event, client, context }) => {
 			"type": "section",
 			"text": {
 				"type": "mrkdwn",
-				"text": "This is a home for the Prototype application. Here you can check your university course progress - Updated v2."
+				"text": "This is a home for the Prototype application. Here you can check your university course progress."
 			}
 		},
 		{
@@ -265,6 +265,106 @@ slack_app.event('app_home_opened', async ({ event, client, context }) => {
 						"emoji": true
 					},
 					"action_id": "actionId-1"
+				}
+			]
+		},
+		{
+			"type": "divider"
+		},
+		
+		/* Week section */
+		{
+			"type": "header",
+			"text": {
+				"type": "plain_text",
+				"text": "Current Week",
+				"emoji": true
+			}
+		},
+		{
+			"type": "section",
+			"text": {
+				"type": "mrkdwn",
+				"text": "Get information about the current week:"
+			},
+			"accessory": {
+				"type": "button",
+				"text": {
+					"type": "plain_text",
+					"text": "Display current week",
+					"emoji": true
+				},
+				"value": "click_me_123",
+				"action_id": "button-action"
+			}
+		},
+		{
+			"type": "divider"
+		},
+
+		/* Grades section */
+		{
+			"type": "header",
+			"text": {
+				"type": "plain_text",
+				"text": "Grades",
+				"emoji": true
+			}
+		},
+		{
+			"type": "section",
+			"text": {
+				"type": "mrkdwn",
+				"text": "Select a module from the list:"
+			},
+			"accessory": {
+				"type": "static_select",
+				"placeholder": {
+					"type": "plain_text",
+					"text": "Select an item",
+					"emoji": true
+				},
+				"options": [
+					{
+						"text": {
+							"type": "plain_text",
+							"text": "*Module 1*",
+							"emoji": true
+						},
+						"value": "value-0"
+					},
+					{
+						"text": {
+							"type": "plain_text",
+							"text": "*Module 2*",
+							"emoji": true
+						},
+						"value": "value-1"
+					},
+					{
+						"text": {
+							"type": "plain_text",
+							"text": "*Module 3*",
+							"emoji": true
+						},
+						"value": "value-2"
+					}
+				],
+				"action_id": "static_select-action"
+			}
+		},
+		{
+			"type": "actions",
+			"elements": [
+				{
+					"type": "button",
+					"text": {
+						"type": "plain_text",
+						"text": "Display grades",
+						"emoji": true
+					},
+					"value": "click_me_123",
+					"action_id": "actionId-0"
 				}
 			]
 		},
