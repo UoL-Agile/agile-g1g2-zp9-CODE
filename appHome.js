@@ -199,3 +199,5 @@ const homeView = async(user) => {
 const displayHome = async(user) => {
 	return await homeView(user);
 };
+
+module.exports = { displayHome };
