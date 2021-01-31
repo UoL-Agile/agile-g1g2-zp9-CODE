@@ -197,5 +197,5 @@ const homeView = async(user) => {
 /* Display App Home */
 
 const displayHome = async(user) => {
-  return await homeView(user);
+	return await homeView(user);
 };
