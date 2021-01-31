@@ -23,9 +23,6 @@ const slack_app = new App({
 // Import the app home file
 const appHome = require('./appHome');
 
-// Import the test user file
-const userTest = require('./testUser');
-
 
  //============= Slack app event listener====
  
@@ -171,20 +168,7 @@ slack_app.shortcut('prototype_uol_shortcut', async ({ shortcut, ack,client }) =>
 //=============== The home page =================
 
 app.event('app_home_opened', ({ event, say }) => {  
-  // Look up the user from DB
-  let user = userTest.getUser(event.user);
-  
-  if(!user) {
-    user = {
-      user: event.user,
-      channel: event.channel
-    };
-    userTest.addUser(user);
-    
-    say(`Hello world, and welcome <@${event.user}>!`);
-  } else {
-    say('Hi again!');
-  }
+    say(`Hello world, and welcome`);
 });
 
 
