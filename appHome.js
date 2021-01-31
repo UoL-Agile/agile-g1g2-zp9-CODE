@@ -17,7 +17,7 @@ const homeView = async(user) => {
 			"type": "section",
 			"text": {
 				"type": "mrkdwn",
-				"text": "This is a home for the Prototype application. Here you can check your university course progress."
+				"text": "This is a home for the Prototype application. Here you can check your university course progress"
 			}
 		},
 		{
