@@ -167,11 +167,6 @@ slack_app.shortcut('prototype_uol_shortcut', async ({ shortcut, ack,client }) =>
 
 //=============== The home page =================
 
-slack_app.event('app_home_opened', ({ event, say }) => {  
-    say(`Hello world, and welcome`);
-});
-
-
 // slack_app.event('app_home_opened', async ({ event, context }) => {
   
 //   // Display App Home
