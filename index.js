@@ -215,6 +215,61 @@ slack_app.event('app_home_opened', async ({ event, client, context }) => {
 		},
 		{
 			"type": "divider"
+		},
+		
+		/* Deadlines section */
+		{
+			"type": "header",
+			"text": {
+				"type": "plain_text",
+				"text": "Deadlines",
+				"emoji": true
+			}
+		},
+		{
+			"type": "section",
+			"text": {
+				"type": "mrkdwn",
+				"text": "Use the calendar to look for deadlines within the time period:"
+			},
+			"accessory": {
+				"type": "button",
+				"text": {
+					"type": "plain_text",
+					"text": "Display deadlines",
+					"emoji": true
+				},
+				"value": "click_me_123",
+				"action_id": "button-action"
+			}
+		},
+		{
+			"type": "actions",
+			"elements": [
+				{
+					"type": "datepicker",
+					"initial_date": "2021-01-01",
+					"placeholder": {
+						"type": "plain_text",
+						"text": "Select a date",
+						"emoji": true
+					},
+					"action_id": "actionId-0"
+				},
+				{
+					"type": "datepicker",
+					"initial_date": "2021-01-01",
+					"placeholder": {
+						"type": "plain_text",
+						"text": "Select a date",
+						"emoji": true
+					},
+					"action_id": "actionId-1"
+				}
+			]
+		},
+		{
+			"type": "divider"
 		}
 	]
 	  }
