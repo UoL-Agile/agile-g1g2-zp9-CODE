@@ -167,13 +167,14 @@ slack_app.shortcut('prototype_uol_shortcut', async ({ shortcut, ack,client }) =>
 
 //=============== The home page =================
 
-slack_app.event('app_home_opened', async ({ event, client, context }) => {
+slack_app.event('app_home_opened', async ({ event, context, payload }) => {
   
   // Display App Home
   const homeView = await appHome.displayHome(event.user);
   
   try {
     const result = await slack_app.client.views.publish({
+      token: context.botToken,      
       user_id: event.user,
       view: homeView
     });
