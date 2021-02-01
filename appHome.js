@@ -1,10 +1,18 @@
-const slack_app = require('./index');
+slack_app.event('app_home_opened', async ({ event, client, context }) => {
+  try {
+	/* view.publish is the method that your app uses to push a view to the Home tab */
+	const result = await client.views.publish({
 
-const homeView = async(user) => {
+	  /* the user that opened your app's app home */
+	  user_id: event.user,
 
-	let blocks = [
+	  /* the view object that appears in the app home*/
+	  view: {
+		type: 'home',
+		callback_id: 'home_view',
 
-		/* Intro message */
+		/* body of the view */
+	"blocks": [
 		{
 			"type": "header",
 			"text": {
@@ -17,13 +25,13 @@ const homeView = async(user) => {
 			"type": "section",
 			"text": {
 				"type": "mrkdwn",
-				"text": "This is a home for the Prototype application. Here you can check your university course progress"
+				"text": "This is a home for the Prototype application. Here you can check your university course progress!    Version Dated: " + createNiceDateForVersion(new Date())
 			}
 		},
 		{
 			"type": "divider"
 		},
-
+		
 		/* Deadlines section */
 		{
 			"type": "header",
@@ -43,7 +51,7 @@ const homeView = async(user) => {
 				"type": "button",
 				"text": {
 					"type": "plain_text",
-					"text": "Display deadlines",
+					"text": ":exclamation:  Display deadlines",
 					"emoji": true
 				},
 				"value": "click_me_123",
@@ -78,7 +86,7 @@ const homeView = async(user) => {
 		{
 			"type": "divider"
 		},
-
+		
 		/* Week section */
 		{
 			"type": "header",
@@ -98,7 +106,7 @@ const homeView = async(user) => {
 				"type": "button",
 				"text": {
 					"type": "plain_text",
-					"text": "Display current week",
+					"text": ":date:  Display current week",
 					"emoji": true
 				},
 				"value": "click_me_123",
@@ -167,7 +175,7 @@ const homeView = async(user) => {
 					"type": "button",
 					"text": {
 						"type": "plain_text",
-						"text": "Display grades",
+						"text": ":bar_chart:  Display grades",
 						"emoji": true
 					},
 					"value": "click_me_123",
@@ -178,26 +186,11 @@ const homeView = async(user) => {
 		{
 			"type": "divider"
 		}
-	];
-
-	let view = {
-		type: 'home',
-		callback_id: 'home_view',
-		title: {
-			type: 'plain_text',
-			text: 'Keep track of course progress!'
-		},
-		blocks: blocks
+	]
+	  }
+	});
+  }
+	catch (error) {
+	console.error(error);
 	}
-
-	return JSON.stringify(view);
-};
-
-
-/* Display App Home */
-
-const displayHome = async(user) => {
-	return await homeView(user);
-};
-
-module.exports = { displayHome };
+});
