@@ -34,7 +34,7 @@ const slack_app = new App({
  app = receiver.app;
 
 // Import the app home file
-const appHome = require('./appHome');
+require('./appHome')(slack_app)
 
 
  //============= Slack app event listener====
