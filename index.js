@@ -217,7 +217,7 @@ slack_app.event('app_home_opened', async ({ event, client, context }) => {
 			"type": "header",
 			"text": {
 				"type": "plain_text",
-				"text": "👋 Welcome! " + new Date().toString(),
+				"text": "👋 Welcome!",
 				"emoji": true
 			}
 		},
@@ -225,7 +225,7 @@ slack_app.event('app_home_opened', async ({ event, client, context }) => {
 			"type": "section",
 			"text": {
 				"type": "mrkdwn",
-				"text": "This is a home for the Prototype application. Here you can check your university course progress!"
+				"text": "This is a home for the Prototype application. Here you can check your university course progress!    Version Dated: " + createNiceDateForVersion(new Date())
 			}
 		},
 		{
@@ -448,6 +448,10 @@ function displayMyModuleDeadlines() {
 function displayMyModuleProgress() {
   var myProgress = ['SDD - 85%','Agile - 58%','Computer Security - 20%']
   return JSON.stringify(myProgress)
+}
+
+function createNiceDateForVersion(thisDate) {
+    return thisDate.getFullYear() + '-' + (thisDate.getMonth() +1 ) + thisDate.getDate() + ' ' + thisDate.getHours() + ':' +thisDate.getMinutes()
 }
 
 // load the DB module
