@@ -1,22 +1,33 @@
-//=============== ADD EXPRESS =================
-/*var express = require('express');
-const app = express();*/
 
 // ==== BOLT APP  AND EXPRESS RECEIVER ===========
 // Require the Bolt package (github.com/slackapi/bolt)
-const { App, ExpressReceiver,LogLevel  } = require("@slack/bolt");
+const { App, ExpressReceiver, LogLevel  } = require("@slack/bolt");
+
+// need this incase we are running locally (this it NOT secure but is needed for testing) - we could regenerate keys when we are live
+if (process.env.SLACK_SIGNING_SECRET) {
+    var SLACK_SIGNING_SECRET = process.env.SLACK_SIGNING_SECRET
+} else {
+    var SLACK_SIGNING_SECRET = 'c915abbf614385af3d9f974b7823a4ee'
+}
+
+if (process.env.SLACK_BOT_TOKEN) {
+    var SLACK_BOT_TOKEN = process.env.SLACK_BOT_TOKEN
+} else {
+    var SLACK_BOT_TOKEN = 'BWdYU5yCn4gu2ImxC8RLnoUA'
+}
+// End dangerous showing of tokens!
 
 // Create a Bolt Receiver
 const receiver = new ExpressReceiver({
-  signingSecret:  process.env.SLACK_SIGNING_SECRET
+  signingSecret:  SLACK_SIGNING_SECRET
 });
 
 // Create the Bolt App, using the receiver
 const slack_app = new App({
   receiver,
-  token: process.env.SLACK_BOT_TOKEN,
-  logLevel: LogLevel.DEBUG,
-  developerMode: true
+  token: SLACK_BOT_TOKEN,
+  logLevel: LogLevel.DEBUG, // we want full details logged to the console for testings
+  developerMode: true // we want full details logged to the console for testings
 });
 
  // for express route
@@ -206,7 +217,7 @@ slack_app.event('app_home_opened', async ({ event, client, context }) => {
 			"type": "header",
 			"text": {
 				"type": "plain_text",
-				"text": "👋 Welcome!",
+				"text": "👋 Welcome! " + new Date().toString(),
 				"emoji": true
 			}
 		},
@@ -382,58 +393,6 @@ slack_app.event('app_home_opened', async ({ event, client, context }) => {
 	catch (error) {
 	console.error(error);
 	}
-});
-
-
-//=============== The routes =================
-
-// test GET functions to check things are working
-app.get('/getCurrentWeek', (req, res) => {
-   res.send(getCurrentWeek(false));
-});
-
-app.get('/displayMyModuleGrades', (req, res) => {
-   res.send(displayMyModuleGrades());
-});
-
-
-app.get('/displayMyModuleDeadlines', (req, res) => {
-  res.send(displayMyModuleDeadlines())
-});
-
-
-app.get('/displayMyModuleProgress', (req, res) => {
-   res.send(displayMyModuleProgress())
-});
-
-// test GET functions to check things are working
-app.post('/getCurrentWeek', (req, res) => {
-   console.log(req.body)
-   res.send(getCurrentWeek(false));
-});
-
-app.post('/displayMyModuleGrades', (req, res) => {
-   console.log(req.body)
-   res.send(displayMyModuleGrades());
-});
-
-
-app.post('/displayMyModuleDeadlines', (req, res) => {
-  console.log(req.body)
-  res.send(displayMyModuleDeadlines())
-});
-
-
-app.post('/displayMyModuleProgress', (req, res) => {
-   console.log(req.body)
-   res.send(displayMyModuleProgress())
-});
-
-
-// main POST function from slack
-app.post('/slackconnect', (req, res) => {
-   console.log(req.body)
-   res.send(req.body)
 });
 
 
