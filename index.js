@@ -231,9 +231,6 @@ function displayMyModuleProgress() {
   return JSON.stringify(myProgress)
 }
 
-function createNiceDateForVersion(thisDate) {
-    return thisDate.getFullYear() + '-' + (thisDate.getMonth() +1 ) + '-' +  thisDate.getDate() + ' ' + thisDate.getHours() + ':' +thisDate.getMinutes()
-}
 
 // load the DB module
 var db_conn = require('./dbConnection.js');

@@ -197,4 +197,7 @@ slack_app.event('app_home_opened', async ({ event, client, context }) => {
         console.error(error);
         }
     });
+    function createNiceDateForVersion(thisDate) {
+    return thisDate.getFullYear() + '-' + (thisDate.getMonth() +1 ) + '-' +  thisDate.getDate() + ' ' + thisDate.getHours() + ':' +thisDate.getMinutes()
+}
 }
