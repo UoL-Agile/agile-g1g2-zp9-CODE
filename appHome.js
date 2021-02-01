@@ -198,6 +198,9 @@ slack_app.event('app_home_opened', async ({ event, client, context }) => {
         }
     });
     function createNiceDateForVersion(thisDate) {
-    return thisDate.getFullYear() + '-' + (thisDate.getMonth() +1 ) + '-' +  thisDate.getDate() + ' ' + thisDate.getHours() + ':' +thisDate.getMinutes()
+    return thisDate.getFullYear() + '-' + str_pad(thisDate.getMonth() +1 )) + '-' +  str_pad(thisDate.getDate()) + ' ' + str_pad(thisDate.getHours()) + ':' +str_pad(thisDate.getMinutes())
+}
+    function str_pad(theNumber) {
+    return ('0' + theNumber).slice(-2)
 }
 }
