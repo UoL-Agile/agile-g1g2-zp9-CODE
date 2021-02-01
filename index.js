@@ -15,7 +15,8 @@ const receiver = new ExpressReceiver({
 const slack_app = new App({
   receiver,
   token: process.env.SLACK_BOT_TOKEN,
-  logLevel: LogLevel.DEBUG
+  logLevel: LogLevel.DEBUG,
+  developerMode: true
 });
 
  // for express route
