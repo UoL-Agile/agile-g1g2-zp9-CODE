@@ -6,7 +6,13 @@ This uses the pool in order to have a single connection to the DB pooled for the
 const Pool = require('pg-pool');
 const url = require('url')
 
-const params = url.parse(process.env.DATABASE_URL); // Gets the DB URL from the process.env
+if (process.env.DATABASE_URL) {
+   var dbURL = process.env.DATABASE_URL
+} else {
+    var dbURL = 'postgresql://other@localhost/otherdb?connect_timeout=10&application_name=myapp'
+}
+
+const params = url.parse(dbURL); // Gets the DB URL from the process.env
 
 const auth = params.auth.split(':');
 
