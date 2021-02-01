@@ -4,7 +4,7 @@ const app = express();*/
 
 // ==== BOLT APP  AND EXPRESS RECEIVER ===========
 // Require the Bolt package (github.com/slackapi/bolt)
-const { App, ExpressReceiver } = require("@slack/bolt");
+const { App, ExpressReceiver,LogLevel  } = require("@slack/bolt");
 
 // Create a Bolt Receiver
 const receiver = new ExpressReceiver({
@@ -15,7 +15,7 @@ const receiver = new ExpressReceiver({
 const slack_app = new App({
   receiver,
   token: process.env.SLACK_BOT_TOKEN,
-    logLevel: LogLevel.DEBUG
+  logLevel: LogLevel.DEBUG
 });
 
  // for express route
