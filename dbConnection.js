@@ -7,7 +7,7 @@ const Pool = require('pg-pool');
 const url = require('url')
 
 if (process.env.DATABASE_URL) {
-   var dbURL = process.env.DATABASE_URL
+    var dbURL = process.env.DATABASE_URL
 } else {
     var dbURL = 'postgresql://other@localhost/otherdb?connect_timeout=10&application_name=myapp'
 }
