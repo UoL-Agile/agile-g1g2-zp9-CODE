@@ -1,7 +1,10 @@
-
 // ==== BOLT APP  AND EXPRESS RECEIVER ===========
 // Require the Bolt package (github.com/slackapi/bolt)
-const { App, ExpressReceiver, LogLevel  } = require("@slack/bolt");
+const {
+    App,
+    ExpressReceiver,
+    LogLevel
+} = require("@slack/bolt");
 
 // need this incase we are running locally (this it NOT secure but is needed for testing) - we could regenerate keys when we are live
 if (process.env.SLACK_SIGNING_SECRET) {
@@ -19,19 +22,19 @@ if (process.env.SLACK_BOT_TOKEN) {
 
 // Create a Bolt Receiver
 const receiver = new ExpressReceiver({
-  signingSecret:  SLACK_SIGNING_SECRET
+    signingSecret: SLACK_SIGNING_SECRET
 });
 
 // Create the Bolt App, using the receiver
 const slack_app = new App({
-  receiver,
-  token: SLACK_BOT_TOKEN,
-  logLevel: LogLevel.DEBUG, // we want full details logged to the console for testings
-  developerMode: true // we want full details logged to the console for testings
+    receiver,
+    token: SLACK_BOT_TOKEN,
+    logLevel: LogLevel.DEBUG, // we want full details logged to the console for testings
+    developerMode: true // we want full details logged to the console for testings
 });
 
- // for express route
- //app = receiver.app;
+// for express route
+//app = receiver.app;
 
 // Import the app home file
 require('./appHome')(slack_app)
@@ -46,9 +49,9 @@ db_conn.connectDB_Pool(); // open a DB pool for us to use
 
 //DB call
 
- // EXAMPLE SQL - 'SELECT * FROM this_table'
+// EXAMPLE SQL - 'SELECT * FROM this_table'
 function makeaDBCallWithSQL(theSQL) {
-   db_pool.connect((err, client, release) => {
+    db_pool.connect((err, client, release) => {
         if (err) {
             console.log('Error acquiring client', err)
             return callback(err)
@@ -62,9 +65,9 @@ function makeaDBCallWithSQL(theSQL) {
 
             return callback(null, JSON.stringify(result.rows))
         })
-    }) 
+    })
 }
-    
+
 
 
 
@@ -74,9 +77,8 @@ var port = process.env.PORT || 3000; // need to get the port that Heroku gives u
 console.log('index.js','listening on ' + port + '!');*/
 
 (async () => {
-   // Start your app
-   await slack_app.start(port);
- 
-   console.log("⚡️ Bolt app is running on "+ + port + '!');
- })();
- 
+    // Start your app
+    await slack_app.start(port);
+
+    console.log("⚡️ Bolt app is running on " + +port + '!');
+})();
