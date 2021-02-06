@@ -95,7 +95,7 @@ module.exports = function(slack_app) {
                         /* Week section */
                         {
                             "type": "header",
-                            "block_id": "Whr",
+                            "block_id": "week-header",
                             "text": {
                                 "type": "plain_text",
                                 "text": "Current Week",
@@ -104,10 +104,11 @@ module.exports = function(slack_app) {
                         },
                         {
                             "type": "section",
-                            "block_id": "Wmn",
+                            "block_id": "week-main",
                             "text": {
                                 "type": "mrkdwn",
-                                "text": "Get information about the current week:"
+                                "text": "Get information about the current week:",
+                                "emoji": true
                             },
                             "accessory": {
                                 "type": "button",
@@ -208,21 +209,19 @@ module.exports = function(slack_app) {
      // Acknowledge action request
         await ack();
         
-        body.view.blocks[0].type = "check";
+//        body.view.blocks[0].type = "check";
         
-        var body_test = body.view.blocks;
+        var body_parser = body.view.blocks;
         
-        for (var i = 0; i < body_test.length; i++){
-            
-            console.log(body_test[i]);
-            
-            if(body_test[i].block_id == "Wmn") {
-                console.log(body_test[i]);
-                delete body_test[i].accessory;
-                console.log("_____________");
-                console.log(body_test[i]);
+        for (var i = 0; i < body_parser.length; i++){            
+            if(body_parser[i].block_id == "week-main") {
+                delete body_parser[i].accessory;
+                body_parser.text.text = "Current week :date: : " + getCurrentWeek(true);
+                console.log(body_parser[i]);
             }
         }
+        
+        
         
 //        var body_json = JSON.stringify(body.view.blocks);
                 
