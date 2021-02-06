@@ -107,8 +107,7 @@ module.exports = function(slack_app) {
                             "block_id": "week-main",
                             "text": {
                                 "type": "mrkdwn",
-                                "text": "Get information about the current week:",
-                                "emoji": true
+                                "text": "Get information about the current week:"
                             },
                             "accessory": {
                                 "type": "button",
@@ -216,7 +215,7 @@ module.exports = function(slack_app) {
         for (var i = 0; i < body_parser.length; i++){            
             if(body_parser[i].block_id == "week-main") {
                 delete body_parser[i].accessory;
-                body_parser.text.text = "Current week :date: : " + getCurrentWeek(true);
+                body_parser.text.text = "Current week: " + getCurrentWeek(true);
                 console.log(body_parser[i]);
             }
         }
