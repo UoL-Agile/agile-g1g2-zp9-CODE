@@ -94,6 +94,7 @@ module.exports = function(slack_app) {
 
                         /* Week section */
                         {
+                            "block_id": "week_header",
                             "type": "header",
                             "text": {
                                 "type": "plain_text",
@@ -102,6 +103,7 @@ module.exports = function(slack_app) {
                             }
                         },
                         {
+                            "block_id": "week_main",
                             "type": "section",
                             "text": {
                                 "type": "mrkdwn",
@@ -208,9 +210,9 @@ module.exports = function(slack_app) {
         
         body.view.blocks[0].type = "check";
         
-        var check = JSON.stringify(body.view.blocks[0]);
+        var body_json = JSON.stringify(body.view);
         
-        console.log(check);
+        console.log(body_json);
         console.log(body.view.blocks[0]);
         
         //can use for understanding which date the use chose
