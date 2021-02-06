@@ -207,7 +207,7 @@ module.exports = function(slack_app) {
         
         var view_result = await client.views.open();
         console.log(view_result);
-        
+    
     });
   
     slack_app.action('grades_button', async ({ body, ack, say }) => {
