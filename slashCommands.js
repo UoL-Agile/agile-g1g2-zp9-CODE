@@ -147,6 +147,7 @@ module.exports = function(slack_app) {
     
     // Action listener: current week
     slack_app.action('/button-action', async ({
+        action,
         ack,
         respond
     }) => {
