@@ -68,12 +68,6 @@ function makeaDBCallWithSQL(theSQL) {
     })
 }
 
- slack_app.action('deadlines_button', async ({ ack, say }) => {
-     // Acknowledge action request
-     await ack();
-     await say('Deadlines button clicked 👍');
- });
-
 //===============PORT and SERVER =================
 var port = process.env.PORT || 3000; // need to get the port that Heroku gives us
 /*app.listen(port);
