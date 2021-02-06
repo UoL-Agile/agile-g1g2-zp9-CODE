@@ -95,7 +95,7 @@ module.exports = function(slack_app) {
                         /* Week section */
                         {
                             "type": "header",
-                            "block_id": "week_header",
+                            "block_id": "Whr",
                             "text": {
                                 "type": "plain_text",
                                 "text": "Current Week",
@@ -104,7 +104,7 @@ module.exports = function(slack_app) {
                         },
                         {
                             "type": "section",
-                            "block_id": "week_main",
+                            "block_id": "Wmn",
                             "text": {
                                 "type": "mrkdwn",
                                 "text": "Get information about the current week:"
@@ -216,7 +216,7 @@ module.exports = function(slack_app) {
             
             console.log(body_test[i]);
             
-            if(body_test[i].block_id == "week_main") {
+            if(body_test[i].block_id == "Wmn") {
                 console.log(body_test[i]);
                 delete body_test[i].accessory;
                 console.log("_____________");
