@@ -220,7 +220,7 @@ module.exports = function(slack_app) {
 
 
     // Action listener: current week
-    slack_app.action('button-action', async ({
+    slack_app.action('week_button', async ({
         ack, body, client
     }) => {
         // Acknowledge command request
