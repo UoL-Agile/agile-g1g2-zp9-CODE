@@ -210,11 +210,19 @@ module.exports = function(slack_app) {
         
         body.view.blocks[0].type = "check";
         
-        var body_json = JSON.stringify(body.view.blocks);
-        let result = body_json.filter((item) => item.block_id === "week_main");
+        var body_test = body.view.blocks;
         
-        console.log(result);
+        for (var i = 0; i < body_test.length; i++){
+            if(body_test[i].block_id == "week_main") {
+                console.log(body_test[i]);
+                delete body_test[i].accessory;
+                console.log("_____________");
+                console.log(body_test[i]);
+            }
+        }
         
+//        var body_json = JSON.stringify(body.view.blocks);
+                
         console.log(body.view.blocks[0]);
         
         //can use for understanding which date the use chose
