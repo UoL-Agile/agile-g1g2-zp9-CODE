@@ -214,7 +214,7 @@ module.exports = function(slack_app) {
             view_id: body.view.id,
             // Pass the current hash to avoid race conditions
             hash: body.view.hash,
-             View payload with updated blocks
+            // View payload with updated blocks
             view: {
                 type: 'modal',
                 // View identifier
