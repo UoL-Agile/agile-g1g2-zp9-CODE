@@ -206,7 +206,7 @@ module.exports = function(slack_app) {
      // Acknowledge action request
         await ack();
         
-        console.log(body['qWs']);
+        console.log(body[block_id: 'qWs']);
         
 //        try {
 //            // Call views.update with the built-in client
