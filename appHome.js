@@ -207,7 +207,7 @@ module.exports = function(slack_app) {
         await ack();
         
         console.log(body.view.blocks[0]);
-        console.log(body.find((item) => item.block_id === "qWs"));
+        console.log(body.view.state.values);
         
 //        try {
 //            // Call views.update with the built-in client
