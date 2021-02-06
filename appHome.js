@@ -60,7 +60,7 @@ module.exports = function(slack_app) {
                                     "emoji": true
                                 },
                                 "value": "click_me_123",
-                                "action_id": "button-action"
+                                "action_id": "deadlines_button"
                             }
                         },
                         {
@@ -195,6 +195,12 @@ module.exports = function(slack_app) {
         }
     });
 
+    slack_app.action('deadlines_button', async ({ ack, say }) => {
+    // Acknowledge action request
+    await ack();
+    await say('Deadlines button clicked 👍');
+    });
+    
     function createNiceDateForVersion(thisDate) {
         return thisDate.getFullYear() + '-' + str_pad((thisDate.getMonth() + 1)) + '-' + str_pad(thisDate.getDate()) + ' ' + str_pad(thisDate.getHours()) + ':' + str_pad(thisDate.getMinutes())
     }
