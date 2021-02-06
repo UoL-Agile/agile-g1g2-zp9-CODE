@@ -152,7 +152,16 @@ module.exports = function(slack_app) {
     }) => {
         // Acknowledge command request
         await ack();
-        await respond({console.log('test')});
+        await respond({
+            "blocks": [{
+                "type": "section",
+                "text": {
+                    "type": "plain_text",
+                    "text": "Current week :date: : " + getCurrentWeek(true),
+                    "emoji": true
+                }
+            }, ]
+        });
     });
     
 
