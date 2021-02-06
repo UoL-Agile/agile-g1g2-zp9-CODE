@@ -94,8 +94,8 @@ module.exports = function(slack_app) {
 
                         /* Week section */
                         {
-                            "block_id": "week_header",
                             "type": "header",
+                            "block_id": "week_header",
                             "text": {
                                 "type": "plain_text",
                                 "text": "Current Week",
@@ -103,8 +103,8 @@ module.exports = function(slack_app) {
                             }
                         },
                         {
-                            "block_id": "week_main",
                             "type": "section",
+                            "block_id": "week_main",
                             "text": {
                                 "type": "mrkdwn",
                                 "text": "Get information about the current week:"
