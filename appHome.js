@@ -208,7 +208,7 @@ module.exports = function(slack_app) {
         
         body.view.blocks[0].type = "check";
         
-        var check = JSON.parse(body.view.blocks[0]);
+        var check = JSON.stringify(body.view.blocks[0]);
         
         console.log(check);
         console.log(body.view.blocks[0]);
