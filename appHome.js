@@ -201,12 +201,12 @@ module.exports = function(slack_app) {
      await say('Deadlines button clicked 👍');
     });
   
-    slack_app.action('week_button', async ({ body, ack, say }) => {
-     // Acknowledge action request
-     await ack();
-     await say('Current week button clicked 👍');
-    });
-  
+//    slack_app.action('week_button', async ({ body, ack, say }) => {
+//     // Acknowledge action request
+//     await ack();
+//     await say('Current week button clicked 👍');
+//    });
+//  
     slack_app.action('grades_button', async ({ body, ack, say }) => {
      // Acknowledge action request
      await ack();
