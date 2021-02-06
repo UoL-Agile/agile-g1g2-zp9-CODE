@@ -143,10 +143,32 @@ module.exports = function(slack_app) {
             console.error(error);
         }
     });
+    
+    
+    // Action listener: current week
+    slack_app.action('button-action', async ({
+        command,
+        ack,
+        respond
+    }) => {
+        // Acknowledge command request
+        await ack();
+        await respond({
+            "blocks": [{
+                "type": "section",
+                "text": {
+                    "type": "plain_text",
+                    "text": "Current week :date: : " + getCurrentWeek(true),
+                    "emoji": true
+                }
+            }, ]
+        });
+    });
+    
 
     //=============== The Functions  =================
 
-    //in num = true, then return only the week number in string format
+    //if num = true, then return only the week number in string format
     //else return the string str
     function getCurrentWeek(num) {
         //The date of the first week in format
@@ -156,14 +178,28 @@ module.exports = function(slack_app) {
         var currDate = new Date();
         //current week
         var currWeek = Math.ceil(((currDate - firstWeek) / 86400000) / 7);
+        
 
         if (num == true) {
-            return String(currWeek);
+            if (currWeek > 22) {
+                return "The school term is over";
+            }
+            else {
+                return String(currWeek);
+            };
         }
+        else {
+            if (currWeek > 22) {
+                return "The school term is over";
+            }
+            else {
+                var str = "Today is " + String(currWeek) + " week!";
 
-        var str = "Today is " + String(currWeek) + " week!";
+                return str + "\r" + myWeekInfo();
+            };  
+        };
 
-        return str + "\r" + myWeekInfo();
+        
     }
 
     // function will get info from DB for every user
