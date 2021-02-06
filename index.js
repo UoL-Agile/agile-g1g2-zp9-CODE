@@ -36,11 +36,12 @@ const slack_app = new App({
 // for express route
 //app = receiver.app;
 
+//============= Slack app event listener====
+require('./slashCommands')(slack_app)
+
 // Import the app home file
 require('./appHome')(slack_app)
 
-//============= Slack app event listener====
-require('./slashCommands')(slack_app)
 
 // load the DB module
 var db_conn = require('./dbConnection.js');
