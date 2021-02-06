@@ -1,4 +1,3 @@
-module.exports = function() {
     //=============== The Functions  =================
 
     //if num = true, then return only the week number in string format
@@ -67,4 +66,3 @@ module.exports = function() {
         return JSON.stringify(myProgress)
     }
     
-}

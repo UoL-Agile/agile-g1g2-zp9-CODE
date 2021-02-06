@@ -1,6 +1,6 @@
 module.exports = function(slack_app) {
 
-    require('./functions');
+    import * as fn from './functions';
     
     slack_app.event('app_home_opened', async ({
         event,
@@ -217,7 +217,7 @@ module.exports = function(slack_app) {
         for (var i = 0; i < body_parser.length; i++){            
             if(body_parser[i].block_id == "week-main") {
                 delete body_parser[i].accessory;
-                body_parser.text.text = "Current week: " + getCurrentWeek(true);
+                body_parser.text.text = "Current week: " + fn.getCurrentWeek(true);
                 console.log(body_parser[i]);
             }
         }

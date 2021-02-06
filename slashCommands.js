@@ -1,6 +1,6 @@
 module.exports = function(slack_app) {
 
-    require('./functions');
+    import * as fn from './functions';
     
     // Slack command : get help
     slack_app.command('/prototype-help', async ({
@@ -59,7 +59,7 @@ module.exports = function(slack_app) {
                 "type": "section",
                 "text": {
                     "type": "plain_text",
-                    "text": "Current week :date: : " + getCurrentWeek(true),
+                    "text": "Current week :date: : " + fn.getCurrentWeek(true),
                     "emoji": true
                 }
             }, ]
