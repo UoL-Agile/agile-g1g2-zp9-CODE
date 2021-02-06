@@ -73,7 +73,7 @@ module.exports = function(slack_app) {
                                         "text": "Select a date",
                                         "emoji": true
                                     },
-                                    "action_id": "actionId-0"
+                                    "action_id": "start_date_button"
                                 },
                                 {
                                     "type": "datepicker",
@@ -83,7 +83,7 @@ module.exports = function(slack_app) {
                                         "text": "Select a date",
                                         "emoji": true
                                     },
-                                    "action_id": "actionId-1"
+                                    "action_id": "end_date_button"
                                 }
                             ]
                         },
@@ -114,7 +114,7 @@ module.exports = function(slack_app) {
                                     "emoji": true
                                 },
                                 "value": "click_me_123",
-                                "action_id": "button-action"
+                                "action_id": "week_button"
                             }
                         },
                         {
@@ -181,7 +181,7 @@ module.exports = function(slack_app) {
                                     "emoji": true
                                 },
                                 "value": "click_me_123",
-                                "action_id": "actionId-0"
+                                "action_id": "grades_button"
                             }]
                         },
                         {
@@ -193,6 +193,24 @@ module.exports = function(slack_app) {
         } catch (error) {
             console.error(error);
         }
+    });
+    
+    slack_app.action('deadlines_button', async ({ body, ack, say }) => {
+     // Acknowledge action request
+     await ack();
+     await say('Deadlines button clicked 👍');
+    });
+  
+    slack_app.action('week_button', async ({ body, ack, say }) => {
+     // Acknowledge action request
+     await ack();
+     await say('Current week button clicked 👍');
+    });
+  
+    slack_app.action('grades_button', async ({ body, ack, say }) => {
+     // Acknowledge action request
+     await ack();
+     await say('Grades button clicked 👍');
     });
     
     function createNiceDateForVersion(thisDate) {
