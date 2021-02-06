@@ -28,7 +28,7 @@ module.exports = function(slack_app) {
                         },
                         {
                             "type": "section",
-                            "block_id": 'qWs',
+                            "block_id": "qWs",
                             "text": {
                                 "type": "mrkdwn",
                                 "text": "This is a home for the Prototype application. Here you can check your university course progress!    Version Dated: " + createNiceDateForVersion(new Date())
@@ -206,7 +206,8 @@ module.exports = function(slack_app) {
      // Acknowledge action request
         await ack();
         
-        console.log(body[block_id: 'qWs']);
+        console.log(body.view.blocks[0]);
+        console.log(body.find((item) => item.block_id === "qWs"));
         
 //        try {
 //            // Call views.update with the built-in client
