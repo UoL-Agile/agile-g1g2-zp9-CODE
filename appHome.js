@@ -1,4 +1,6 @@
 module.exports = function(slack_app) {
+
+    import * as fn from './functions';
     
     slack_app.event('app_home_opened', async ({
         event,

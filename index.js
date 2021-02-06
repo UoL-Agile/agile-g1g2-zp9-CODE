@@ -42,8 +42,6 @@ require('./slashCommands')(slack_app)
 // Import the app home file
 require('./appHome')(slack_app)
 
-//
-import * as fn from './functions';
 
 
 // load the DB module
