@@ -152,6 +152,7 @@ module.exports = function(slack_app) {
     }) => {
         // Acknowledge command request
         await ack();
+        return 'is it work?';
         await say('Is it work?');
     });
     
