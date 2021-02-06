@@ -205,46 +205,46 @@ module.exports = function(slack_app) {
      // Acknowledge action request
         await ack();
         
-        console.log(body.view);
+        console.log(body.view.blocks);
         
-        try {
-            // Call views.update with the built-in client
-            const result = await client.views.update({
-            // Pass the view_id
-            view_id: body.view.id,
-            // Pass the current hash to avoid race conditions
-            hash: body.view.hash,
-            // View payload with updated blocks
-            view: {
-                type: 'modal',
-                // View identifier
-                callback_id: 'view_1',
-                title: {
-                    type: 'plain_text',
-                    text: 'Updated modal'
-                },
-                blocks: [
-                  {
-                    type: 'section',
-                    text: {
-                      type: 'plain_text',
-                      text: 'You updated the modal!'
-                    }
-                  },
-                  {
-                    type: 'image',
-                    image_url: 'https://media.giphy.com/media/SVZGEcYt7brkFUyU90/giphy.gif',
-                    alt_text: 'Yay! The modal was updated'
-                  }
-                ]
-            }
-            });
-            console.log(result);
-        }
-        catch (error) {
-            console.error(error);
-        }
-    
+//        try {
+//            // Call views.update with the built-in client
+//            const result = await client.views.update({
+//            // Pass the view_id
+//            view_id: body.view.id,
+//            // Pass the current hash to avoid race conditions
+//            hash: body.view.hash,
+//            // View payload with updated blocks
+//            view: {
+//                type: 'modal',
+//                // View identifier
+//                callback_id: 'view_1',
+//                title: {
+//                    type: 'plain_text',
+//                    text: 'Updated modal'
+//                },
+//                blocks: [
+//                  {
+//                    type: 'section',
+//                    text: {
+//                      type: 'plain_text',
+//                      text: 'You updated the modal!'
+//                    }
+//                  },
+//                  {
+//                    type: 'image',
+//                    image_url: 'https://media.giphy.com/media/SVZGEcYt7brkFUyU90/giphy.gif',
+//                    alt_text: 'Yay! The modal was updated'
+//                  }
+//                ]
+//            }
+//            });
+//            console.log(result);
+//        }
+//        catch (error) {
+//            console.error(error);
+//        }
+//    
     });
   
     slack_app.action('grades_button', async ({ body, ack, say }) => {
