@@ -213,6 +213,9 @@ module.exports = function(slack_app) {
         var body_test = body.view.blocks;
         
         for (var i = 0; i < body_test.length; i++){
+            
+            console.log(body_test[i]);
+            
             if(body_test[i].block_id == "week_main") {
                 console.log(body_test[i]);
                 delete body_test[i].accessory;
