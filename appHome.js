@@ -208,10 +208,15 @@ module.exports = function(slack_app) {
         
         body.view.blocks[0].type = "check";
         
+        var check = JSON.parse(body.view.blocks[0]);
+        
+        console.log(check);
         console.log(body.view.blocks[0]);
         
         //can use for understanding which date the use chose
         console.log(body.view.state.values);
+        
+        // https://api.slack.com/tutorials/workflow-builder-steps-pt-2 - how to return body
         
 //        try {
 //            // Call views.update with the built-in client
