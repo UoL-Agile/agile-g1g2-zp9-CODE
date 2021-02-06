@@ -206,7 +206,9 @@ module.exports = function(slack_app) {
      // Acknowledge action request
         await ack();
         
-        console.log(body.view.blocks[0]);
+        console.log(body.view.blocks.values);
+        
+        //can use for understanding which date the use chose
         console.log(body.view.state.values);
         
 //        try {
