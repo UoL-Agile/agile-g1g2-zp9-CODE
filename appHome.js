@@ -194,12 +194,6 @@ module.exports = function(slack_app) {
             console.error(error);
         }
     });
-
-    slack_app.action('deadlines_button', async ({ ack, say }) => {
-    // Acknowledge action request
-    await ack();
-    await say('Deadlines button clicked 👍');
-    });
     
     function createNiceDateForVersion(thisDate) {
         return thisDate.getFullYear() + '-' + str_pad((thisDate.getMonth() + 1)) + '-' + str_pad(thisDate.getDate()) + ' ' + str_pad(thisDate.getHours()) + ':' + str_pad(thisDate.getMinutes())
