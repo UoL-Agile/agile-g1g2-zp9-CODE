@@ -205,14 +205,16 @@ module.exports = function(slack_app) {
      // Acknowledge action request
         await ack();
         
+        console.log(body.view);
+        
         try {
             // Call views.update with the built-in client
             const result = await client.views.update({
-//            // Pass the view_id
-//            view_id: body.view.id,
-//            // Pass the current hash to avoid race conditions
-//            hash: body.view.hash,
-            // View payload with updated blocks
+            // Pass the view_id
+            view_id: body.view.id,
+            // Pass the current hash to avoid race conditions
+            hash: body.view.hash,
+             View payload with updated blocks
             view: {
                 type: 'modal',
                 // View identifier
