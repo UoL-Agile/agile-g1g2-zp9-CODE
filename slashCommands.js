@@ -147,21 +147,12 @@ module.exports = function(slack_app) {
     
     // Action listener: current week
     slack_app.action('/button-action', async ({
-        action,
         ack,
         respond
     }) => {
         // Acknowledge command request
         await ack();
         await respond({
-            "blocks": [{
-                "type": "section",
-                "text": {
-                    "type": "plain_text",
-                    "text": "Current week :date: : " + getCurrentWeek(true),
-                    "emoji": true
-                }
-            }, ]
         });
     });
     
