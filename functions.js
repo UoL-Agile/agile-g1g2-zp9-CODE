@@ -32,7 +32,7 @@ exports.getCurrentWeek = function(num) {
     };
 }
 
-function getDeadlines() {
+exports.getDeadlines() = function() {
 	var mappings = [
 		{ deadline: 0, task: "Checkpoint 5: ", date: "2021-2-8", month: "2", day: "8"},
 		{ deadline: 1, task: "Checkpoint 6: ", date: "2021-2-22", month: "2", day: "22"},
