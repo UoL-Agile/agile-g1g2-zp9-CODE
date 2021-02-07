@@ -219,6 +219,7 @@ module.exports = function(slack_app) {
             }
         }
         
+        console.log(body.view.blocks);
 //        //can use for understanding which date the use chose
 //        console.log(body.view.state.values);
         
@@ -242,8 +243,6 @@ module.exports = function(slack_app) {
         }
         catch (error) {
             console.error(error);
-            console.error(error.response_metadata.messages);
-            console.error(error.response_metadata.scopes);
         }
     
     });
