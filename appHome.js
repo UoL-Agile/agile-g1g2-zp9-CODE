@@ -212,35 +212,33 @@ module.exports = function(slack_app) {
         
 //        body.view.blocks[0].type = "check";
         
-        var body_parser = body.view.blocks;
-        
-        for (var i = 0; i < body_parser.length; i++) {            
-            var keys1 = Object.keys(body_parser[i]);
+        for (var i = 0; i < body.view.blocks.length; i++) {            
+            var keys1 = Object.keys(body.view.blocks[i]);
             console.log("1 keys: " + keys1);
             for (var j = 0; j < keys1.length; j++) {
                 if(keys1[j] == "text") {
-                    var keys2 = Object.keys(body_parser[i].text);
+                    var keys2 = Object.keys(body.view.blocks[i].text);
                     console.log("2 keys: " + keys2);
                     for (var q = 0; q < keys2.length; q++) {
                         if(keys2[q] == "verbatim") {
-                            console.log(body_parser[i].text);
-                            delete body_parser[i].text.verbatim;
-                            console.log(body_parser[i].text);
+                            console.log(body.view.blocks[i].text);
+                            delete body.view.blocks[i].text.verbatim;
+                            console.log(body.view.blocks[i].text);
                         }
                     }
                 }
             }
             
-            if(body_parser[i].block_id == "week-main") {
-                delete body_parser[i].accessory;
-                body_parser[i].text.text = "Current week: " + fn.getCurrentWeek(true);
+            if(body.view.blocks[i].block_id == "week-main") {
+                delete body.view.blocks[i].accessory;
+                body.view.blocks[i].text.text = "Current week: " + fn.getCurrentWeek(true);
             }
             
         }
         
-//        var string = JSON.strigify(body_parser);
+//        var string = JSON.strigify(body.view.blocks);
         
-//        console.log(body_parser);
+//        console.log(body.view.blocks);
 //        //can use for understanding which date the use chose
 //        console.log(body.view.state.values);
         
@@ -248,22 +246,22 @@ module.exports = function(slack_app) {
         try {
             // Call views.update with the built-in client
             const result = await client.views.update({
-            // Pass the view_id
-            view_id: body.view.id,
-            // Pass the current hash to avoid race conditions
-            hash: body.view.hash,
-            // View payload with updated blocks
-            view: {
-                type: 'modal',
-                // View identifier
-                callback_id: 'view_123',
-                blocks: [body_parser]
-            }
+                // Pass the view_id
+                view_id: body.view.id,
+                // Pass the current hash to avoid race conditions
+                hash: body.view.hash,
+                // View payload with updated blocks
+                view: {
+                    type: 'modal',
+                    // View identifier
+                    callback_id: 'view_123',
+                    blocks: [body.view.blocks]
+                }
             });
             console.log(result);
         }
         catch (error) {
-            console.error(error);
+            console.error(error.response_metadata);
         }
     
     });
