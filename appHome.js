@@ -216,11 +216,11 @@ module.exports = function(slack_app) {
         
         for (var i = 0; i < body_parser.length; i++) {            
             var keys1 = Object.keys(body_parser[i]);
-            console.log(keys1);
+            console.log("1 keys: " + keys1);
             for (var j = 0; j < keys1.length; j++) {
-                if(keys1[i] == "text") {
+                if(keys1[j] == "text") {
                     var keys2 = Object.keys(body_parser[i].text);
-                    console.log(keys2);
+                    console.log("2 keys: " + keys2);
                     for (var q = 0; q < keys2.length; q++) {
                         if(keys2[q] == "verbatim") {
                             console.log(body_parser[i].text);
@@ -238,9 +238,9 @@ module.exports = function(slack_app) {
             
         }
         
+//        var string = JSON.strigify(body_parser);
         
-        
-        console.log(body_parser);
+//        console.log(body_parser);
 //        //can use for understanding which date the use chose
 //        console.log(body.view.state.values);
         
@@ -257,7 +257,7 @@ module.exports = function(slack_app) {
                 type: 'modal',
                 // View identifier
                 callback_id: 'view_123',
-                blocks: JSON.strigify(body_parser)
+                blocks: body_parser
             }
             });
             console.log(result);
