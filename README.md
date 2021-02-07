@@ -1,4 +1,3 @@
-# agile-g1g2-zp9-CODE
-# Prototype ![App logo](docs/assets/app_logo.jfif)
+# Prototype ![App logo](docs/assets/app_logo.jpg)
 
-A Slack application that provides information regarding a Coursera degree.
+A Slack application that provides information about your Coursera degree.
