@@ -217,10 +217,6 @@ module.exports = function(slack_app) {
                 delete body.view.blocks[i].accessory;
                 body.view.blocks[i].text.text = "Current week: " + fn.getCurrentWeek(true);
             }
-            
-            if(body.view.blocks[i].block_id == "qWs") {
-                delete body.view.blocks[i].text.text;
-            }
         }
         
 //        //can use for understanding which date the use chose
@@ -238,12 +234,11 @@ module.exports = function(slack_app) {
             view: {
                 type: 'modal',
                 // View identifier
-                callback_id: 'view_1',
-                blocks: body.view.blocks,
-                submit_disabled: true
+                callback_id: 'view_123',
+                blocks: body.view.blocks
             }
             });
-//            console.log(result);
+            console.log(result);
         }
         catch (error) {
             console.error(error);
