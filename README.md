@@ -22,4 +22,4 @@ From getting current course week to checking assignment deadlines, <b>Prototype<
 
 If you get stuck, we're here to help. The following are the best ways to get assistance working through your issue:
 
-  * [Issue Tracker](https://github.com/UoL-Agile/agile-g1g2-zp9-CODE/issues) for questions, bug reports, feature requests, and general discussion related to the Prototype app. Try searching for an existing issue before creating a new one.
+  * [Issue Tracker](https://github.com/UoL-Agile/agile-g1g2-zp9-CODE/issues) for questions, bug reports, feature requests, and general discussion related to the <b>Prototype</b> app. Try searching for an existing issue before creating a new one.
