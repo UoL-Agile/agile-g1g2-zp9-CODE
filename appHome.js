@@ -1,5 +1,7 @@
 module.exports = function(slack_app) {
     
+    var fn = require("./functions.js");
+    
     slack_app.event('app_home_opened', async ({
         event,
         client,

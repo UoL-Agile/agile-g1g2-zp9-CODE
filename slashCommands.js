@@ -1,5 +1,7 @@
 module.exports = function(slack_app) {
     
+    var fn = require("./functions.js");
+    
     // Slack command : get help
     slack_app.command('/prototype-help', async ({
         command,
