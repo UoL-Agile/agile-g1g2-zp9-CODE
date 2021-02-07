@@ -34,9 +34,9 @@ exports.getCurrentWeek = function(num) {
 
 exports.getDeadlines = function() {
 	var mappings = [
-		{ deadline: 0, task: "Checkpoint 5: ", date: "2021-2-8", month: "2", day: "8"},
-		{ deadline: 1, task: "Checkpoint 6: ", date: "2021-2-22", month: "2", day: "22"},
-		{ deadline: 2, task: "Final Project Submission: ", date: "2021-3-15", month: "3", day: "15"},
+		{ deadline: 0, task: " Checkpoint 5: ", date: "2021-2-8", month: "2", day: "8"},
+		{ deadline: 1, task: " Checkpoint 6: ", date: "2021-2-22", month: "2", day: "22"},
+		{ deadline: 2, task: " Final Project Submission: ", date: "2021-3-15", month: "3", day: "15"},
 	];
 
 	var deadlines = [];
