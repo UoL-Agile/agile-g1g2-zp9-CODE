@@ -224,9 +224,8 @@ module.exports = function(slack_app) {
             
             if (body.view.blocks[i].block_id == "deadlines-main") {
                 delete body.view.blocks[i].accessory;
-                body.view.blocks[i].text.text = "Next Deadline: " + fn.displayMyModuleDeadlines();
-            }
-            
+                body.view.blocks[i].text.text = "Next Deadline: " + fn.getDeadlines();
+            }           
         }        
         
         try {
