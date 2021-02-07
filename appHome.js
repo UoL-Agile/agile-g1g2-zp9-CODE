@@ -239,7 +239,8 @@ module.exports = function(slack_app) {
                 type: 'modal',
                 // View identifier
                 callback_id: 'view_1',
-                blocks: body.view.blocks
+                blocks: body.view.blocks,
+                submit_disabled: true
             }
             });
 //            console.log(result);
