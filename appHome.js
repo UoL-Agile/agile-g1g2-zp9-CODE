@@ -252,7 +252,7 @@ module.exports = function(slack_app) {
                 hash: body.view.hash,
                 // View payload with updated blocks
                 view: {
-                    type: 'modal',
+                    type: 'home',
                     // View identifier
                     callback_id: 'view_123',
                     blocks: body.view.blocks
@@ -262,9 +262,6 @@ module.exports = function(slack_app) {
         }
         catch (error) {
             console.log(error.data.response_metadata);
-            var string = JSON.strigify(error);
-            console.log(string);
-            console.error(error);
         }
     
     });
