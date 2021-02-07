@@ -217,6 +217,10 @@ module.exports = function(slack_app) {
                 delete body.view.blocks[i].accessory;
                 body.view.blocks[i].text.text = "Current week: " + fn.getCurrentWeek(true);
             }
+            
+            if(body.view.blocks[i].block_id == "qWs") {
+                delete body.view.blocks[i].text.text;
+            }
         }
         
 //        //can use for understanding which date the use chose
