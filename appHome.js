@@ -212,15 +212,24 @@ module.exports = function(slack_app) {
         
 //        body.view.blocks[0].type = "check";
         
-        for (var i = 0; i < body.view.blocks.length; i++){            
+        for (var i = 0; i < body.view.blocks.length; i++) {            
             if(body.view.blocks[i].block_id == "week-main") {
                 delete body.view.blocks[i].accessory;
                 body.view.blocks[i].text.text = "Current week: " + fn.getCurrentWeek(true);
             }
             
-            if(body.view.blocks[i].text.verbatim == "false" || body.view.blocks[i].text.verbatim == "true") {
-                delete body.view.blocks[i].text.verbatim;
+            var keys1 = Object.keys(body.view.blocks[i]);
+            for (var j = 0; j < keys1.length; j++) {
+                if(keys1[i] == "text") {
+                    var keys2 = Object.keys(body.view.blocks[i].text);
+                    for (var q = 0; q < keys2.length; q++) {
+                        if(keys2[q] == "verbatim") {
+                            delete body.view.blocks[i].text.verbatim;
+                        }
+                    }
+                }
             }
+            
         }
         
         console.log(body.view.blocks);
