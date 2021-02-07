@@ -261,7 +261,10 @@ module.exports = function(slack_app) {
             console.log(result);
         }
         catch (error) {
-            console.error(error.response_metadata);
+            console.log(error);
+            var string = JSON.strigify(error);
+            console.log(string);
+            console.error(error);
         }
     
     });
