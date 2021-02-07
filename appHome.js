@@ -261,7 +261,7 @@ module.exports = function(slack_app) {
             console.log(result);
         }
         catch (error) {
-            console.log(error);
+            console.log(error.data.response_metadata);
             var string = JSON.strigify(error);
             console.log(string);
             console.error(error);
