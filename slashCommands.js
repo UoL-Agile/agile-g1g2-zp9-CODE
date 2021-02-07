@@ -1,6 +1,4 @@
 module.exports = function(slack_app) {
-
-    import * as fn from './functions';
     
     // Slack command : get help
     slack_app.command('/prototype-help', async ({

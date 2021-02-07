@@ -2,7 +2,7 @@
 
 //if num = true, then return only the week number in string format
 //else return the string str
-export function getCurrentWeek(num) {
+exports.getCurrentWeek = function(num) {
     //The date of the first week in format
     //{YYYY-MM-DD}T{HH:MM:SS.MsMsMs}Z in GMT +00
     var firstWeek = new Date("2020-10-12T00:00:00.000Z");
@@ -36,7 +36,7 @@ export function getCurrentWeek(num) {
 
 // function will get info from DB for every user
 // and return it back.
-export function myWeekInfo() {
+exports.myWeekInfo = function() {
     var moduls = ["Modle 1", "Modle 2", "Modle 3", "Modle 4"];
     var modulsWeeks = ["week 1", "week 4", "week 10", "week 5"];
     var toRead = ["nothing", "Book 1, p. 123", "nothing", "nothing"];
@@ -51,17 +51,17 @@ export function myWeekInfo() {
 }
 
 
-export function displayMyModuleGrades() {
+exports.displayMyModuleGrades = function() {
     var myGrades = ['72%', '34%', '56%', '89%', '90%', '72%']
     return JSON.stringify(myGrades);
 }
 
-export function displayMyModuleDeadlines() {
+exports.displayMyModuleDeadlines = function() {
     var myDeadlines = ['01/01/2021 - Mid Term 1', '01/02/2021 - Mid Term 2', '01/03/2021 - Mid Term 3', '01/04/2021 - Mid Term 4', '01/05/2021 - Mid Term ', '01/06/2021 - Mid Term 6']
     return JSON.stringify(myDeadlines)
 }
 
-export function displayMyModuleProgress() {
+exports.displayMyModuleProgress = function() {
     var myProgress = ['SDD - 85%', 'Agile - 58%', 'Computer Security - 20%']
     return JSON.stringify(myProgress)
 }

@@ -36,6 +36,8 @@ const slack_app = new App({
 // for express route
 //app = receiver.app;
 
+var fn = require("./functions.js");
+
 //============= Slack app event listener====
 require('./slashCommands')(slack_app)
 
