@@ -242,6 +242,8 @@ module.exports = function(slack_app) {
         }
         catch (error) {
             console.error(error);
+            console.error(error.response_metadata.messages);
+            console.error(error.response_metadata.scopes);
         }
     
     });
