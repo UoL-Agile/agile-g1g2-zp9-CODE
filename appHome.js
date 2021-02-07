@@ -212,68 +212,38 @@ module.exports = function(slack_app) {
         
 //        body.view.blocks[0].type = "check";
         
-        var body_parser = body.view.blocks;
-        
-        for (var i = 0; i < body_parser.length; i++){            
-            if(body_parser[i].block_id == "week-main") {
-                delete body_parser[i].accessory;
-                body_parser[i].text.text = "Current week: " + fn.getCurrentWeek(true);
-                console.log(body_parser[i]);
+        for (var i = 0; i < body.view.blocks.length; i++){            
+            if(body.view.blocks[i].block_id == "week-main") {
+                delete body.view.blocks[i].accessory;
+                body.view.blocks[i].text.text = "Current week: " + fn.getCurrentWeek(true);
             }
         }
         
-        for (var i = 0; i < body.view.blocks.length; i++)
-        {
-            console.log(i);
-        }
+//        //can use for understanding which date the use chose
+//        console.log(body.view.state.values);
         
-//        var body_json = JSON.stringify(body.view.blocks);
-                
-        console.log(body.view.blocks[0]);
         
-        //can use for understanding which date the use chose
-        console.log(body.view.state.values);
-        
-        // https://api.slack.com/tutorials/workflow-builder-steps-pt-2 - how to return body
-        
-//        try {
-//            // Call views.update with the built-in client
-//            const result = await client.views.update({
-//            // Pass the view_id
-//            view_id: body.view.id,
-//            // Pass the current hash to avoid race conditions
-//            hash: body.view.hash,
-//            // View payload with updated blocks
-//            view: {
-//                type: 'modal',
-//                // View identifier
-//                callback_id: 'view_1',
-//                title: {
-//                    type: 'plain_text',
-//                    text: 'Updated modal'
-//                },
-//                blocks: [
-//                  {
-//                    type: 'section',
-//                    text: {
-//                      type: 'plain_text',
-//                      text: 'You updated the modal!'
-//                    }
-//                  },
-//                  {
-//                    type: 'image',
-//                    image_url: 'https://media.giphy.com/media/SVZGEcYt7brkFUyU90/giphy.gif',
-//                    alt_text: 'Yay! The modal was updated'
-//                  }
-//                ]
-//            }
-//            });
+        try {
+            // Call views.update with the built-in client
+            const result = await client.views.update({
+            // Pass the view_id
+            view_id: body.view.id,
+            // Pass the current hash to avoid race conditions
+            hash: body.view.hash,
+            // View payload with updated blocks
+            view: {
+                type: 'modal',
+                // View identifier
+                callback_id: 'view_1',
+                blocks: body.view.blocks
+            }
+            });
 //            console.log(result);
-//        }
-//        catch (error) {
-//            console.error(error);
-//        }
-//    
+        }
+        catch (error) {
+            console.error(error);
+        }
+    
     });
   
     slack_app.action('grades_button', async ({ body, ack, say }) => {
