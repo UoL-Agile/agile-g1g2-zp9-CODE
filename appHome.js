@@ -212,29 +212,35 @@ module.exports = function(slack_app) {
         
 //        body.view.blocks[0].type = "check";
         
-        for (var i = 0; i < body.view.blocks.length; i++) {            
-            if(body.view.blocks[i].block_id == "week-main") {
-                delete body.view.blocks[i].accessory;
-                body.view.blocks[i].text.text = "Current week: " + fn.getCurrentWeek(true);
-            }
-            
-            var keys1 = Object.keys(body.view.blocks[i]);
+        var body_parser = body.view.blocks;
+        
+        for (var i = 0; i < body_parser.length; i++) {            
+            var keys1 = Object.keys(body_parser[i]);
             console.log(keys1);
             for (var j = 0; j < keys1.length; j++) {
                 if(keys1[i] == "text") {
-                    var keys2 = Object.keys(body.view.blocks[i].text);
-                    console.log(keys1);
+                    var keys2 = Object.keys(body_parser[i].text);
+                    console.log(keys2);
                     for (var q = 0; q < keys2.length; q++) {
                         if(keys2[q] == "verbatim") {
-                            delete body.view.blocks[i].text.verbatim;
+                            console.log(body_parser[i].text);
+                            delete body_parser[i].text.verbatim;
+                            console.log(body_parser[i].text);
                         }
                     }
                 }
             }
             
+            if(body_parser[i].block_id == "week-main") {
+                delete body_parser[i].accessory;
+                body_parser[i].text.text = "Current week: " + fn.getCurrentWeek(true);
+            }
+            
         }
         
-        console.log(body.view.blocks);
+        
+        
+        console.log(body_parser);
 //        //can use for understanding which date the use chose
 //        console.log(body.view.state.values);
         
@@ -251,7 +257,7 @@ module.exports = function(slack_app) {
                 type: 'modal',
                 // View identifier
                 callback_id: 'view_123',
-                blocks: body.view.blocks
+                blocks: JSON.strigify(body_parser);
             }
             });
             console.log(result);
@@ -276,4 +282,3 @@ module.exports = function(slack_app) {
         return ('0' + theNumber).slice(-2)
     }
 }
-
