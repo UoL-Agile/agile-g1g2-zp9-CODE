@@ -41,6 +41,7 @@ exports.getDeadlines = function() {
 	];
 
 	var deadlines;
+	var date = new Date(); 
 	for (var i = 0; i < mappings.length; ++i)
 	{
 		var deadlineDate = new Date(mappings[i].date);
