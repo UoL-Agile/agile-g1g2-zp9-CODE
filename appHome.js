@@ -51,6 +51,7 @@ module.exports = function(slack_app) {
                         },
                         {
                             "type": "section",
+                            "block_id": "deadlines-main",
                             "text": {
                                 "type": "mrkdwn",
                                 "text": "Use the calendar to look for deadlines within the time period:"
@@ -200,10 +201,54 @@ module.exports = function(slack_app) {
         }
     });
     
-    slack_app.action('deadlines_button', async ({ body, ack, say }) => {
+    slack_app.action('deadlines_button', async ({ body, ack, client }) => {
      // Acknowledge action request
-     await ack();
-     await say('Deadlines button clicked 👍');
+        await ack();
+                
+        for (var i = 0; i < body.view.blocks.length; i++) {            
+            var keys1 = Object.keys(body.view.blocks[i]);
+            console.log("1 keys: " + keys1);
+            for (var j = 0; j < keys1.length; j++) {
+                if(keys1[j] == "text") {
+                    var keys2 = Object.keys(body.view.blocks[i].text);
+                    console.log("2 keys: " + keys2);
+                    for (var q = 0; q < keys2.length; q++) {
+                        if(keys2[q] == "verbatim") {
+                            console.log(body.view.blocks[i].text);
+                            delete body.view.blocks[i].text.verbatim;
+                            console.log(body.view.blocks[i].text);
+                        }
+                    }
+                }
+            }
+            
+            if (body.view.blocks[i].block_id == "deadlines-main") {
+                delete body.view.blocks[i].accessory;
+                body.view.blocks[i].text.text = "Next Deadline: " + fn.displayMyModuleDeadlines();
+            }
+            
+        }        
+        
+        try {
+            // Call views.update with the built-in client
+            const result = await client.views.update({
+                // Pass the view_id
+                view_id: body.view.id,
+                // Pass the current hash to avoid race conditions
+                hash: body.view.hash,
+                // View payload with updated blocks
+                view: {
+                    type: 'home',
+                    // View identifier
+                    callback_id: 'view_123',
+                    blocks: body.view.blocks
+                }
+            });
+            console.log(result);
+        }
+        catch (error) {
+            console.log(error.data.response_metadata);
+        }    
     });
   
     slack_app.action('week_button', async ({ body, ack, client }) => {
