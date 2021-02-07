@@ -209,9 +209,7 @@ module.exports = function(slack_app) {
     slack_app.action('week_button', async ({ body, ack, client }) => {
      // Acknowledge action request
         await ack();
-        
-//        body.view.blocks[0].type = "check";
-        
+                
         for (var i = 0; i < body.view.blocks.length; i++) {            
             var keys1 = Object.keys(body.view.blocks[i]);
             console.log("1 keys: " + keys1);
@@ -236,9 +234,6 @@ module.exports = function(slack_app) {
             
         }
         
-//        var string = JSON.strigify(body.view.blocks);
-        
-//        console.log(body.view.blocks);
 //        //can use for understanding which date the use chose
 //        console.log(body.view.state.values);
         
