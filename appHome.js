@@ -217,6 +217,10 @@ module.exports = function(slack_app) {
                 delete body.view.blocks[i].accessory;
                 body.view.blocks[i].text.text = "Current week: " + fn.getCurrentWeek(true);
             }
+            
+            if(body.view.blocks[i].text.verbatim == "false" || body.view.blocks[i].text.verbatim == "true") {
+                delete body.view.blocks[i].text.verbatim;
+            }
         }
         
         console.log(body.view.blocks);
@@ -261,3 +265,4 @@ module.exports = function(slack_app) {
         return ('0' + theNumber).slice(-2)
     }
 }
+
