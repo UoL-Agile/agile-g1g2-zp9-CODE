@@ -79,7 +79,7 @@ module.exports = function(slack_app) {
                 "type": "section",
                 "text": {
                     "type": "plain_text",
-                    "text": "Assignments deadline :book: : " + fn.getCurrentWeek(true),
+                    "text": "Assignments deadline :book: : " + fn.getDeadlines(),
                     "emoji": true
                 }
             }, ]
