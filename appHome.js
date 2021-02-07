@@ -54,7 +54,7 @@ module.exports = function(slack_app) {
                             "block_id": "deadlines-main",
                             "text": {
                                 "type": "mrkdwn",
-                                "text": "Use the calendar to look for deadlines within the time period:"
+                                "text": "Get information about your next deadline:"
                             },
                             "accessory": {
                                 "type": "button",
@@ -66,30 +66,6 @@ module.exports = function(slack_app) {
                                 "value": "click_me_123",
                                 "action_id": "deadlines_button"
                             }
-                        },
-                        {
-                            "type": "actions",
-                            "elements": [{
-                                    "type": "datepicker",
-                                    "initial_date": "2021-01-01",
-                                    "placeholder": {
-                                        "type": "plain_text",
-                                        "text": "Select a date",
-                                        "emoji": true
-                                    },
-                                    "action_id": "start_date_button"
-                                },
-                                {
-                                    "type": "datepicker",
-                                    "initial_date": "2021-01-01",
-                                    "placeholder": {
-                                        "type": "plain_text",
-                                        "text": "Select a date",
-                                        "emoji": true
-                                    },
-                                    "action_id": "end_date_button"
-                                }
-                            ]
                         },
                         {
                             "type": "divider"
