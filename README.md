@@ -4,12 +4,12 @@ A Slack application that provides information about your university degree.
 
 From getting current course week to checking assignment deadlines, <b>Prototype</b> bot enables users to query UOL Bsc Computer Science course related information without leaving the Slack platform.
 
-## Features
+## Features ⚙️
 * Get current course workweek
 * Get module assignment deadlines
 * Get module grades
 
-## Commands
+## Commands :zap:
 
 | Command  | Description  |
 | :---: | :--- |
