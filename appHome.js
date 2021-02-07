@@ -219,9 +219,11 @@ module.exports = function(slack_app) {
             }
             
             var keys1 = Object.keys(body.view.blocks[i]);
+            console.log(keys1);
             for (var j = 0; j < keys1.length; j++) {
                 if(keys1[i] == "text") {
                     var keys2 = Object.keys(body.view.blocks[i].text);
+                    console.log(keys1);
                     for (var q = 0; q < keys2.length; q++) {
                         if(keys2[q] == "verbatim") {
                             delete body.view.blocks[i].text.verbatim;
