@@ -217,12 +217,15 @@ module.exports = function(slack_app) {
         for (var i = 0; i < body_parser.length; i++){            
             if(body_parser[i].block_id == "week-main") {
                 delete body_parser[i].accessory;
-                body_parser.text.text = "Current week: " + fn.getCurrentWeek(true);
+                body_parser[i].text.text = "Current week: " + fn.getCurrentWeek(true);
                 console.log(body_parser[i]);
             }
         }
         
-        
+        for (var i = 0; i < body.view.blocks.length; i++)
+        {
+            console.log(i);
+        }
         
 //        var body_json = JSON.stringify(body.view.blocks);
                 
