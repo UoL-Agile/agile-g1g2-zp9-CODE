@@ -80,7 +80,7 @@ exports.getMyGrades = function(selectedModule) {
         {module: "CM1025 - FCS", grade: '89%'}
     ];
     
-    if (selectedModule != "slahCommand") {
+    if (selectedModule != "slashCommand") {
         for (var i = 0; i < myGrades.length; i++) {
             if(selectedModule == myGrades[i].module) {
                 return myGrades[i].grade;
@@ -94,7 +94,6 @@ exports.getMyGrades = function(selectedModule) {
         }
         return gradesRes;
     }
-    
 }
 
 exports.displayMyModuleDeadlines = function() {
