@@ -295,16 +295,16 @@ module.exports = function(slack_app) {
     slack_app.action('grades_select', async ({ body, ack, client }) => {
         // Acknowledge action request
         await ack();
+                
+        console.log(body.view);
         
-        console.log()
-        
-        var values = body.view.state.values;
-        console.log(values.grades_main.grades_select.selected_option);
+        var selectedModule = body.view.state.values.grades_main.grades_select.selected_option.text.text;
+        console.log(selectedModule);
         
         
         
 //        for (var i = 0; i < body.view.blocks.length; i++) {            
-//            if (body.view.blocks[i].block_id == "deadlines-main") {
+//            if (body.view.blocks[i].block_id == "grades_main") {
 //                delete body.view.blocks[i].accessory;
 //                body.view.blocks[i].text.text = "Next Deadline: " + fn.getDeadlines();
 //            }           
