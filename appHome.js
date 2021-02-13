@@ -51,21 +51,74 @@ module.exports = function(slack_app) {
                         },
                         {
                             "type": "section",
-                            "block_id": "deadlines-main",
+                            "block_id": "deadlines_main",
                             "text": {
                                 "type": "mrkdwn",
-                                "text": "Get information about your next deadline:"
+                                "text": "Select the module and get information about your next deadline:"
                             },
                             "accessory": {
+                                "type": "static_select",
+                                "placeholder": {
+                                    "type": "plain_text",
+                                    "text": "Select a module",
+                                    "emoji": true
+                                },
+                                "options": [{
+                                        "text": {
+                                            "type": "plain_text",
+                                            "text": fn.getMyModuls(0),
+                                            "emoji": true
+                                        },
+                                        "value": "value-0"
+                                    },
+                                    {
+                                        "text": {
+                                            "type": "plain_text",
+                                            "text": fn.getMyModuls(1),
+                                            "emoji": true
+                                        },
+                                        "value": "value-1"
+                                    },
+                                    {
+                                        "text": {
+                                            "type": "plain_text",
+                                            "text": fn.getMyModuls(2),
+                                            "emoji": true
+                                        },
+                                        "value": "value-2"
+                                    },
+                                    {
+                                        "text": {
+                                            "type": "plain_text",
+                                            "text": fn.getMyModuls(3),
+                                            "emoji": true
+                                        },
+                                        "value": "value-3"
+                                    },
+                                    {
+                                        "text": {
+                                            "type": "plain_text",
+                                            "text": "All modules",
+                                            "emoji": true
+                                        },
+                                        "value": "value-4"
+                                    }
+                                ]
+                            }
+                            
+                        },
+                        {
+                            "type": "actions",
+                            "elements": [{
                                 "type": "button",
                                 "text": {
                                     "type": "plain_text",
-                                    "text": ":exclamation:  Display deadlines",
+                                    "text": ":bar_chart:  Display deadline",
                                     "emoji": true
                                 },
                                 "value": "click_me_123",
                                 "action_id": "deadlines_button"
-                            }
+                            }]
                         },
                         {
                             "type": "divider"
@@ -124,7 +177,7 @@ module.exports = function(slack_app) {
                                 "type": "static_select",
                                 "placeholder": {
                                     "type": "plain_text",
-                                    "text": "Select an item",
+                                    "text": "Select a module",
                                     "emoji": true
                                 },
                                 "options": [{
@@ -185,7 +238,8 @@ module.exports = function(slack_app) {
     slack_app.action('deadlines_button', async ({ body, ack, client }) => {
      // Acknowledge action request
         await ack();
-                
+        
+        console.log(body.view.state);
         for (var i = 0; i < body.view.blocks.length; i++) {            
             if (body.view.blocks[i].block_id == "deadlines-main") {
                 delete body.view.blocks[i].accessory;
@@ -251,9 +305,7 @@ module.exports = function(slack_app) {
     slack_app.action('grades_select', async ({ body, ack, client }) => {
         // Acknowledge action request
         await ack();
-                
-        console.log(body.view.blocks);
-        
+                        
         var selectedModule = body.view.state.values.grades_main.grades_select.selected_option.text.text;
         console.log(selectedModule);
         

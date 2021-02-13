@@ -40,7 +40,7 @@ exports.getDeadlines = function() {
 		{ deadline: 2, task: "Final Project Submission --> ", date: "2021-3-15"},
 	];
 
-	var deadlines;
+	var deadlines = "No deadlines";
 	var date = new Date(); 
 	for (var i = 0; i < mappings.length; ++i)
 	{
@@ -51,6 +51,10 @@ exports.getDeadlines = function() {
 			break;
 		}
 	}
+    
+    if (deadlines == "No deadlines") {
+        return deadlines;
+    }
 	return String(deadlines);
 }
 
