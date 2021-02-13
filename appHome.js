@@ -106,7 +106,7 @@ module.exports = function(slack_app) {
                         /* Grades section */
                         {
                             "type": "header",
-                            "block_id" : "grades-header",
+                            "block_id" : "grades_header",
                             "text": {
                                 "type": "plain_text",
                                 "text": "Grades",
@@ -115,7 +115,7 @@ module.exports = function(slack_app) {
                         },
                         {
                             "type": "section",
-                            "block_id": "grades-main",
+                            "block_id": "grades_main",
                             "text": {
                                 "type": "mrkdwn",
                                 "text": "Select a module from the list for showing your grades:"
@@ -299,7 +299,8 @@ module.exports = function(slack_app) {
         console.log()
         
         var values = body.view.state.values;
-        console.log(values);
+        console.log(values.grades_main.grades_select.selected_option);
+        
         
         
 //        for (var i = 0; i < body.view.blocks.length; i++) {            
