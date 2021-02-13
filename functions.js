@@ -95,7 +95,7 @@ exports.getDeadlines = function(selectedModule) {
                     var deadlineDate = new Date(mappings[i].deadlines[j].date);
                     if (date <= deadlineDate)
                     {
-                        deadlines = (mappings[i].deadlines[j].task + deadlineDate);
+                        deadlines = (mappings[i].deadlines[j].task + mappings[i].deadlines[j].date);
                         break;
                     }
 
@@ -110,11 +110,11 @@ exports.getDeadlines = function(selectedModule) {
         }
     }
     else {
-        var deadlinesRes = "No deadlines";
+        var deadlinesRes = "";
         if (getCurrentWeek(true) != "The school term is over") {
             for (var i = 0; i < mappings.length; ++i) {
+                var dealinesPerModule = "";
                 for (var j = 0; j < mappings[i].deadlines.length; ++j) {
-                    var dealinesPerModule = "";
                     dealinesPerModule = dealinesPerModule + mappings[i].deadlines[j].task + mappings[i].deadlines[j].date + "\r";
             }
             
@@ -124,7 +124,7 @@ exports.getDeadlines = function(selectedModule) {
             return deadlinesRes;
         }
         
-        return deadlinesRes;
+        return "No deadlines";
     }
     
 }
