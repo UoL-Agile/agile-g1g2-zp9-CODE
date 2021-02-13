@@ -296,7 +296,7 @@ module.exports = function(slack_app) {
         // Acknowledge action request
         await ack();
                 
-        console.log(body.view);
+        console.log(body.view.blocks);
         
         var selectedModule = body.view.state.values.grades_main.grades_select.selected_option.text.text;
         console.log(selectedModule);
