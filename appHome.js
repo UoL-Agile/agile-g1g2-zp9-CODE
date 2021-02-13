@@ -158,6 +158,14 @@ module.exports = function(slack_app) {
                                             "emoji": true
                                         },
                                         "value": "value-3"
+                                    },
+                                    {
+                                        "text": {
+                                            "type": "plain_text",
+                                            "text": "All modules",
+                                            "emoji": true
+                                        },
+                                        "value": "value-4"
                                     }
                                 ],
                                 "action_id": "grades_select"
@@ -249,27 +257,48 @@ module.exports = function(slack_app) {
         var selectedModule = body.view.state.values.grades_main.grades_select.selected_option.text.text;
         console.log(selectedModule);
         
-        
-        
-        for (var i = 0; i < body.view.blocks.length; i++) { 
-            if (body.view.blocks[i].block_id == "grades_main") {
-                if(body.view.blocks[i+1].block_id != "grades_result") {
-                    var divider = body.view.blocks[i+1];
-                    body.view.blocks.splice(i+1);
-                    body.view.blocks.push({"type": "section",
-                                            "block_id": "grades_result",
-                                            "text": {
-                                                "type": "mrkdwn",
-                                                "text": "Your grade for: \r" + selectedModule + " ---- " + fn.getMyGrades(selectedModule)
-                                            }});
-                    body.view.blocks.push(divider);
-                }
-                else {
-                    var textRes = body.view.blocks[i+1].text.text;
-                    body.view.blocks[i+1].text.text = textRes + "\r" + selectedModule + " ---- " + fn.getMyGrades(selectedModule);
-                }
-            }           
-        }        
+        if(selectedModule != "All modules") {
+            for (var i = 0; i < body.view.blocks.length; i++) { 
+                if (body.view.blocks[i].block_id == "grades_main") {
+                    if(body.view.blocks[i+1].block_id != "grades_result") {
+                        var divider = body.view.blocks[i+1];
+                        body.view.blocks.splice(i+1);
+                        body.view.blocks.push({"type": "section",
+                                                "block_id": "grades_result",
+                                                "text": {
+                                                    "type": "mrkdwn",
+                                                    "text": "Your grade for: \r" + selectedModule + " ---- " + fn.getMyGrades(selectedModule)
+                                                }});
+                        body.view.blocks.push(divider);
+                    }
+                    else {
+                        var textRes = body.view.blocks[i+1].text.text;
+                        body.view.blocks[i+1].text.text = textRes + "\r" + selectedModule + " ---- " + fn.getMyGrades(selectedModule);
+                    }
+                }           
+            }
+        }
+        else {
+            for (var i = 0; i < body.view.blocks.length; i++) { 
+                if (body.view.blocks[i].block_id == "grades_main") {
+                    if(body.view.blocks[i+1].block_id != "grades_result") {
+                        var divider = body.view.blocks[i+1];
+                        body.view.blocks.splice(i+1);
+                        body.view.blocks.push({"type": "section",
+                                                "block_id": "grades_result",
+                                                "text": {
+                                                    "type": "mrkdwn",
+                                                    "text": "Your grade for: \r" + fn.getMyGrades("slashCommand")
+                                                }});
+                        body.view.blocks.push(divider);
+                    }
+                    else {
+                        var textRes = body.view.blocks[i+1].text.text;
+                        body.view.blocks[i+1].text.text = textRes + "\r" + fn.getMyGrades("slashCommand");
+                    }
+                }           
+            }
+        }
         
         try {
             // Call views.update with the built-in client
