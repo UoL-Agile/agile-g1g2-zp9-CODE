@@ -111,7 +111,7 @@ exports.getDeadlines = function(selectedModule) {
     }
     else {
         var deadlinesRes = "No deadlines";
-        if (getCurrentWeek(true) == "The school term is over") {
+        if (getCurrentWeek(true) != "The school term is over") {
             for (var i = 0; i < mappings.length; ++i) {
                 for (var j = 0; j < mappings[i].deadlines.length; ++j) {
                     var dealinesPerModule = "";

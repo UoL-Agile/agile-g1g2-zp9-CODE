@@ -242,15 +242,22 @@ module.exports = function(slack_app) {
             for (var i = 0; i < body.view.blocks.length; i++) { 
                 if (body.view.blocks[i].block_id == "deadlines_main") {
                     if(body.view.blocks[i+1].block_id != "deadlines_result") {
-                        var divider = body.view.blocks[i+1];
-                        body.view.blocks.splice(i+1, 1);
+                        var divider = [];
+                        for (var j = i+1; j < body.view.blocks.length; j++) {
+                            divider.push(body.view.blocks[j]);
+                        }
+                        
+                        body.view.blocks.splice(i+1);
                         body.view.blocks.push({"type": "section",
                                                 "block_id": "deadlines_result",
                                                 "text": {
                                                     "type": "mrkdwn",
                                                     "text": "Deadlines for " + selectedModule + ": \r" + fn.getDeadlines(selectedModule)
                                                 }});
-                        body.view.blocks.push(divider);
+                        for (var j = 0; j < divider.length; j++) {
+                            body.view.blocks.push(divider[j]);
+                        }
+                        
                     }
                     else {
                         var textRes = body.view.blocks[i+1].text.text;
@@ -263,15 +270,22 @@ module.exports = function(slack_app) {
             for (var i = 0; i < body.view.blocks.length; i++) { 
                 if (body.view.blocks[i].block_id == "deadlines_main") {
                     if(body.view.blocks[i+1].block_id != "deadlines_result") {
-                        var divider = body.view.blocks[i+1];
-                        body.view.blocks.splice(i+1, 1);
+                        var divider = [];
+                        for (var j = i+1; j < body.view.blocks.length; j++) {
+                            divider.push(body.view.blocks[j]);
+                        }
+                        
+                        body.view.blocks.splice(i+1);
                         body.view.blocks.push({"type": "section",
                                                 "block_id": "deadlines_result",
                                                 "text": {
                                                     "type": "mrkdwn",
                                                     "text": "Your deadlines for all modules: \r" + fn.getDeadlines("slashCommand")
                                                 }});
-                        body.view.blocks.push(divider);
+                        
+                        for (var j = 0; j < divider.length; j++) {
+                            body.view.blocks.push(divider[j]);
+                        }
                     }
                     else {
                         var textRes = body.view.blocks[i+1].text.text;
