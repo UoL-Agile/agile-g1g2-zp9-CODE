@@ -99,7 +99,7 @@ module.exports = function(slack_app) {
                 "type": "section",
                 "text": {
                     "type": "plain_text",
-                    "text": "Module grades :bar_chart: : xxx",
+                    "text": "Module grades :bar_chart: : \r" + fn.getMyGrades("slashCommand"),
                     "emoji": true
                 }
             }, ]

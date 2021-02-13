@@ -202,7 +202,7 @@ module.exports = function(slack_app) {
             });
         }
         catch (error) {
-            console.log(error.data.response_metadata);
+            console.log(error);
         }    
     });
   
@@ -235,7 +235,7 @@ module.exports = function(slack_app) {
             });
         }
         catch (error) {
-            console.log(error.data.response_metadata);
+            console.log(error);
         }
     
     });
@@ -260,13 +260,13 @@ module.exports = function(slack_app) {
                                             "block_id": "grades_result",
                                             "text": {
                                                 "type": "mrkdwn",
-                                                "text": "Your grade for: \r" + selectedModule + " ---- 89"
+                                                "text": "Your grade for: \r" + selectedModule + " ---- " + fn.getMyGrades(selectedModule)
                                             }});
                     body.view.blocks.push(divider);
                 }
                 else {
                     var textRes = body.view.blocks[i+1].text.text;
-                    body.view.blocks[i+1].text.text = textRes + "\r" + selectedModule + " ---- 89";
+                    body.view.blocks[i+1].text.text = textRes + "\r" + selectedModule + " ---- " + fn.getMyGrades(selectedModule);
                 }
             }           
         }        
@@ -286,10 +286,9 @@ module.exports = function(slack_app) {
                     blocks: body.view.blocks
                 }
             });
-            console.log(result);
         }
         catch (error) {
-            console.log(error.data.response_metadata);
+            console.log(error);
         }
     });
     

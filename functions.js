@@ -71,9 +71,30 @@ exports.myWeekInfo = function() {
 }
 
 
-exports.displayMyModuleGrades = function() {
-    var myGrades = ['72%', '34%', '56%', '89%', '90%', '72%']
-    return JSON.stringify(myGrades);
+exports.getMyGrades = function(selectedModule) {
+    // Maybe in the future we will get this data from DB
+    var myGrades = [
+        {module: "CM1035 - ADS1", grade: '72%'},
+        {module: "CM1015 - CM", grade: '34%'},
+        {module: "CM1020 - DM", grade: '56%'},
+        {module: "CM1025 - FCS", grade: '89%'}
+    ];
+    
+    if (selectedModule != "slahCommand") {
+        for (var i = 0; i < myGrades.length; i++) {
+            if(selectedModule == myGrades[i].module) {
+                return myGrades[i].grade;
+            }
+        }
+    }
+    else {
+        var gradesRes = "";
+        for (var i = 0; i < myGrades.length; i++) {
+            gradesRes = gradesRes + myGrades[i].module + " --- " + myGrades[i].grade + "\r";
+        }
+        return gradesRes;
+    }
+    
 }
 
 exports.displayMyModuleDeadlines = function() {
