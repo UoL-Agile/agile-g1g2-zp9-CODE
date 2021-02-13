@@ -193,21 +193,21 @@ module.exports = function(slack_app) {
         await ack();
                 
         for (var i = 0; i < body.view.blocks.length; i++) {            
-            var keys1 = Object.keys(body.view.blocks[i]);
-            console.log("1 keys: " + keys1);
-            for (var j = 0; j < keys1.length; j++) {
-                if(keys1[j] == "text") {
-                    var keys2 = Object.keys(body.view.blocks[i].text);
-                    console.log("2 keys: " + keys2);
-                    for (var q = 0; q < keys2.length; q++) {
-                        if(keys2[q] == "verbatim") {
-                            console.log(body.view.blocks[i].text);
-                            delete body.view.blocks[i].text.verbatim;
-                            console.log(body.view.blocks[i].text);
-                        }
-                    }
-                }
-            }
+//            var keys1 = Object.keys(body.view.blocks[i]);
+//            console.log("1 keys: " + keys1);
+//            for (var j = 0; j < keys1.length; j++) {
+//                if(keys1[j] == "text") {
+//                    var keys2 = Object.keys(body.view.blocks[i].text);
+//                    console.log("2 keys: " + keys2);
+//                    for (var q = 0; q < keys2.length; q++) {
+//                        if(keys2[q] == "verbatim") {
+//                            console.log(body.view.blocks[i].text);
+//                            delete body.view.blocks[i].text.verbatim;
+//                            console.log(body.view.blocks[i].text);
+//                        }
+//                    }
+//                }
+//            }
             
             if (body.view.blocks[i].block_id == "deadlines-main") {
                 delete body.view.blocks[i].accessory;
@@ -242,21 +242,21 @@ module.exports = function(slack_app) {
         await ack();
                 
         for (var i = 0; i < body.view.blocks.length; i++) {            
-            var keys1 = Object.keys(body.view.blocks[i]);
-            console.log("1 keys: " + keys1);
-            for (var j = 0; j < keys1.length; j++) {
-                if(keys1[j] == "text") {
-                    var keys2 = Object.keys(body.view.blocks[i].text);
-                    console.log("2 keys: " + keys2);
-                    for (var q = 0; q < keys2.length; q++) {
-                        if(keys2[q] == "verbatim") {
-                            console.log(body.view.blocks[i].text);
-                            delete body.view.blocks[i].text.verbatim;
-                            console.log(body.view.blocks[i].text);
-                        }
-                    }
-                }
-            }
+//            var keys1 = Object.keys(body.view.blocks[i]);
+//            console.log("1 keys: " + keys1);
+//            for (var j = 0; j < keys1.length; j++) {
+//                if(keys1[j] == "text") {
+//                    var keys2 = Object.keys(body.view.blocks[i].text);
+//                    console.log("2 keys: " + keys2);
+//                    for (var q = 0; q < keys2.length; q++) {
+//                        if(keys2[q] == "verbatim") {
+//                            console.log(body.view.blocks[i].text);
+//                            delete body.view.blocks[i].text.verbatim;
+//                            console.log(body.view.blocks[i].text);
+//                        }
+//                    }
+//                }
+//            }
             
             if(body.view.blocks[i].block_id == "week-main") {
                 delete body.view.blocks[i].accessory;
