@@ -32,6 +32,37 @@ exports.getCurrentWeek = function(num) {
     };
 }
 
+//For inside using
+function getCurrentWeek(num) {
+    //The date of the first week in format
+    //{YYYY-MM-DD}T{HH:MM:SS.MsMsMs}Z in GMT +00
+    var firstWeek = new Date("2020-10-12T00:00:00.000Z");
+    //current date of the client
+    var currDate = new Date();
+    //current week
+    var currWeek = Math.ceil(((currDate - firstWeek) / 86400000) / 7);
+
+
+    if (num == true) {
+        if (currWeek > 22) {
+            return "The school term is over";
+        }
+        else {
+            return String(currWeek);
+        };
+    }
+    else {
+        if (currWeek > 22) {
+            return "The school term is over";
+        }
+        else {
+            var str = "Today is " + String(currWeek) + " week!";
+
+            return str + "\r" + myWeekInfo();
+        };  
+    };
+}
+
 // Gets the next approaching deadline.
 exports.getDeadlines = function(selectedModule) {
 	var mappings = [
@@ -80,7 +111,7 @@ exports.getDeadlines = function(selectedModule) {
     }
     else {
         var deadlinesRes = "No deadlines";
-        if (fn.getCurrentWeek(true) == "The school term is over") {
+        if (getCurrentWeek(true) == "The school term is over") {
             for (var i = 0; i < mappings.length; ++i) {
                 for (var j = 0; j < mappings[i].deadlines.length; ++j) {
                     var dealinesPerModule = "";

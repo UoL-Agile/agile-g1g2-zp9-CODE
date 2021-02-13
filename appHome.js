@@ -243,7 +243,7 @@ module.exports = function(slack_app) {
                 if (body.view.blocks[i].block_id == "deadlines_main") {
                     if(body.view.blocks[i+1].block_id != "deadlines_result") {
                         var divider = body.view.blocks[i+1];
-                        body.view.blocks.splice(i+1);
+                        body.view.blocks.splice(i+1, 1);
                         body.view.blocks.push({"type": "section",
                                                 "block_id": "deadlines_result",
                                                 "text": {
@@ -259,27 +259,27 @@ module.exports = function(slack_app) {
                 }           
             }
         }
-//        else {
-//            for (var i = 0; i < body.view.blocks.length; i++) { 
-//                if (body.view.blocks[i].block_id == "grades_main") {
-//                    if(body.view.blocks[i+1].block_id != "grades_result") {
-//                        var divider = body.view.blocks[i+1];
-//                        body.view.blocks.splice(i+1);
-//                        body.view.blocks.push({"type": "section",
-//                                                "block_id": "grades_result",
-//                                                "text": {
-//                                                    "type": "mrkdwn",
-//                                                    "text": "Your grade for: \r" + fn.getMyGrades("slashCommand")
-//                                                }});
-//                        body.view.blocks.push(divider);
-//                    }
-//                    else {
-//                        var textRes = body.view.blocks[i+1].text.text;
-//                        body.view.blocks[i+1].text.text = textRes + "\r" + fn.getMyGrades("slashCommand");
-//                    }
-//                }           
-//            }
-//        }
+        else {
+            for (var i = 0; i < body.view.blocks.length; i++) { 
+                if (body.view.blocks[i].block_id == "deadlines_main") {
+                    if(body.view.blocks[i+1].block_id != "deadlines_result") {
+                        var divider = body.view.blocks[i+1];
+                        body.view.blocks.splice(i+1, 1);
+                        body.view.blocks.push({"type": "section",
+                                                "block_id": "deadlines_result",
+                                                "text": {
+                                                    "type": "mrkdwn",
+                                                    "text": "Your deadlines for all modules: \r" + fn.getDeadlines("slashCommand")
+                                                }});
+                        body.view.blocks.push(divider);
+                    }
+                    else {
+                        var textRes = body.view.blocks[i+1].text.text;
+                        body.view.blocks[i+1].text.text = textRes + "\r" + "Your deadlines for all modules" + "\r" + fn.getDeadlines("slashCommand");
+                    }
+                }           
+            }
+        }
         
         try {
             // Call views.update with the built-in client
