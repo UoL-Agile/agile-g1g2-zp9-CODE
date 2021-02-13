@@ -103,22 +103,10 @@ module.exports = function(slack_app) {
                                         },
                                         "value": "value-4"
                                     }
-                                ]
+                                ],
+                                "action_id": "deadlines_select"
                             }
                             
-                        },
-                        {
-                            "type": "actions",
-                            "elements": [{
-                                "type": "button",
-                                "text": {
-                                    "type": "plain_text",
-                                    "text": ":bar_chart:  Display deadline",
-                                    "emoji": true
-                                },
-                                "value": "click_me_123",
-                                "action_id": "deadlines_button"
-                            }]
                         },
                         {
                             "type": "divider"
@@ -235,17 +223,63 @@ module.exports = function(slack_app) {
         }
     });
     
-    slack_app.action('deadlines_button', async ({ body, ack, client }) => {
+    slack_app.action('deadlines_select', async ({ body, ack, client }) => {
      // Acknowledge action request
         await ack();
         
-        console.log(body.view.state);
-        for (var i = 0; i < body.view.blocks.length; i++) {            
-            if (body.view.blocks[i].block_id == "deadlines-main") {
-                delete body.view.blocks[i].accessory;
-                body.view.blocks[i].text.text = "Next Deadline: " + fn.getDeadlines();
-            }           
-        }        
+//        console.log(body.view.state);
+//        for (var i = 0; i < body.view.blocks.length; i++) {            
+//            if (body.view.blocks[i].block_id == "deadlines-main") {
+//                delete body.view.blocks[i].accessory;
+//                body.view.blocks[i].text.text = "Next Deadline: " + fn.getDeadlines();
+//            }           
+//        }  
+        
+        var selectedModule = body.view.state.values.deadlines_main.deadlines_select.selected_option.text.text;
+        console.log(selectedModule);
+        
+        if(selectedModule != "All modules") {
+            for (var i = 0; i < body.view.blocks.length; i++) { 
+                if (body.view.blocks[i].block_id == "deadlines_main") {
+                    if(body.view.blocks[i+1].block_id != "deadlines_result") {
+                        var divider = body.view.blocks[i+1];
+                        body.view.blocks.splice(i+1);
+                        body.view.blocks.push({"type": "section",
+                                                "block_id": "deadlines_result",
+                                                "text": {
+                                                    "type": "mrkdwn",
+                                                    "text": "Deadlines for " + selectedModule + ": \r" + fn.getDeadlines()
+                                                }});
+                        body.view.blocks.push(divider);
+                    }
+                    else {
+                        var textRes = body.view.blocks[i+1].text.text;
+                        body.view.blocks[i+1].text.text = textRes + "\r" + selectedModule + ": \r" + fn.getDeadlines();
+                    }
+                }           
+            }
+        }
+//        else {
+//            for (var i = 0; i < body.view.blocks.length; i++) { 
+//                if (body.view.blocks[i].block_id == "grades_main") {
+//                    if(body.view.blocks[i+1].block_id != "grades_result") {
+//                        var divider = body.view.blocks[i+1];
+//                        body.view.blocks.splice(i+1);
+//                        body.view.blocks.push({"type": "section",
+//                                                "block_id": "grades_result",
+//                                                "text": {
+//                                                    "type": "mrkdwn",
+//                                                    "text": "Your grade for: \r" + fn.getMyGrades("slashCommand")
+//                                                }});
+//                        body.view.blocks.push(divider);
+//                    }
+//                    else {
+//                        var textRes = body.view.blocks[i+1].text.text;
+//                        body.view.blocks[i+1].text.text = textRes + "\r" + fn.getMyGrades("slashCommand");
+//                    }
+//                }           
+//            }
+//        }
         
         try {
             // Call views.update with the built-in client
