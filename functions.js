@@ -68,8 +68,9 @@ exports.getDeadlines = function(selectedModule) {
                         break;
                     }
 
-                    return String(deadlines);
                 }
+                
+                return String(deadlines);
             }
         }
         
