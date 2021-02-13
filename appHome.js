@@ -303,33 +303,40 @@ module.exports = function(slack_app) {
         
         
         
-//        for (var i = 0; i < body.view.blocks.length; i++) {            
-//            if (body.view.blocks[i].block_id == "grades_main") {
-//                delete body.view.blocks[i].accessory;
-//                body.view.blocks[i].text.text = "Next Deadline: " + fn.getDeadlines();
-//            }           
-//        }        
-//        
-//        try {
-//            // Call views.update with the built-in client
-//            const result = await client.views.update({
-//                // Pass the view_id
-//                view_id: body.view.id,
-//                // Pass the current hash to avoid race conditions
-//                hash: body.view.hash,
-//                // View payload with updated blocks
-//                view: {
-//                    type: 'home',
-//                    // View identifier
-//                    callback_id: 'view_123',
-//                    blocks: body.view.blocks
-//                }
-//            });
-//            console.log(result);
-//        }
-//        catch (error) {
-//            console.log(error.data.response_metadata);
-//        }
+        for (var i = 0; i < body.view.blocks.length; i++) {            
+            if (body.view.blocks[i].block_id == "grades_main") {
+                var divider = body.view.blocks[i+1];
+                body.view.blocks.splice(i+1);
+                body.view.blocks.push({"type": "section",
+                                        "block_id": "grades_result",
+                                        "text": {
+                                            "type": "mrkdwn",
+                                            "text": "Your grade for " + selectedModule + ": 89"
+                                        }});
+                body.view.blocks.push(divider);
+            }           
+        }        
+        
+        try {
+            // Call views.update with the built-in client
+            const result = await client.views.update({
+                // Pass the view_id
+                view_id: body.view.id,
+                // Pass the current hash to avoid race conditions
+                hash: body.view.hash,
+                // View payload with updated blocks
+                view: {
+                    type: 'home',
+                    // View identifier
+                    callback_id: 'view_123',
+                    blocks: body.view.blocks
+                }
+            });
+            console.log(result);
+        }
+        catch (error) {
+            console.log(error.data.response_metadata);
+        }
     });
     
     function createNiceDateForVersion(thisDate) {
