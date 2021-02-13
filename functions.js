@@ -57,7 +57,7 @@ exports.getDeadlines = function() {
 // function will get info from DB for every user
 // and return it back.
 exports.myWeekInfo = function() {
-    var moduls = ["Modle 1", "Modle 2", "Modle 3", "Modle 4"];
+    var moduls = ["Module 1", "Module 2", "Module 3", "Module 4"];
     var modulsWeeks = ["week 1", "week 4", "week 10", "week 5"];
     var toRead = ["nothing", "Book 1, p. 123", "nothing", "nothing"];
 
@@ -86,3 +86,8 @@ exports.displayMyModuleProgress = function() {
     return JSON.stringify(myProgress)
 }
 
+exports.getMyModuls = function(module_num) {
+    // Maybe in the future we will get this data from DB
+    var modules = ["CM1035 - ADS1", "CM1015 - CM", "CM1020 - DM", "CM1025 - FCS"];
+    return modules[module_num];
+}

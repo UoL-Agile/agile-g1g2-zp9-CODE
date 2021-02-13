@@ -106,6 +106,7 @@ module.exports = function(slack_app) {
                         /* Grades section */
                         {
                             "type": "header",
+                            "block_id" : "grades-header",
                             "text": {
                                 "type": "plain_text",
                                 "text": "Grades",
@@ -114,6 +115,7 @@ module.exports = function(slack_app) {
                         },
                         {
                             "type": "section",
+                            "block_id": "grades-main",
                             "text": {
                                 "type": "mrkdwn",
                                 "text": "Select a module from the list:"
@@ -128,7 +130,7 @@ module.exports = function(slack_app) {
                                 "options": [{
                                         "text": {
                                             "type": "plain_text",
-                                            "text": "*Module 1*",
+                                            "text": fn.getMyModuls(0),
                                             "emoji": true
                                         },
                                         "value": "value-0"
@@ -136,7 +138,7 @@ module.exports = function(slack_app) {
                                     {
                                         "text": {
                                             "type": "plain_text",
-                                            "text": "*Module 2*",
+                                            "text": fn.getMyModuls(1),
                                             "emoji": true
                                         },
                                         "value": "value-1"
@@ -144,10 +146,18 @@ module.exports = function(slack_app) {
                                     {
                                         "text": {
                                             "type": "plain_text",
-                                            "text": "*Module 3*",
+                                            "text": fn.getMyModuls(2),
                                             "emoji": true
                                         },
                                         "value": "value-2"
+                                    },
+                                    {
+                                        "text": {
+                                            "type": "plain_text",
+                                            "text": fn.getMyModuls(3),
+                                            "emoji": true
+                                        },
+                                        "value": "value-3"
                                     }
                                 ],
                                 "action_id": "static_select-action"
@@ -155,6 +165,7 @@ module.exports = function(slack_app) {
                         },
                         {
                             "type": "actions",
+                            "block_id": "grades-button",
                             "elements": [{
                                 "type": "button",
                                 "text": {
@@ -281,10 +292,43 @@ module.exports = function(slack_app) {
     
     });
   
-    slack_app.action('grades_button', async ({ body, ack, say }) => {
-     // Acknowledge action request
-     await ack();
-     await say('Grades button clicked 👍');
+    slack_app.action('grades_button', async ({ body, ack, client }) => {
+        // Acknowledge action request
+        await ack();
+        
+        console.log()
+        
+        var values = body.view.state.values;
+        console.log(values);
+        
+        
+//        for (var i = 0; i < body.view.blocks.length; i++) {            
+//            if (body.view.blocks[i].block_id == "deadlines-main") {
+//                delete body.view.blocks[i].accessory;
+//                body.view.blocks[i].text.text = "Next Deadline: " + fn.getDeadlines();
+//            }           
+//        }        
+//        
+//        try {
+//            // Call views.update with the built-in client
+//            const result = await client.views.update({
+//                // Pass the view_id
+//                view_id: body.view.id,
+//                // Pass the current hash to avoid race conditions
+//                hash: body.view.hash,
+//                // View payload with updated blocks
+//                view: {
+//                    type: 'home',
+//                    // View identifier
+//                    callback_id: 'view_123',
+//                    blocks: body.view.blocks
+//                }
+//            });
+//            console.log(result);
+//        }
+//        catch (error) {
+//            console.log(error.data.response_metadata);
+//        }
     });
     
     function createNiceDateForVersion(thisDate) {
