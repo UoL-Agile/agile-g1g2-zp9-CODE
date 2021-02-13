@@ -248,13 +248,13 @@ module.exports = function(slack_app) {
                                                 "block_id": "deadlines_result",
                                                 "text": {
                                                     "type": "mrkdwn",
-                                                    "text": "Deadlines for " + selectedModule + ": \r" + fn.getDeadlines()
+                                                    "text": "Deadlines for " + selectedModule + ": \r" + fn.getDeadlines(selectedModule)
                                                 }});
                         body.view.blocks.push(divider);
                     }
                     else {
                         var textRes = body.view.blocks[i+1].text.text;
-                        body.view.blocks[i+1].text.text = textRes + "\r" + selectedModule + ": \r" + fn.getDeadlines();
+                        body.view.blocks[i+1].text.text = textRes + "\r" + selectedModule + ": \r" + fn.getDeadlines(selectedModule);
                     }
                 }           
             }

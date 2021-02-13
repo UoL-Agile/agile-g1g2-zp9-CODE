@@ -33,29 +33,68 @@ exports.getCurrentWeek = function(num) {
 }
 
 // Gets the next approaching deadline.
-exports.getDeadlines = function() {
+exports.getDeadlines = function(selectedModule) {
 	var mappings = [
-		{ deadline: 0, task: "Checkpoint 5 --> ", date: "2021-2-8"},
-		{ deadline: 1, task: "Checkpoint 6 --> ", date: "2021-2-22"},
-		{ deadline: 2, task: "Final Project Submission --> ", date: "2021-3-15"},
+        {module: "CM1035 - ADS1", deadlines:
+                    [{ deadline: 0, task: "Checkpoint 5 --> ", date: "2021-2-8"},
+                     { deadline: 1, task: "Checkpoint 6 --> ", date: "2021-2-22"},
+                     { deadline: 2, task: "Final Project Submission --> ", date: "2021-3-15"}]},
+        {module: "CM1015 - CM", deadlines:
+                    [{ deadline: 0, task: "Checkpoint 5 --> ", date: "2021-2-8"},
+                     { deadline: 1, task: "Checkpoint 6 --> ", date: "2021-2-22"},
+                     { deadline: 2, task: "Final Project Submission --> ", date: "2021-3-15"}]},
+        {module: "CM1020 - DM", deadlines:
+                    [{ deadline: 0, task: "Checkpoint 5 --> ", date: "2021-2-8"},
+                     { deadline: 1, task: "Checkpoint 6 --> ", date: "2021-2-22"},
+                     { deadline: 2, task: "Final Project Submission --> ", date: "2021-3-15"}]},
+        {module: "CM1025 - FCS", deadlines:
+                    [{ deadline: 0, task: "Checkpoint 5 --> ", date: "2021-2-8"},
+                     { deadline: 1, task: "Checkpoint 6 --> ", date: "2021-2-22"},
+                     { deadline: 2, task: "Final Project Submission --> ", date: "2021-3-15"}]},
 	];
 
-	var deadlines = "No deadlines";
-	var date = new Date(); 
-	for (var i = 0; i < mappings.length; ++i)
-	{
-		var deadlineDate = new Date(mappings[i].date);
-		if (date <= deadlineDate)
-		{
-			deadlines = (mappings[i].task + deadlineDate);
-			break;
-		}
-	}
     
-    if (deadlines == "No deadlines") {
-        return deadlines;
+    if(selectedModule != "slashCommand") {
+        var deadlines = "No deadlines";
+        var date = new Date();
+        for (var i = 0; i < mappings.length; ++i) {
+            if (mappings[i].module == selectedModule) {
+               for (var j = 0; j < mappings[i].deadlines.length; ++j){
+            
+                    var deadlineDate = new Date(mappings[i].deadlines[j].date);
+                    if (date <= deadlineDate)
+                    {
+                        deadlines = (mappings[i].deadlines[j].task + deadlineDate);
+                        break;
+                    }
+
+                    return String(deadlines);
+                }
+            }
+        }
+        
+        if (deadlines == "No deadlines") {
+            return deadlines;
+        }
     }
-	return String(deadlines);
+    else {
+        var deadlinesRes = "No deadlines";
+        if (fn.getCurrentWeek(true) == "The school term is over") {
+            for (var i = 0; i < mappings.length; ++i) {
+                for (var j = 0; j < mappings[i].deadlines.length; ++j) {
+                    var dealinesPerModule = "";
+                    dealinesPerModule = dealinesPerModule + mappings[i].deadlines[j].task + mappings[i].deadlines[j].date + "\r";
+            }
+            
+                deadlinesRes = deadlinesRes + mappings[i].module + "\r" + dealinesPerModule;
+            }
+            
+            return deadlinesRes;
+        }
+        
+        return deadlinesRes;
+    }
+    
 }
 
 // function will get info from DB for every user
