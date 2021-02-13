@@ -118,7 +118,7 @@ module.exports = function(slack_app) {
                             "block_id": "grades-main",
                             "text": {
                                 "type": "mrkdwn",
-                                "text": "Select a module from the list:"
+                                "text": "Select a module from the list for showing your grades:"
                             },
                             "accessory": {
                                 "type": "static_select",
@@ -160,23 +160,23 @@ module.exports = function(slack_app) {
                                         "value": "value-3"
                                     }
                                 ],
-                                "action_id": "static_select-action"
+                                "action_id": "grades_select"
                             }
                         },
-                        {
-                            "type": "actions",
-                            "block_id": "grades-button",
-                            "elements": [{
-                                "type": "button",
-                                "text": {
-                                    "type": "plain_text",
-                                    "text": ":bar_chart:  Display grades",
-                                    "emoji": true
-                                },
-                                "value": "click_me_123",
-                                "action_id": "grades_button"
-                            }]
-                        },
+//                        {
+//                            "type": "actions",
+//                            "block_id": "grades-button",
+//                            "elements": [{
+//                                "type": "button",
+//                                "text": {
+//                                    "type": "plain_text",
+//                                    "text": ":bar_chart:  Display grades",
+//                                    "emoji": true
+//                                },
+//                                "value": "click_me_123",
+//                                "action_id": "grades_button"
+//                            }]
+//                        },
                         {
                             "type": "divider"
                         }
@@ -292,7 +292,7 @@ module.exports = function(slack_app) {
     
     });
   
-    slack_app.action('grades_button', async ({ body, ack, client }) => {
+    slack_app.action('grades_select', async ({ body, ack, client }) => {
         // Acknowledge action request
         await ack();
         
