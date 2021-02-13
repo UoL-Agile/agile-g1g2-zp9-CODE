@@ -163,20 +163,6 @@ module.exports = function(slack_app) {
                                 "action_id": "grades_select"
                             }
                         },
-//                        {
-//                            "type": "actions",
-//                            "block_id": "grades-button",
-//                            "elements": [{
-//                                "type": "button",
-//                                "text": {
-//                                    "type": "plain_text",
-//                                    "text": ":bar_chart:  Display grades",
-//                                    "emoji": true
-//                                },
-//                                "value": "click_me_123",
-//                                "action_id": "grades_button"
-//                            }]
-//                        },
                         {
                             "type": "divider"
                         }
@@ -193,22 +179,6 @@ module.exports = function(slack_app) {
         await ack();
                 
         for (var i = 0; i < body.view.blocks.length; i++) {            
-//            var keys1 = Object.keys(body.view.blocks[i]);
-//            console.log("1 keys: " + keys1);
-//            for (var j = 0; j < keys1.length; j++) {
-//                if(keys1[j] == "text") {
-//                    var keys2 = Object.keys(body.view.blocks[i].text);
-//                    console.log("2 keys: " + keys2);
-//                    for (var q = 0; q < keys2.length; q++) {
-//                        if(keys2[q] == "verbatim") {
-//                            console.log(body.view.blocks[i].text);
-//                            delete body.view.blocks[i].text.verbatim;
-//                            console.log(body.view.blocks[i].text);
-//                        }
-//                    }
-//                }
-//            }
-            
             if (body.view.blocks[i].block_id == "deadlines-main") {
                 delete body.view.blocks[i].accessory;
                 body.view.blocks[i].text.text = "Next Deadline: " + fn.getDeadlines();
@@ -230,7 +200,6 @@ module.exports = function(slack_app) {
                     blocks: body.view.blocks
                 }
             });
-            console.log(result);
         }
         catch (error) {
             console.log(error.data.response_metadata);
@@ -242,32 +211,12 @@ module.exports = function(slack_app) {
         await ack();
                 
         for (var i = 0; i < body.view.blocks.length; i++) {            
-//            var keys1 = Object.keys(body.view.blocks[i]);
-//            console.log("1 keys: " + keys1);
-//            for (var j = 0; j < keys1.length; j++) {
-//                if(keys1[j] == "text") {
-//                    var keys2 = Object.keys(body.view.blocks[i].text);
-//                    console.log("2 keys: " + keys2);
-//                    for (var q = 0; q < keys2.length; q++) {
-//                        if(keys2[q] == "verbatim") {
-//                            console.log(body.view.blocks[i].text);
-//                            delete body.view.blocks[i].text.verbatim;
-//                            console.log(body.view.blocks[i].text);
-//                        }
-//                    }
-//                }
-//            }
-            
             if(body.view.blocks[i].block_id == "week-main") {
                 delete body.view.blocks[i].accessory;
                 body.view.blocks[i].text.text = "Current week: " + fn.getCurrentWeek(true);
             }
             
         }
-        
-//        //can use for understanding which date the use chose
-//        console.log(body.view.state.values);
-        
         
         try {
             // Call views.update with the built-in client
@@ -284,7 +233,6 @@ module.exports = function(slack_app) {
                     blocks: body.view.blocks
                 }
             });
-            console.log(result);
         }
         catch (error) {
             console.log(error.data.response_metadata);
@@ -303,17 +251,23 @@ module.exports = function(slack_app) {
         
         
         
-        for (var i = 0; i < body.view.blocks.length; i++) {            
+        for (var i = 0; i < body.view.blocks.length; i++) { 
             if (body.view.blocks[i].block_id == "grades_main") {
-                var divider = body.view.blocks[i+1];
-                body.view.blocks.splice(i+1);
-                body.view.blocks.push({"type": "section",
-                                        "block_id": "grades_result",
-                                        "text": {
-                                            "type": "mrkdwn",
-                                            "text": "Your grade for " + selectedModule + ": 89"
-                                        }});
-                body.view.blocks.push(divider);
+                if(body.view.blocks[i+1].block_id != "grades_result") {
+                    var divider = body.view.blocks[i+1];
+                    body.view.blocks.splice(i+1);
+                    body.view.blocks.push({"type": "section",
+                                            "block_id": "grades_result",
+                                            "text": {
+                                                "type": "mrkdwn",
+                                                "text": "Your grade for: \r" + selectedModule + " ---- 89"
+                                            }});
+                    body.view.blocks.push(divider);
+                }
+                else {
+                    var textRes = body.view.blocks[i+1].text.text;
+                    body.view.blocks[i+1].text.text = textRes + "\r" + selectedModule + " ---- 89";
+                }
             }           
         }        
         
