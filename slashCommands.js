@@ -25,8 +25,7 @@ module.exports = function(slack_app) {
                     "type": "section",
                     "text": {
                         "type": "mrkdwn",
-                        "text": "Visit `<slack://app?team=${workspaceid}&id=${process.env.SLACK_APP_ID}|*Prototype Home tab*>` or type following commands to get common UOL FAQs",
-                        "emoji": true
+                        "text": "Visit `<slack://app?team=${workspaceid}&id=${process.env.SLACK_APP_ID}|*Prototype Home tab*>` or type following commands to get common UOL FAQs"
                     }
                 },
                 {
