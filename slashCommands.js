@@ -23,15 +23,7 @@ module.exports = function(slack_app) {
                     "type": "section",
                     "text": {
                         "type": "plain_text",
-                        "text": "Visit Prototype Home tab or type following commands to get common UOL FAQs",
-                        "emoji": true
-                    }
-                },
-                {
-                    "type": "section",
-                    "text": {
-                        "type": "plain_text",
-                        "text": "Following are the available commands:",
+                        "text": "Visit `<slack://app?team=${workspaceid}&id=${process.env.SLACK_APP_ID}|*Prototype Home tab*>` or type following commands to get common UOL FAQs",
                         "emoji": true
                     }
                 },
