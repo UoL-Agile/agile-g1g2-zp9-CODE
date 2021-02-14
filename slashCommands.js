@@ -25,7 +25,7 @@ module.exports = function(slack_app) {
                     "type": "section",
                     "text": {
                         "type": "mrkdwn",
-                        "text": "Visit" + `<slack://app?team=${workspaceid}&id=${process.env.SLACK_APP_ID}|*Prototype Home tab*>` +" or type following commands to get common UOL FAQs"
+                        "text": "Visit " + `<slack://app?team=${workspaceid}&id=${process.env.SLACK_APP_ID}|*Prototype Home tab*>` +" or type following commands to get common UOL FAQs"
                     }
                 },
                 {
@@ -87,15 +87,29 @@ module.exports = function(slack_app) {
     }) => {
         // Acknowledge command request
         await ack();
+        const grades = fn.getMyGrades("slashCommand").split("\r");
+        gradeText = ""
+        grades.forEach(element => {
+            gradeText += "• " + element + "\n";
+        });
+
         await respond({
             "blocks": [{
                 "type": "section",
                 "text": {
                     "type": "plain_text",
-                    "text": "Module grades :bar_chart: : \r" + fn.getMyGrades("slashCommand"),
+                    "text": "Module grades :bar_chart: : \r",
                     "emoji": true
                 }
-            }, ]
+            }, 
+            {
+                "type": "section",
+                "text": {
+                    "type": "mrkdwn",
+                    "text": gradeText
+                }
+            }
+        ]
         });
     });
 
