@@ -1,3 +1,5 @@
+const workspaceid = "TDT1N1BUG";
+
 module.exports = function(slack_app) {
     
     var fn = require("./functions.js");
@@ -22,7 +24,7 @@ module.exports = function(slack_app) {
                 {
                     "type": "section",
                     "text": {
-                        "type": "plain_text",
+                        "type": "mrkdwn",
                         "text": "Visit `<slack://app?team=${workspaceid}&id=${process.env.SLACK_APP_ID}|*Prototype Home tab*>` or type following commands to get common UOL FAQs",
                         "emoji": true
                     }
@@ -108,7 +110,7 @@ module.exports = function(slack_app) {
             // Acknowledge shortcut request
             await ack();
             // Call the views.open method using one of the built-in WebClients
-            const workspaceid = "TDT1N1BUG";
+            // const workspaceid = "TDT1N1BUG";
             const result = await client.views.open({
                 trigger_id: shortcut.trigger_id,
                 view: {
