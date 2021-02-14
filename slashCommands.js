@@ -52,7 +52,7 @@ module.exports = function(slack_app) {
                 "type": "section",
                 "text": {
                     "type": "plain_text",
-                    "text": "Current week :date: : " + fn.getCurrentWeek(true),
+                    "text": "Current week :date: : Week " + fn.getCurrentWeek(true),
                     "emoji": true
                 }
             }, ]
@@ -90,7 +90,9 @@ module.exports = function(slack_app) {
         const grades = fn.getMyGrades("slashCommand").split("\r");
         gradeText = ""
         grades.forEach(element => {
-            gradeText += "• " + element + "\n";
+            if(( element.trim() != "")){
+                gradeText += "• " + element + "\n";
+            }        
         });
 
         await respond({
