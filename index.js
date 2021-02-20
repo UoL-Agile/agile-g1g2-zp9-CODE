@@ -33,9 +33,8 @@ const slack_app = new App({
     developerMode: true // we want full details logged to the console for testings
 });
 
-// for express route
-//app = receiver.app;
 
+//Import main functions
 var fn = require("./functions.js");
 
 //============= Slack app event listener====
@@ -74,8 +73,6 @@ function makeaDBCallWithSQL(theSQL) {
 
 //===============PORT and SERVER =================
 var port = process.env.PORT || 3000; // need to get the port that Heroku gives us
-/*app.listen(port);
-console.log('index.js','listening on ' + port + '!');*/
 
 (async () => {
     // Start your app

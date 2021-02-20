@@ -1,7 +1,9 @@
 module.exports = function(slack_app) {
     
+    //import main functions
     var fn = require("./functions.js");
     
+    //Creating the main appearance of the home page and creating its template 
     slack_app.event('app_home_opened', async ({
         event,
         client,
@@ -223,43 +225,56 @@ module.exports = function(slack_app) {
         }
     });
     
+    
+//////////////////////////////////////////////////////////////////////
+//////////////////-- Home Page Listeners --///////////////////////////
+//////////////////////////////////////////////////////////////////////
+    
+    //Listener for the deadline selection menu
     slack_app.action('deadlines_select', async ({ body, ack, client }) => {
      // Acknowledge action request
         await ack();
         
-//        console.log(body.view.state);
-//        for (var i = 0; i < body.view.blocks.length; i++) {            
-//            if (body.view.blocks[i].block_id == "deadlines-main") {
-//                delete body.view.blocks[i].accessory;
-//                body.view.blocks[i].text.text = "Next Deadline: " + fn.getDeadlines();
-//            }           
-//        }  
-        
+        //Takes the user-selected module
         var selectedModule = body.view.state.values.deadlines_main.deadlines_select.selected_option.text.text;
-        console.log(selectedModule);
         
+        //Checks if all modules are selected
+        //This determines how the data for the return will be generated
         if(selectedModule != "All modules") {
+            
+            //Select the desired part of the "body"
+            //where to insert the resulting data
             for (var i = 0; i < body.view.blocks.length; i++) { 
                 if (body.view.blocks[i].block_id == "deadlines_main") {
+                    
+                    //Checks whether the module exists
+                    //in the "body" with the given ID
                     if(body.view.blocks[i+1].block_id != "deadlines_result") {
+                        
+                        //Saves data after the desired block
                         var divider = [];
                         for (var j = i+1; j < body.view.blocks.length; j++) {
                             divider.push(body.view.blocks[j]);
                         }
                         
+                        //Deletes data after the desired block
                         body.view.blocks.splice(i+1);
+                        
+                        //Inserts data after the selected block
                         body.view.blocks.push({"type": "section",
                                                 "block_id": "deadlines_result",
                                                 "text": {
                                                     "type": "mrkdwn",
                                                     "text": "Deadlines for " + selectedModule + ": \r" + fn.getDeadlines(selectedModule)
                                                 }});
+                        
+                        //Returns the previously deleted data
                         for (var j = 0; j < divider.length; j++) {
                             body.view.blocks.push(divider[j]);
                         }
                         
                     }
-                    else {
+                    else { //Inserts data into an existing block
                         var textRes = body.view.blocks[i+1].text.text;
                         body.view.blocks[i+1].text.text = textRes + "\r" + selectedModule + ": \r" + fn.getDeadlines(selectedModule);
                     }
@@ -267,15 +282,25 @@ module.exports = function(slack_app) {
             }
         }
         else {
+            //Select the desired part of the "body"
+            //where to insert the resulting data
             for (var i = 0; i < body.view.blocks.length; i++) { 
                 if (body.view.blocks[i].block_id == "deadlines_main") {
+                    
+                    //Checks whether the module exists
+                    //in the "body" with the given ID
                     if(body.view.blocks[i+1].block_id != "deadlines_result") {
+                        
+                        //Saves data after the desired block
                         var divider = [];
                         for (var j = i+1; j < body.view.blocks.length; j++) {
                             divider.push(body.view.blocks[j]);
                         }
                         
+                        //Deletes data after the desired block
                         body.view.blocks.splice(i+1);
+                        
+                        //Inserts data after the selected block
                         body.view.blocks.push({"type": "section",
                                                 "block_id": "deadlines_result",
                                                 "text": {
@@ -283,11 +308,13 @@ module.exports = function(slack_app) {
                                                     "text": "Your deadlines for all modules: \r" + fn.getDeadlines("slashCommand")
                                                 }});
                         
+                        //Returns the previously deleted data
                         for (var j = 0; j < divider.length; j++) {
                             body.view.blocks.push(divider[j]);
                         }
                     }
                     else {
+                        //Inserts data into an existing block
                         var textRes = body.view.blocks[i+1].text.text;
                         body.view.blocks[i+1].text.text = textRes + "\r" + "Your deadlines for all modules" + "\r" + fn.getDeadlines("slashCommand");
                     }
@@ -295,6 +322,7 @@ module.exports = function(slack_app) {
             }
         }
         
+        //Redrawing the main menu with the changes made
         try {
             // Call views.update with the built-in client
             const result = await client.views.update({
@@ -316,18 +344,26 @@ module.exports = function(slack_app) {
         }    
     });
   
+    //Listener for the week selection menu
     slack_app.action('week_button', async ({ body, ack, client }) => {
      // Acknowledge action request
         await ack();
-                
+        
+        //Select the desired part of the "body"
+        //where to insert the resulting data
         for (var i = 0; i < body.view.blocks.length; i++) {            
             if(body.view.blocks[i].block_id == "week-main") {
+                
+                //Deletes the button
                 delete body.view.blocks[i].accessory;
+                
+                //Inserts data about the week
                 body.view.blocks[i].text.text = "Current week: " + fn.getCurrentWeek(true);
             }
             
         }
         
+        //Redrawing the main menu with the changes made
         try {
             // Call views.update with the built-in client
             const result = await client.views.update({
@@ -350,28 +386,46 @@ module.exports = function(slack_app) {
     
     });
   
+    //Listener for the grades selection menu
     slack_app.action('grades_select', async ({ body, ack, client }) => {
         // Acknowledge action request
         await ack();
-                        
+        
+        //Takes the user-selected module                
         var selectedModule = body.view.state.values.grades_main.grades_select.selected_option.text.text;
         console.log(selectedModule);
         
+        //Checks if all modules are selected
+        //This determines how the data for the return will be generated
         if(selectedModule != "All modules") {
+            
+            //Select the desired part of the "body"
+            //where to insert the resulting data
             for (var i = 0; i < body.view.blocks.length; i++) { 
                 if (body.view.blocks[i].block_id == "grades_main") {
+                    
+                    //Checks whether the module exists
+                    //in the "body" with the given ID
                     if(body.view.blocks[i+1].block_id != "grades_result") {
+                        
+                        //Save data after selected block
                         var divider = body.view.blocks[i+1];
+                        
+                        //Deletes data after the desired block
                         body.view.blocks.splice(i+1);
+                        
+                        //Inserts data after the selected block
                         body.view.blocks.push({"type": "section",
                                                 "block_id": "grades_result",
                                                 "text": {
                                                     "type": "mrkdwn",
                                                     "text": "Your grade for: \r" + selectedModule + " ---- " + fn.getMyGrades(selectedModule)
                                                 }});
+                        //Returns the previously deleted data
                         body.view.blocks.push(divider);
                     }
                     else {
+                        //Inserts data into an existing block
                         var textRes = body.view.blocks[i+1].text.text;
                         body.view.blocks[i+1].text.text = textRes + "\r" + selectedModule + " ---- " + fn.getMyGrades(selectedModule);
                     }
@@ -379,20 +433,35 @@ module.exports = function(slack_app) {
             }
         }
         else {
+            
+            //Select the desired part of the "body"
+            //where to insert the resulting data
             for (var i = 0; i < body.view.blocks.length; i++) { 
                 if (body.view.blocks[i].block_id == "grades_main") {
+                    
+                    //Checks whether the module exists
+                    //in the "body" with the given ID
                     if(body.view.blocks[i+1].block_id != "grades_result") {
+                        
+                        //Save data after selected block
                         var divider = body.view.blocks[i+1];
+                        
+                        //Deletes data after the desired block
                         body.view.blocks.splice(i+1);
+                        
+                        //Inserts data after the selected block
                         body.view.blocks.push({"type": "section",
                                                 "block_id": "grades_result",
                                                 "text": {
                                                     "type": "mrkdwn",
                                                     "text": "Your grade for: \r" + fn.getMyGrades("slashCommand")
                                                 }});
+                        
+                        //Returns the previously deleted data
                         body.view.blocks.push(divider);
                     }
                     else {
+                        //Inserts data into an existing block
                         var textRes = body.view.blocks[i+1].text.text;
                         body.view.blocks[i+1].text.text = textRes + "\r" + fn.getMyGrades("slashCommand");
                     }
@@ -400,6 +469,7 @@ module.exports = function(slack_app) {
             }
         }
         
+        //Redrawing the main menu with the changes made
         try {
             // Call views.update with the built-in client
             const result = await client.views.update({
@@ -420,6 +490,9 @@ module.exports = function(slack_app) {
             console.log(error);
         }
     });
+    
+    //////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////
     
     function createNiceDateForVersion(thisDate) {
         return thisDate.getFullYear() + '-' + str_pad((thisDate.getMonth() + 1)) + '-' + str_pad(thisDate.getDate()) + ' ' + str_pad(thisDate.getHours()) + ':' + str_pad(thisDate.getMinutes())
