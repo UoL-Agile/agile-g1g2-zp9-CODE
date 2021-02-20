@@ -1,3 +1,5 @@
+const workspaceid = "TDT1N1BUG";
+
 module.exports = function(slack_app) {
     
     //import main functions
@@ -23,17 +25,8 @@ module.exports = function(slack_app) {
                 {
                     "type": "section",
                     "text": {
-                        "type": "plain_text",
-                        "text": "Visit Prototype Home tab or type following commands to get common UOL FAQs",
-                        "emoji": true
-                    }
-                },
-                {
-                    "type": "section",
-                    "text": {
-                        "type": "plain_text",
-                        "text": "Following are the available commands:",
-                        "emoji": true
+                        "type": "mrkdwn",
+                        "text": "Visit " + `<slack://app?team=${workspaceid}&id=${process.env.SLACK_APP_ID}|*Prototype Home tab*>` +" or type following commands to get common UOL FAQs"
                     }
                 },
                 {
@@ -60,7 +53,7 @@ module.exports = function(slack_app) {
                 "type": "section",
                 "text": {
                     "type": "plain_text",
-                    "text": "Current week :date: : " + fn.getCurrentWeek(true),
+                    "text": "Current week :date: : Week " + fn.getCurrentWeek(true),
                     "emoji": true
                 }
             }, ]
@@ -95,15 +88,31 @@ module.exports = function(slack_app) {
     }) => {
         // Acknowledge command request
         await ack();
+        const grades = fn.getMyGrades("slashCommand").split("\r");
+        gradeText = ""
+        grades.forEach(element => {
+            if(( element.trim() != "")){
+                gradeText += "• " + element + "\n";
+            }        
+        });
+
         await respond({
             "blocks": [{
                 "type": "section",
                 "text": {
                     "type": "plain_text",
-                    "text": "Module grades :bar_chart: : \r" + fn.getMyGrades("slashCommand"),
+                    "text": "Module grades :bar_chart: : \r",
                     "emoji": true
                 }
-            }, ]
+            }, 
+            {
+                "type": "section",
+                "text": {
+                    "type": "mrkdwn",
+                    "text": gradeText
+                }
+            }
+        ]
         });
     });
 
@@ -117,7 +126,7 @@ module.exports = function(slack_app) {
             // Acknowledge shortcut request
             await ack();
             // Call the views.open method using one of the built-in WebClients
-            const workspaceid = "TDT1N1BUG";
+            // const workspaceid = "TDT1N1BUG";
             const result = await client.views.open({
                 trigger_id: shortcut.trigger_id,
                 view: {
