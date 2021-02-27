@@ -41,7 +41,7 @@ module.exports = function(slack_app) {
     });
 
     // Slack command : Get current week
-    slack_app.command('/pathfinder-currww', async ({
+    slack_app.command('/pathfinder-week', async ({
         command,
         ack,
         respond

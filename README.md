@@ -13,7 +13,7 @@ From getting current course week to checking assignment deadlines, <b>Pathfinder
 
 | Command  | Description  |
 | :---: | :--- |
-| `/pathfinder-currww` | Provides information about the current course week.
+| `/pathfinder-week` | Provides information about the current course week.
 | `/pathfinder-deadline` | Shows the next assignment deadline.
 | `/pathfinder-grade` | Shows the grades for particular course module.
 | `/pathfinder-help` | Shows all the available commands and user manual.
