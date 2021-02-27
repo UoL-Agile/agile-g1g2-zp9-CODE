@@ -6,7 +6,7 @@ module.exports = function(slack_app) {
     var fn = require("./functions.js");
     
     // Slack command : get help
-    slack_app.command('/prototype-help', async ({
+    slack_app.command('/pathfinder-help', async ({
         command,
         ack,
         respond
@@ -41,7 +41,7 @@ module.exports = function(slack_app) {
     });
 
     // Slack command : Get current week
-    slack_app.command('/prototype-currww', async ({
+    slack_app.command('/pathfinder-currww', async ({
         command,
         ack,
         respond
@@ -61,7 +61,7 @@ module.exports = function(slack_app) {
     });
 
     // Slack command, get module deadline
-    slack_app.command('/prototype-deadline', async ({
+    slack_app.command('/pathfinder-deadline', async ({
         command,
         ack,
         respond
@@ -81,7 +81,7 @@ module.exports = function(slack_app) {
     });
 
     // Slack command: get grade
-    slack_app.command('/prototype-grade', async ({
+    slack_app.command('/pathfinder-grade', async ({
         command,
         ack,
         respond
@@ -126,7 +126,6 @@ module.exports = function(slack_app) {
             // Acknowledge shortcut request
             await ack();
             // Call the views.open method using one of the built-in WebClients
-            // const workspaceid = "TDT1N1BUG";
             const result = await client.views.open({
                 trigger_id: shortcut.trigger_id,
                 view: {
