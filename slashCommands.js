@@ -18,7 +18,7 @@ module.exports = function(slack_app) {
                     "type": "header",
                     "text": {
                         "type": "plain_text",
-                        "text": "Welcome to prototype :tada:",
+                        "text": "Welcome to Pathfinder :tada:",
                         "emoji": true
                     }
                 },
@@ -26,14 +26,14 @@ module.exports = function(slack_app) {
                     "type": "section",
                     "text": {
                         "type": "mrkdwn",
-                        "text": "Visit " + `<slack://app?team=${workspaceid}&id=${process.env.SLACK_APP_ID}|*Prototype Home tab*>` +" or type following commands to get common UOL FAQs"
+                        "text": "Visit " + `<slack://app?team=${workspaceid}&id=${process.env.SLACK_APP_ID}|*Pathfinder Home tab*>` +" or type following commands to get common UOL FAQs"
                     }
                 },
                 {
                     "type": "section",
                     "text": {
                         "type": "mrkdwn",
-                        "text": " • prototype-help : View help \n • prototype-currww : Get UOL current week \n • prototype-deadline: Get UOL module assignments deadline \n • prototype-grade: Get UOL module grade "
+                        "text": " • pathfinder-help : View help \n • pathfinder-week : Get UOL current week \n • pathfinder-deadline: Get UOL module assignments deadline \n • pathfinder-grade: Get UOL module grade "
                     }
                 }
             ]
@@ -132,7 +132,7 @@ module.exports = function(slack_app) {
                     type: "modal",
                     title: {
                         type: "plain_text",
-                        text: "Prototype"
+                        text: "Pathfinder UoL"
                     },
                     close: {
                         type: "plain_text",
