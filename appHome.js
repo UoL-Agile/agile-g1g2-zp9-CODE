@@ -35,7 +35,7 @@ module.exports = function(slack_app) {
                             "block_id": "qWs",
                             "text": {
                                 "type": "mrkdwn",
-                                "text": "This is a home for the Prototype application. Here you can check your university course progress!    Version Dated: " + createNiceDateForVersion(new Date())
+                                "text": "This is a home for the Pathfinder application. Here you can check your university course progress!    Version Dated: " + createNiceDateForVersion(new Date())
                             }
                         },
                         {
