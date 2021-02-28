@@ -117,7 +117,7 @@ module.exports = function(slack_app) {
     });
 
     // The open_modal shortcut opens a plain old modal
-    slack_app.shortcut('prototype_uol_shortcut', async ({
+    slack_app.shortcut('pathfinder_uol_shortcut', async ({
         shortcut,
         ack,
         client
@@ -142,8 +142,8 @@ module.exports = function(slack_app) {
                         type: "section",
                         text: {
                             type: "mrkdwn",
-                            text: "Visit " + `<slack://app?team=${workspaceid}&id=${process.env.SLACK_APP_ID}|*Prototype*>` +
-                                " bot now to get: \n • current week \n • assignment deadline \n • module grades"
+                            text: "Visit " + `<slack://app?team=${workspaceid}&id=${process.env.SLACK_APP_ID}|*Pathfinder*>` +
+                                " bot page to get: \n • Current week \n • Assignment deadlines \n • Module grades"
                         }
                     }, ]
                 }
