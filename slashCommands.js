@@ -26,14 +26,14 @@ module.exports = function(slack_app) {
                     "type": "section",
                     "text": {
                         "type": "mrkdwn",
-                        "text": "Visit " + `<slack://app?team=${workspaceid}&id=${process.env.SLACK_APP_ID}|*Pathfinder Home tab*>` +" or type following commands to get common UOL FAQs"
+                        "text": "Visit " + `<slack://app?team=${workspaceid}&id=${process.env.SLACK_APP_ID}|*Pathfinder Home tab*>` +" or type the following commands to get common UoL FAQs"
                     }
                 },
                 {
                     "type": "section",
                     "text": {
                         "type": "mrkdwn",
-                        "text": " • pathfinder-help : View help \n • pathfinder-week : Get UOL current week \n • pathfinder-deadline: Get UOL module assignments deadline \n • pathfinder-grade: Get UOL module grade "
+                        "text": " • pathfinder-help : View helpful tips \n • pathfinder-week : Get current course week \n • pathfinder-deadline: Get course module assignment deadlines \n • pathfinder-grade: Get course module grade "
                     }
                 }
             ]
