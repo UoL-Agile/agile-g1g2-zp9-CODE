@@ -29,9 +29,16 @@ const receiver = new ExpressReceiver({
 const slack_app = new App({
     receiver,
     token: SLACK_BOT_TOKEN,
+});
+
+/* Create the Bolt App, using the receiver - For Debug
+const slack_app = new App({
+    receiver,
+    token: SLACK_BOT_TOKEN,
     logLevel: LogLevel.DEBUG, // we want full details logged to the console for testings
     developerMode: true // we want full details logged to the console for testings
 });
+*/
 
 
 //Import main functions

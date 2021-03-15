@@ -13,59 +13,100 @@ var examplePOSTJSON_string = '{"token":"BWdYU5yCn4gu2ImxC8RLnoUA","team_id":"TDT
 
 var examplePOSTJSON_JSON = JSON.parse(examplePOSTJSON_string)
 
+var SLACK_SIGNATURE = '48ry928bj34598udfapjisdb0'
+
 var serverURL = 'http://localhost:3000' // this is the URL of the server
 var slackEventsPath = '/slack/events' // this is the event path
 
 
 describe('Testing response to bolt commands', function() {
-    
-    it('Should respond to "get grade" shortcut with JSON', function(done) {
+    it('Should respond to "“module syllabus" shortcut with JSON', function(done) {
         chai.request(serverURL)
                 .post(slackEventsPath)
+                .set('X-Slack-Signature', SLACK_SIGNATURE)   
                 .send(examplePOSTJSON_string)
                 .end(function(err, res) {
-                      assert(1,"Recevied a valid JSON Object")
-                      done(); // we have finished  
+                    var returnBody = res.body
+                        try {
+                            JSON.parse(returnBody)
+                            assert(1,"Received a valid JSON Object")
+                            done(); // we have finished  
+                        } catch(err) {
+                            assert(0,"Received an INVALID JSON Object")
+                            done(); // we have finished
+                        }
                    })
     });
     
-    it('Should respond to "get module"  shortcut with JSON', function(done) {
+    it('Should respond to "get deadlines"  shortcut with JSON', function(done) {
           chai.request(serverURL)
                 .post(slackEventsPath)
+                .set('X-Slack-Signature', SLACK_SIGNATURE)
                 .send(examplePOSTJSON_string)
                 .end(function(err, res) {
-                      assert(1,"Recevied a valid JSON Object")
-                      done(); // we have finished  
+                     var returnBody = res.body
+                        try {
+                            JSON.parse(returnBody)
+                            assert(1,"Received a valid JSON Object")
+                            done(); // we have finished  
+                        } catch(err) {
+                            assert(0,"Received an INVALID JSON Object")
+                            done(); // we have finished
+                        } 
                    })                
     });
     
     it('Should respond to "get current week" shortcut with JSON', function(done) {
           chai.request(serverURL)
                 .post(slackEventsPath)
+                .set('X-Slack-Signature', SLACK_SIGNATURE)
                 .send(examplePOSTJSON_string)
                 .end(function(err, res) {
-                      assert(1,"Recevied a valid JSON Object")
-                      done(); // we have finished  
+                     var returnBody = res.body
+                        try {
+                            JSON.parse(returnBody)
+                            assert(1,"Received a valid JSON Object")
+                            done(); // we have finished  
+                        } catch(err) {
+                            assert(0,"Received an INVALID JSON Object")
+                            done(); // we have finished
+                        }  
                    })                  
     });
     
     it('Should respond to "open modal" shortcut with JSON', function(done) {
           chai.request(serverURL)
                 .post(slackEventsPath)
-                .send(examplePOSTJSON_string)
+                .set('X-Slack-Signature', SLACK_SIGNATURE)
+                .send(examplePOSTJSON_string)        
                 .end(function(err, res) {
-                      assert(1,"Recevied a valid JSON Object")
-                      done(); // we have finished  
+                      var returnBody = res.body
+                        try {
+                            JSON.parse(returnBody)
+                            assert(1,"Received a valid JSON Object")
+                            done(); // we have finished  
+                        } catch(err) {
+                            assert(0,"Received an INVALID JSON Object")
+                            done(); // we have finished
+                        } 
                    })                   
     });
     
     it('Should respond to "get help" shortcut with JSON', function(done) {
           chai.request(serverURL)
                 .post(slackEventsPath)
+                .set('X-Slack-Signature', SLACK_SIGNATURE)
                 .send(examplePOSTJSON_string)
                 .end(function(err, res) {
-                      assert(1,"Recevied a valid JSON Object")
-                      done(); // we have finished  
+                     var returnBody = res.body
+                        try {
+                            JSON.parse(returnBody)
+                            assert(1,"Received a valid JSON Object")
+                            done(); // we have finished  
+                        } catch(err) {
+                            assert(0,"Received an INVALID JSON Object")
+                            done(); // we have finished
+                        }  
                    })                 
     });
     

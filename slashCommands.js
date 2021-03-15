@@ -152,6 +152,13 @@ module.exports = function(slack_app) {
             console.log(result);
         } catch (error) {
             console.error(error);
+            
+            await ack({
+                errors: [{
+                    "name": "Ooops",
+                    "error": "Sorry, Looks like there was an error, please contact pathfindersupport@gmail.com"
+                }]
+            });
         }
     });
     
