@@ -1,0 +1,1766 @@
+* commit fb0d5ca1957fed39b6345a6c216ce8f5131222d8
+| Author: John Gerhardt <jag24@student.london.ac.uk>
+| Date:   Mon Mar 15 20:32:45 2021 +0100
+| 
+|     tests update
+| 
+* commit ca446f019321d7291e86a1c5c80fd6824cce8c4b
+| Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| Date:   Sun Feb 28 01:17:03 2021 +0000
+| 
+|     Help command - Improved help messages
+| 
+* commit 44e5d2c2fc43cb9e6a3a3b2bf25d49f3ea1407a4
+| Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| Date:   Sun Feb 28 01:11:56 2021 +0000
+| 
+|     FAQ Commands - Further app name updates
+| 
+* commit cc74ec8cd1d0dccf0d5a40851363c422e6239825
+| Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| Date:   Sun Feb 28 01:06:35 2021 +0000
+| 
+|     Updated FAQ command with new app name
+| 
+* commit 0a98fae0d09c822c8d24ec714c10f74b6d12fd0d
+| Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| Date:   Sun Feb 28 00:31:45 2021 +0000
+| 
+|     Updated application name in the welcome msg
+| 
+* commit fbcc8699c18faf334d52fc2bc09988dd6857b091
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 28 00:25:59 2021 +0300
+| 
+|     Changed get week slash command
+| 
+* commit 97a5c5e2d983e3724ab64b488203cc965e05c5fd
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sat Feb 27 22:24:56 2021 +0300
+| 
+|     Changed about page
+|   
+*   commit 8df96c550b1fec66d86039ed8490629fd6ef8974
+|\  Merge: 749aa27 8f1ebc9
+| | Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| | Date:   Sat Feb 27 22:17:53 2021 +0300
+| | 
+| |     Merge branch 'main' of https://github.com/UoL-Agile/agile-g1g2-zp9-CODE
+| | 
+| * commit 8f1ebc98fde10dbf6ce68b44f88828a2aec5f2c6
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sat Feb 27 14:37:41 2021 +0000
+| | 
+| |     Updated the name of our application
+| |     
+| |     Changed "Prototype" to "Pathfinder UoL"
+| | 
+* | commit 749aa2712f4825ede20a3ca298938983f18335f9
+|/  Author: Maksim Grinberg <maxim.1229@yandex.ru>
+|   Date:   Sat Feb 27 22:17:29 2021 +0300
+|   
+|       Changed app name
+|   
+*   commit 3806f9c65cc4a0a11b52d1b91fc871ee93a07f10
+|\  Merge: 3db69a6 b27d28a
+| | Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| | Date:   Sun Feb 21 00:32:31 2021 +0300
+| | 
+| |     Merge branch 'main' of https://github.com/UoL-Agile/agile-g1g2-zp9-CODE
+| |   
+| *   commit b27d28a97a8353ca6bbf8e6e7367de98aefb9c0c
+| |\  Merge: 448efac a14ea82
+| | | Author: Sharene Lau Tsae Ying <tyl82@student.london.ac.uk>
+| | | Date:   Sun Feb 14 09:41:54 2021 +0800
+| | | 
+| | |     Merge pull request #59 from UoL-Agile/feature/shortcut-sharene
+| | |     
+| | |     slash command grade bullet point
+| | | 
+| | * commit a14ea82c30e6d85af6dc5e7b619574ece279cd6c
+| | | Author: Sharene Lau <sharenelau21@outlook.com>
+| | | Date:   Sun Feb 14 09:39:33 2021 +0800
+| | | 
+| | |     slash command grade bullet point
+| | | 
+| * | commit 448efac884fe2e464ce6906dc478b8cda36dbcbc
+| |\| Merge: be69fb6 386a42c
+| | | Author: Sharene Lau Tsae Ying <tyl82@student.london.ac.uk>
+| | | Date:   Sun Feb 14 09:30:48 2021 +0800
+| | | 
+| | |     Merge pull request #58 from UoL-Agile/feature/shortcut-sharene
+| | |     
+| | |     add layout to grade slack command message
+| | | 
+| | * commit 386a42c9f9f3ecdbaa4d1162b9046d666768603d
+| | | Author: Sharene Lau <sharenelau21@outlook.com>
+| | | Date:   Sun Feb 14 09:28:54 2021 +0800
+| | | 
+| | |     add layout to grade slack command message
+| | | 
+| * | commit be69fb669b30f342338c10bec63db910315af68e
+| |\| Merge: 066dd3a ae34fe9
+| | | Author: Sharene Lau Tsae Ying <tyl82@student.london.ac.uk>
+| | | Date:   Sun Feb 14 09:16:53 2021 +0800
+| | | 
+| | |     Merge pull request #57 from UoL-Agile/feature/shortcut-sharene
+| | |     
+| | |     fix home tab link
+| | | 
+| | * commit ae34fe929a964465141dbf05f87b049d8e4baad3
+| | | Author: Sharene Lau <sharenelau21@outlook.com>
+| | | Date:   Sun Feb 14 09:16:11 2021 +0800
+| | | 
+| | |     fix home tab link
+| | | 
+| * | commit 066dd3a958e44fda5e884ebf509124d3301ac896
+| |\| Merge: e71845a ab286f0
+| | | Author: Sharene Lau Tsae Ying <tyl82@student.london.ac.uk>
+| | | Date:   Sun Feb 14 09:13:51 2021 +0800
+| | | 
+| | |     Merge pull request #56 from UoL-Agile/feature/shortcut-sharene
+| | |     
+| | |     remove emoji=true from markdown section
+| | | 
+| | * commit ab286f06ea09d2180af91d74f65a64cb0ea76b32
+| | | Author: Sharene Lau <sharenelau21@outlook.com>
+| | | Date:   Sun Feb 14 09:12:18 2021 +0800
+| | | 
+| | |     remove emoji=true from markdown section
+| | | 
+| * | commit e71845aef577e18c61e0048a3df945f1b770cf4c
+| |\| Merge: b313f66 c3f60fb
+| | | Author: Sharene Lau Tsae Ying <tyl82@student.london.ac.uk>
+| | | Date:   Sun Feb 14 09:08:17 2021 +0800
+| | | 
+| | |     Merge pull request #55 from UoL-Agile/feature/shortcut-sharene
+| | |     
+| | |     add workspace id in slashcommand
+| | | 
+| | * commit c3f60fb1df84997a2ef19dd25b55bb958e1c6606
+| | | Author: Sharene Lau <sharenelau21@outlook.com>
+| | | Date:   Sun Feb 14 09:07:15 2021 +0800
+| | | 
+| | |     slash command home tab link section- change type to markdown
+| | | 
+| | * commit 48594a720ddbde866141bac157e431f3b9d4fbb9
+| | | Author: Sharene Lau <sharenelau21@outlook.com>
+| | | Date:   Sun Feb 14 09:02:21 2021 +0800
+| | | 
+| | |     add workspace id in slashcommand
+| | | 
+| * | commit b313f66d30d07e799b9b84d9d648002a75d745b9
+| |\| Merge: 4d46f5c 517784b
+| | | Author: Sharene Lau Tsae Ying <tyl82@student.london.ac.uk>
+| | | Date:   Sun Feb 14 08:59:30 2021 +0800
+| | | 
+| | |     Merge pull request #54 from UoL-Agile/feature/shortcut-sharene
+| | |     
+| | |      add home tab link in /prototype-help message
+| | | 
+| | * commit 517784b157f54d510973a7e6fa6ce503142f10ce
+| |/  Author: Sharene Lau <sharenelau21@outlook.com>
+| |   Date:   Sun Feb 14 08:56:35 2021 +0800
+| |   
+| |        add home tab link in /prototype-help message
+| | 
+* | commit 3db69a6fe6c8992b78312a8899b5d984b6a5f1c3
+|/  Author: Maksim Grinberg <maxim.1229@yandex.ru>
+|   Date:   Sun Feb 21 00:31:08 2021 +0300
+|   
+|       cleaned up the code and commented
+| 
+* commit 4d46f5c1c5ec5d114e4cf37e8e0f6fa2a8a9a24a
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sat Feb 13 22:15:40 2021 +0300
+| 
+|     Remove some bugs again
+| 
+* commit e238f47467f85397b7fd8c9c2a4cab7260062912
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sat Feb 13 22:01:39 2021 +0300
+| 
+|     Remove some bugs
+| 
+* commit 3d4e7fdd0204246d0c13997dec11f9dc352a19d8
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sat Feb 13 21:51:30 2021 +0300
+| 
+|     Remove soma bugs
+| 
+* commit 601db8f6e4cbd4f7e5dc0586d9c14df9fee6424f
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sat Feb 13 21:43:38 2021 +0300
+| 
+|     Remove soma bugs
+| 
+* commit dfa4975d8780a9d5b984d59413a8677ce05a7dd6
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sat Feb 13 21:33:36 2021 +0300
+| 
+|     Update deadlines
+| 
+* commit ec93b1de1e083dc8540bc7f9910cd5948b4ed633
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sat Feb 13 21:09:38 2021 +0300
+| 
+|     Update deadlines
+| 
+* commit 2387a8b3d72681b4d6fc1b9ad1f89197ec09aa4c
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sat Feb 13 21:00:16 2021 +0300
+| 
+|     Update functions and add module selector to deadlines
+| 
+* commit 87413dd2c384ada4da4d5634345e2632baa5cf35
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sat Feb 13 20:32:23 2021 +0300
+| 
+|     Update selection
+| 
+* commit 1ac0d1b28a072ffb67b8d3296bb32e12014011c0
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sat Feb 13 20:26:34 2021 +0300
+| 
+|     Solve small bug
+| 
+* commit b1bd6a558319dd1f6267c0a392064d14de2e2c9b
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sat Feb 13 20:23:10 2021 +0300
+| 
+|     Add getMyGrade function and unpade slash commend prototype-grade
+| 
+* commit 059ee2cc69a42e91506b5d185b913b4c4ec4bd08
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sat Feb 13 20:04:09 2021 +0300
+| 
+|     Clean appHome.js and solve selection bag
+| 
+* commit aea1f824fbfbc221a4290814709b2f4f9b139f03
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sat Feb 13 19:40:21 2021 +0300
+| 
+|     Verbatim bag update
+| 
+* commit 312fbce10b3f3ea2bceaab344a45a57f86c46dc0
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sat Feb 13 19:37:24 2021 +0300
+| 
+|     Updated grades menu
+| 
+* commit ac5271d06d33038f2d251a81fe6b81a6faa231ac
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sat Feb 13 19:00:31 2021 +0300
+| 
+|     Update value selector v2.1
+| 
+* commit 12cfde66f0a52a0289881362d4005d1f1974b470
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sat Feb 13 18:58:20 2021 +0300
+| 
+|     Update value selector v2
+| 
+* commit 2a8ed8d806bd4312d3158ca85f9e837c6563a2a0
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sat Feb 13 18:54:10 2021 +0300
+| 
+|     Update value selector
+| 
+* commit 48d3e7362859433b644dca847dbcc6b4ce076bcf
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sat Feb 13 18:45:09 2021 +0300
+| 
+|     Remove Grades button
+| 
+* commit 291e42b3d7a7a96705ecfa363ee687ba09a15ada
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sat Feb 13 18:34:59 2021 +0300
+| 
+|     Update grades module selection
+|   
+*   commit 7cd0bf626ec20e610dcd7b10ff8db855d2db147d
+|\  Merge: 1c81abf 55eb305
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 18:42:35 2021 +0000
+| | 
+| |     Merge pull request #50 from UoL-Agile/docs/assets-berta
+| |     
+| |     Added a Help section
+| | 
+| * commit 55eb305f4ed1298c10847b8c399d67c2100e6478
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 18:41:57 2021 +0000
+| | 
+| |     Added a Help section
+| | 
+| * commit 76d709ee49cf9043817a4b9a72211695792965bc
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 18:41:28 2021 +0000
+| | 
+| |     Added a Help section
+| | 
+| * commit 6487509995ccf45937445194eba8e2ce0911c882
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 18:40:52 2021 +0000
+| | 
+| |     Added a Help section
+| | 
+* | commit 1c81abf321ac15c92ac85c2c6115f1cecdbaf931
+|\| Merge: c72de6f f9e2bc4
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 18:10:33 2021 +0000
+| | 
+| |     Merge pull request #48 from UoL-Agile/docs/assets-berta
+| |     
+| |     Updated the features and commands list
+| | 
+| * commit f9e2bc4d83461eaed9b7bb6f0714853e179b9ba8
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 18:09:30 2021 +0000
+| | 
+| |     Updated the list of commands
+| | 
+| * commit 32781af41418f27598336069f14c5a9b2984a482
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 18:04:26 2021 +0000
+| | 
+| |     Added list of features and commands
+| | 
+* | commit c72de6f7186afa8a7088a0478aa5054addd43984
+|\| Merge: 341d15c d1b642a
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 17:21:33 2021 +0000
+| | 
+| |     Merge pull request #45 from UoL-Agile/docs/assets-berta
+| |     
+| |     Updated the README file
+| | 
+| * commit d1b642a073d9f819e1e12798b95669cf31c2925a
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 17:20:41 2021 +0000
+| | 
+| |     Deleted higher resolution app logo
+| | 
+| * commit 7b110a7704af4757d71146ff4104f92a3172a358
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 17:20:15 2021 +0000
+| | 
+| |     Updated README
+| | 
+| * commit 310b2321d732e56cd33eca26594ef42edc5421d7
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 17:19:23 2021 +0000
+| | 
+| |     Updated README file
+| | 
+| * commit b947ff78d9b76e52e5ea0f06ebbb60ed73ee4ee0
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 17:16:43 2021 +0000
+| | 
+| |     Uploaded smaller resolution app logo
+| | 
+| * commit 4a3b88389d319b29e368bb86e213a142e8ab8e51
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 17:16:17 2021 +0000
+| | 
+| |     Delete app_logo.jfif
+| |     
+| |     File format not compatible
+| | 
+| * commit c098ebb09efc8cb8e201881a71b2f57717def448
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 17:13:29 2021 +0000
+| | 
+| |     Updated logo file format
+| | 
+| * commit 1180cb73c23e52f065f3cbf7c5854d1bbd32b10b
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 17:12:45 2021 +0000
+| | 
+| |     Added app_logo.jpeg
+| | 
+* | commit 341d15c71e5b3bc5963eb9a0cd5b1b35c1586f66
+|\| Merge: 7bc396e 9359834
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 17:09:35 2021 +0000
+| | 
+| |     Merge pull request #44 from UoL-Agile/docs/assets-berta
+| |     
+| |     Updated the README file
+| | 
+| * commit 9359834b2ac5d6dc30c0c6d35dd6808fb75b12be
+|/  Author: BertaF <74141481+BertaF@users.noreply.github.com>
+|   Date:   Sun Feb 7 17:08:46 2021 +0000
+|   
+|       Updated the README file
+|   
+*   commit 7bc396e7299cf610f68cbf43f4c47c779e6af79c
+|\  Merge: 2ea915d 4ceadaf
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 17:06:57 2021 +0000
+| | 
+| |     Merge pull request #43 from UoL-Agile/docs/assets-berta
+| |     
+| |     Docs/assets berta
+| | 
+| * commit 4ceadaf321e05f358c6d0f75de7b3a31b5dac645
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 17:06:00 2021 +0000
+| | 
+| |     Add new app logo
+| | 
+| * commit a8bb6e3319e5e1b46c957f325348a4c8306a7fde
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 17:05:20 2021 +0000
+| | 
+| |     Delete app logo
+| | 
+| * commit 538e9d5b959a8167c23106b0092707a6b9a966aa
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 16:59:32 2021 +0000
+| | 
+| |     Deleting initial commit of app-logo
+| | 
+* | commit 2ea915d4bb65b1eaf284e3df55deac738c916917
+|\| Merge: 3d1e92f fe34b95
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 16:58:47 2021 +0000
+| | 
+| |     Merge pull request #42 from UoL-Agile/docs/assets-berta
+| |     
+| |     Docs/assets berta
+| | 
+| * commit fe34b9506942062c72739d97859ec7fff121ba4c
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 16:58:12 2021 +0000
+| | 
+| |     Uploaded the app logo
+| | 
+| * commit c43fa985b6d68029606781bb53e9b816ffd2f6f8
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 16:57:47 2021 +0000
+| | 
+| |     Add the docs/assets folders
+| | 
+| * commit a256e79778f2f51c8a547a0fd07e59528ceefd71
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 16:55:56 2021 +0000
+| | 
+| |     Delete app-logo
+| | 
+* | commit 3d1e92f3a5b1826035deaff4974d7474b8ddc9f7
+|\| Merge: 3888771 0e5022e
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 16:53:26 2021 +0000
+| | 
+| |     Merge pull request #41 from UoL-Agile/docs/assets-berta
+| |     
+| |     Add a docs/assets folder
+| | 
+| * commit 0e5022e6926b7ee19f236d956e95181dcde4923d
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 16:53:00 2021 +0000
+| | 
+| |     Create a docs/assets folder
+| | 
+| * commit 74e88380fcbb9a6ab2ca5dbfe2e5ca227e7e8da2
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 16:51:52 2021 +0000
+| | 
+| |     Delete the assets file
+| |     
+| |     This is supposed to be a folder
+| | 
+* | commit 3888771b8b7fa886513dab6def266ef8e40fd818
+|\| Merge: 11c8f0e e16c171
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 16:48:20 2021 +0000
+| | 
+| |     Merge pull request #40 from UoL-Agile/docs/assets-berta
+| |     
+| |     Add a docs/assets folder
+| | 
+| * commit e16c171c51e52f43e4ddba87d6ab2ff4f3901496
+|/  Author: BertaF <74141481+BertaF@users.noreply.github.com>
+|   Date:   Sun Feb 7 16:47:55 2021 +0000
+|   
+|       Add a docs/assets folder
+|       
+|       To include our app logo and potentially other assets
+|   
+*   commit 11c8f0ee042f6fdce9d46a9d8c753ef69e4d59f7
+|\  Merge: caa4b02 a936cc2
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 08:01:20 2021 +0000
+| | 
+| |     Merge pull request #39 from UoL-Agile/home/deadlines-berta
+| |     
+| |     slashCommands.js - Updated the deadlines command
+| | 
+| * commit a936cc2ffaeee2f3802798d602321f182d4a4698
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 08:01:00 2021 +0000
+| | 
+| |     slashCommands.js - Updated the deadlines command
+| | 
+* | commit caa4b02c3e5aed85f07dfcb474379d65181e6c0d
+|\| Merge: 4055b44 4072f1f
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 07:57:49 2021 +0000
+| | 
+| |     Merge pull request #38 from UoL-Agile/home/deadlines-berta
+| |     
+| |     SlashCommands.js - Update deadlines command again
+| | 
+| * commit 4072f1f1592bc7db30efdd0bd793737d19e615f1
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 07:57:30 2021 +0000
+| | 
+| |     SlashCommands.js - Update deadlines command again
+| | 
+* | commit 4055b447460f69890db453ae97f7cfa9744a4041
+|\| Merge: 8ab3383 5206ad3
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 07:52:17 2021 +0000
+| | 
+| |     Merge pull request #37 from UoL-Agile/home/deadlines-berta
+| |     
+| |     slashCommands.js - Reverting previous change
+| | 
+| * commit 5206ad3845b82c565bfbfca241b514686aac7a36
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 07:51:17 2021 +0000
+| | 
+| |     slashCommands.js - Reverting previous change
+| |     
+| |     Seems the commands don't work after my last change, so I'm reverting back to the previous version.
+| | 
+* | commit 8ab338356f15a56c308c967c9e7a1a758fc46797
+|\| Merge: 48f3d1e 94eb6bb
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 07:40:40 2021 +0000
+| | 
+| |     Merge pull request #36 from UoL-Agile/home/deadlines-berta
+| |     
+| |     slashCommands.js - Updated deadlines command
+| | 
+| * commit 94eb6bbbfd41f5378de6ccab7851b116324eed45
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 07:39:58 2021 +0000
+| | 
+| |     slashCommands.js - Updated deadlines command
+| |     
+| |     Updated the deadlines command to use the new deadlines function.
+| | 
+* | commit 48f3d1e7b45d6da74fd8b3d8d5257534db43bff5
+|\| Merge: 2ae57ab 7238be0
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 07:28:25 2021 +0000
+| | 
+| |     Merge pull request #35 from UoL-Agile/home/deadlines-berta
+| |     
+| |     appHome.js - Removed deadlines calendar
+| | 
+| * commit 7238be05a3bca94fed7ca326a36ca336fe6c81f8
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 07:27:29 2021 +0000
+| | 
+| |     appHome.js - Removed deadlines calendar
+| | 
+* | commit 2ae57ab71ce2fbdb67ff0dcadc0adddc2e6a7aca
+|\| Merge: b2d2ed5 540d4f5
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 07:23:28 2021 +0000
+| | 
+| |     Merge pull request #34 from UoL-Agile/home/deadlines-berta
+| |     
+| |     functions.js - Fix syntax error in deadlines fnc
+| | 
+| * commit 540d4f56e10501cf0ac0f353e30d5981d4b70b0d
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 07:23:04 2021 +0000
+| | 
+| |     functions.js - Fix syntax error in deadlines fnc
+| | 
+* | commit b2d2ed58cf412320cc54e62340e1cd395eaea941
+|\| Merge: 13991a9 6e4faf4
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 07:16:29 2021 +0000
+| | 
+| |     Merge pull request #33 from UoL-Agile/home/deadlines-berta
+| |     
+| |     functions.js - Updated the deadlines function
+| | 
+| * commit 6e4faf476ff61b3ffcb3422185ead60bf5edd3c8
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 07:16:05 2021 +0000
+| | 
+| |     functions.js - Updated the deadlines function
+| | 
+* | commit 13991a9d91bf886486f903484270108c7e2b15c2
+|\| Merge: 03bc954 638dcc5
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 06:29:25 2021 +0000
+| | 
+| |     Merge pull request #32 from UoL-Agile/home/deadlines-berta
+| |     
+| |     functions.js - Improve formatting of message
+| | 
+| * commit 638dcc542f545e5ea893fd9735f1efac301f78e1
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 06:29:00 2021 +0000
+| | 
+| |     functions.js - Improve formatting of message
+| | 
+* | commit 03bc954439f5b33590f1f5878fc47daed1f06960
+|\| Merge: 5359f27 c01dea4
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 06:24:53 2021 +0000
+| | 
+| |     Merge pull request #31 from UoL-Agile/home/deadlines-berta
+| |     
+| |     functions.js - FIx incorrect syntax
+| | 
+| * commit c01dea4217c1aed874319878274e09f87f5b4d62
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 06:24:22 2021 +0000
+| | 
+| |     functions.js - FIx incorrect syntax
+| | 
+* | commit 5359f27e050576390803dd07d2eb251e8a41c8ba
+|\| Merge: 657e30e 1f13913
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 06:20:55 2021 +0000
+| | 
+| |     Merge pull request #30 from UoL-Agile/home/deadlines-berta
+| |     
+| |     functions.js - Fix incorrect syntax
+| | 
+| * commit 1f139136fab69bd7405af9ff372ec678d298eccd
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 06:20:23 2021 +0000
+| | 
+| |     functions.js - Fix incorrect syntax
+| | 
+* | commit 657e30e213d6be485ccbe5649d1da7e173b0c89e
+|\| Merge: ade1b82 bafa620
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 06:16:32 2021 +0000
+| | 
+| |     Merge pull request #29 from UoL-Agile/home/deadlines-berta
+| |     
+| |     Home/deadlines berta
+| | 
+| * commit bafa620ecaddcaec13f5da27629455ac1b253377
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 06:15:45 2021 +0000
+| | 
+| |     appHome.js - Updated to use new deadlines function
+| | 
+| * commit 8f803394334e9bc19b5e87b2dd0592c65299757b
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 06:14:12 2021 +0000
+| | 
+| |     functions.js - Added a new deadline function
+| | 
+* | commit ade1b8225c0dda0b570be3f581f24bf481b2fcb7
+|\| Merge: 1dc3598 66fc663
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Feb 7 03:27:42 2021 +0000
+| | 
+| |     Merge pull request #28 from UoL-Agile/home/deadlines-berta
+| |     
+| |     appHome.js
+| | 
+| * commit 66fc663864ed5238b159d23ef18d6e35cb10ca13
+|/  Author: BertaF <74141481+BertaF@users.noreply.github.com>
+|   Date:   Sun Feb 7 03:26:15 2021 +0000
+|   
+|       appHome.js
+|       
+|       Testing Maksim's code on the deadlines button
+| 
+* commit 1dc3598be71e6cf8e3e74e38f32b02253a4b2b61
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 05:45:50 2021 +0300
+| 
+|     clean the code
+| 
+* commit 57bdaf87d6604be13b889713ef29953f7c482e28
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 05:31:40 2021 +0300
+| 
+|     error remove
+| 
+* commit d4d87bc2a2aaaf0a85a693e55b4de2c841a370be
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 05:26:11 2021 +0300
+| 
+|     error remove
+| 
+* commit be35f7e0256efe888aef0cf9f3e4adab3ea5291a
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 05:23:45 2021 +0300
+| 
+|     error remove
+| 
+* commit c78bc833d2eb044231f79c0ebb7615190c3a8220
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 05:19:42 2021 +0300
+| 
+|     error remove
+| 
+* commit 32a740cb31387551d9a4243535b244b7f2f152ff
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 05:16:25 2021 +0300
+| 
+|     error remove
+| 
+* commit f38e215f9754b70f154f42b73cc5b0b80cbb1789
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 05:10:56 2021 +0300
+| 
+|     error remove
+| 
+* commit 27e1e281065bdcb75f59b2b8c4e56009853cc304
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 05:07:59 2021 +0300
+| 
+|     error remove
+| 
+* commit 4edc490339cbea7d7986a4a849fe7f5491908b5e
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 05:02:05 2021 +0300
+| 
+|     error remove
+| 
+* commit 01839d7296eb5670b32e20c4768af9445fca3c64
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 05:00:53 2021 +0300
+| 
+|     error remove
+| 
+* commit 6903d4d048eeb27a47b7908a35c0330724ec68e2
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 04:43:41 2021 +0300
+| 
+|     error remove
+| 
+* commit b5b6475e54c356a1927279495550635489aaef4b
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 04:39:33 2021 +0300
+| 
+|     error remove
+| 
+* commit b92cf6d9a93ba49acd023e4d46db7a3d273089f5
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 04:29:19 2021 +0300
+| 
+|     error remove
+| 
+* commit 57e98cb266874b9c4a91f375f87fd05073519d0d
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 04:19:34 2021 +0300
+| 
+|     error remove
+| 
+* commit 5e96d029e1ba15cf10bc462764cf96dddb2f4cc6
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 04:16:25 2021 +0300
+| 
+|     error remove
+| 
+* commit 0f2d0d93d1b349f14e1315cb4fc1c964824033c0
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 04:07:06 2021 +0300
+| 
+|     error remove
+| 
+* commit ee6d831f287df4adda5779486ba4ddfdb268cec0
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 03:57:43 2021 +0300
+| 
+|     error remove
+| 
+* commit 23d8fd51f27e40cf0a182146d6a2bfdcd9537b8f
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 03:44:33 2021 +0300
+| 
+|     error remove
+| 
+* commit c7be8328e48e15d9489d11b5e77984932ca183a3
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 03:27:28 2021 +0300
+| 
+|     Moved the functions to a separate file. Added access to them in all files by the "fn" prefix. Implemented the week display in the menu.
+| 
+* commit b5961b6ec30d8a1e6bd137bd1d67d0421d0f3b74
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 03:17:53 2021 +0300
+| 
+|     tests
+| 
+* commit b21a12e3914b9b244f342aa889df6baf6f456704
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 03:10:51 2021 +0300
+| 
+|     tests
+| 
+* commit 33417c21269f83ce5b45dd87c385ff591a03d708
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 03:08:13 2021 +0300
+| 
+|     tests
+| 
+* commit 07bfb6d73fb7119ed3534f58b4c522f5a9deb92c
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 02:59:35 2021 +0300
+| 
+|     tests
+| 
+* commit b78403fe28361fda1220f6932d9f83b697138f17
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 02:55:11 2021 +0300
+| 
+|     tests
+| 
+* commit cf938d35fb21733420abd691a5bd28e86a337892
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 02:45:07 2021 +0300
+| 
+|     tests
+| 
+* commit 303668ac5ff4efe2ee4217ba4bbdcc1d9990e982
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 02:36:51 2021 +0300
+| 
+|     tests
+| 
+* commit 99b3cef3de47ed0593e2caab1de5aac3561e1320
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 02:26:03 2021 +0300
+| 
+|     tests
+| 
+* commit f73157dc2bedbaddf36b531a5cf1b68eefb4e36a
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 02:23:47 2021 +0300
+| 
+|     tests
+| 
+* commit 4c531553de038703d36d5e9a8c1ca9c824f339fa
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 02:20:11 2021 +0300
+| 
+|     tests
+| 
+* commit c6e8dab96031b449885da8c405880ba3c388747b
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 02:11:03 2021 +0300
+| 
+|     tests
+| 
+* commit a5898ad99177a474601f89b213bcd9d57d09c6eb
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 02:08:25 2021 +0300
+| 
+|     tests
+| 
+* commit 703d421f30f8c0975f34d833ed19f1fd990edb02
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 02:02:32 2021 +0300
+| 
+|     tests
+| 
+* commit 3f90a2752bb0fe050e6abb991ddd91dc5b73b1db
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 01:53:38 2021 +0300
+| 
+|     tests
+| 
+* commit 131c76f3153ac9d0aa473965bf57f886754fb086
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 01:42:20 2021 +0300
+| 
+|     tests
+| 
+* commit 275887ae982a00746f72c0981dd9a074fc2350c5
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 01:35:08 2021 +0300
+| 
+|     tests
+| 
+* commit 735511639c2162e81a376838bacaa05bf4f90062
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 01:27:04 2021 +0300
+| 
+|     tests
+| 
+* commit d2c77b3cf05ae1ba4b1bf7136eb4431a2b07f7f7
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 01:24:38 2021 +0300
+| 
+|     tests
+| 
+* commit 73d5004ade021d6dfe269524f8d51b3600404993
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 01:16:58 2021 +0300
+| 
+|     tests
+| 
+* commit 65c6bcd92eea2f5dbc20b56bc85b406144700505
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 01:12:29 2021 +0300
+| 
+|     tests
+| 
+* commit 1f1fe236bef06a1a4c580979ed99c743ad869149
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 01:08:00 2021 +0300
+| 
+|     tests
+| 
+* commit 01d849700336467d3791c30dbc3a22ff56e356cd
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 00:56:01 2021 +0300
+| 
+|     tests
+| 
+* commit af7dd473d2cd69853feb4f99ca410b656c18e5d9
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 00:37:18 2021 +0300
+| 
+|     tests
+| 
+* commit d405a501c07dc5448fe05f818eb5df9279becf24
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 00:33:47 2021 +0300
+| 
+|     tests
+| 
+* commit 5e62750e21bddf4355f66e85ae0def92f5891002
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 00:21:13 2021 +0300
+| 
+|     tests
+| 
+* commit 00839cbf07427e264fefb09e762a7e0e729ef4d1
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 00:18:15 2021 +0300
+| 
+|     tests
+| 
+* commit 865272e4fe4a8128c1f0c946916d45b9aa9c7d5d
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 00:13:04 2021 +0300
+| 
+|     tests
+| 
+* commit 75a5b7c7dfe63748c3c2b26d85afdc82560e21c4
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 00:06:44 2021 +0300
+| 
+|     tests
+| 
+* commit 4f95bd2fd95f6e3b4ab2f84be8c374ac6d0f5118
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sun Feb 7 00:03:40 2021 +0300
+| 
+|     tests
+| 
+* commit 57fab0de1cf5058bc5e7843db26b32f05fbc735f
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sat Feb 6 23:59:52 2021 +0300
+| 
+|     tests
+| 
+* commit 2ee719e382dbcda68921317f52f940dbce396e5a
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sat Feb 6 23:54:31 2021 +0300
+| 
+|     tests
+| 
+* commit 1eeb92318b80f2adb79b754a94f75093cdda9620
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sat Feb 6 23:44:36 2021 +0300
+| 
+|     tests
+| 
+* commit d95a37482db771e5fd1db3b6118af5216add7872
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sat Feb 6 23:01:45 2021 +0300
+| 
+|     tests
+| 
+* commit cae137d31ef819cb6bcccae850f45729aad85b52
+| Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| Date:   Sat Feb 6 22:59:16 2021 +0300
+| 
+|     tests
+|   
+*   commit d3dabfdb1ac72231811268229d2457122559291d
+|\  Merge: eda9623 fd9979d
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sat Feb 6 19:47:10 2021 +0000
+| | 
+| |     Merge pull request #27 from UoL-Agile/home/deadlines-berta
+| |     
+| |     Home/deadlines berta
+| | 
+| * commit fd9979dc89f8e02e6d52b0c94cc937bffd554b05
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sat Feb 6 19:46:20 2021 +0000
+| | 
+| |     appHome.js - Added more button action events
+| | 
+| * commit 1507af372cb2bfeefdb9407f2b025d5e5e89ded1
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sat Feb 6 18:47:41 2021 +0000
+| | 
+| |     index.js - Removed deadlines button listener
+| | 
+* | commit eda962323db8262170a3139fe7174653398ae2ff
+| | Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| | Date:   Sat Feb 6 22:22:38 2021 +0300
+| | 
+| |     tests
+| | 
+* | commit f262dab4701968a9c83f32e5bd561027a6edfc1c
+| | Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| | Date:   Sat Feb 6 22:20:42 2021 +0300
+| | 
+| |     tests
+| | 
+* | commit a74cb657a916710964fa5e4819b7bdc85644127e
+| | Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| | Date:   Sat Feb 6 22:07:01 2021 +0300
+| | 
+| |     tests
+| | 
+* | commit 8216dc2b33d4e16f618480820dbb1b4ff7dfb5ed
+| | Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| | Date:   Sat Feb 6 22:01:10 2021 +0300
+| | 
+| |     tests
+| | 
+* | commit a93d1ed96fd9e16da0f02c80a3ad5b0e80b6ddc4
+| | Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| | Date:   Sat Feb 6 21:46:18 2021 +0300
+| | 
+| |     tests
+| | 
+* | commit a374ae72af82a592a300091577c62f1c5ab3ad2b
+| | Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| | Date:   Sat Feb 6 21:42:44 2021 +0300
+| | 
+| |     tests
+| | 
+* | commit 81d30ae74e731b4e67180e1e3f26611c02d2b6e4
+| | Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| | Date:   Sat Feb 6 21:37:12 2021 +0300
+| | 
+| |     tests
+| | 
+* | commit 5cde546200f7a795d0dd1f93923787655de4f7b9
+| | Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| | Date:   Sat Feb 6 21:34:57 2021 +0300
+| | 
+| |     tests
+| | 
+* | commit 56bc52424a2962cc1a2fc752f3c8fba259315068
+| | Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| | Date:   Sat Feb 6 21:30:42 2021 +0300
+| | 
+| |     tests
+| | 
+* | commit 312dfba3b73535f8f25d8225139ebf3cead03180
+| | Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| | Date:   Sat Feb 6 21:23:53 2021 +0300
+| | 
+| |     tests
+| | 
+* | commit 811dc4c78e42319cbc7f3b12a02e382b25b9915e
+| | Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| | Date:   Sat Feb 6 21:21:11 2021 +0300
+| | 
+| |     tests
+| |   
+* |   commit cebdbe6bcd50188d3e86c29d40a471e1c7e8d093
+|\ \  Merge: 431f2d8 ce50f5e
+| | | Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| | | Date:   Sat Feb 6 21:15:21 2021 +0300
+| | | 
+| | |     Merge branch 'home/get-grade-maxim'
+| | | 
+| * | commit ce50f5eac683ae4678095b7145b3b9e12411b15a
+| | | Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| | | Date:   Sat Feb 6 21:13:28 2021 +0300
+| | | 
+| | |     Added listener
+| | | 
+| * | commit 906acacaaf7694008db9fc658b78f51a45c4be40
+| | | Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| | | Date:   Sat Feb 6 20:56:02 2021 +0300
+| | | 
+| | |     adding button actions
+| | |   
+* | |   commit 431f2d891c9cdc4b0e9f6fcd49280bdda5ff535b
+|\ \ \  Merge: 537317d 87da179
+| | |/  Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| |/|   Date:   Sat Feb 6 17:58:28 2021 +0000
+| | |   
+| | |       Merge pull request #26 from UoL-Agile/home/deadlines-berta
+| | |       
+| | |       Home/deadlines berta
+| | | 
+| * | commit 87da179e80d4e0bfc260df6966389b5bd55903ca
+| | | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | | Date:   Sat Feb 6 17:55:45 2021 +0000
+| | | 
+| | |     index.js - Added button action listener
+| | | 
+| * | commit 86125e21ae6276e5d61740bd81b5bf43aee6429a
+| | | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | | Date:   Sat Feb 6 17:50:18 2021 +0000
+| | | 
+| | |     appHome.js - Removed the button action listener
+| | |     
+| | |     I'm moving the listener into the index.js because this isn't working in here.
+| | | 
+* | | commit 537317d35becfa4a8ff97b5a403a43a990b7fafe
+|\| | Merge: 02b3337 caa875d
+| |/  Author: BertaF <74141481+BertaF@users.noreply.github.com>
+|/|   Date:   Sat Feb 6 17:27:02 2021 +0000
+| |   
+| |       Merge pull request #25 from UoL-Agile/home/deadlines-berta
+| |       
+| |       appHome - Added a deadlines button action event
+| | 
+| * commit caa875d9c86e30e1e7e25f96485e28f7979cc282
+|/  Author: BertaF <74141481+BertaF@users.noreply.github.com>
+|   Date:   Sat Feb 6 17:25:11 2021 +0000
+|   
+|       appHome - Added a deadlines button action event
+| 
+* commit 02b3337b1a1b3a25cce8ab51dd747aed57251b64
+| Author: John Gerhardt <jag24@student.london.ac.uk>
+| Date:   Mon Feb 1 21:07:57 2021 +0100
+| 
+|     Update index.js
+| 
+* commit bf1afda3287d6a1d455a6e6ff9e6b2fb47b973ae
+| Author: John Gerhardt <jag24@student.london.ac.uk>
+| Date:   Mon Feb 1 20:56:45 2021 +0100
+| 
+|     Beautifying!
+| 
+* commit cb0c13a77aae8f2024f0c764cd3a6cf80d6624a9
+| Author: John Gerhardt <jag24@student.london.ac.uk>
+| Date:   Mon Feb 1 20:53:46 2021 +0100
+| 
+|     seperate slash commands
+| 
+* commit 4d165aa4b536cc9f4db8eb559b36e24c0c6a8da8
+| Author: John Gerhardt <jag24@student.london.ac.uk>
+| Date:   Mon Feb 1 20:48:17 2021 +0100
+| 
+|     More file split modifications
+| 
+* commit 23c4a18a2d7e9ef845927e52c18492289a16b79c
+| Author: John Gerhardt <jag24@student.london.ac.uk>
+| Date:   Mon Feb 1 20:45:16 2021 +0100
+| 
+|     Fixing file split
+| 
+* commit f7ed0bac282e83a4f18a1142e1f51834fb532184
+| Author: John Gerhardt <jag24@student.london.ac.uk>
+| Date:   Mon Feb 1 20:41:43 2021 +0100
+| 
+|     Splitting files
+| 
+* commit ff520af87456c84606bd33ce1fdbb0b964e1c156
+| Author: John Gerhardt <jag24@student.london.ac.uk>
+| Date:   Mon Feb 1 20:37:49 2021 +0100
+| 
+|     Updated Version Info for app home
+| 
+* commit 4e3eeddda368535d10f188b487aae4e8b54ef2b4
+| Author: John Gerhardt <jag24@student.london.ac.uk>
+| Date:   Mon Feb 1 20:32:59 2021 +0100
+| 
+|     Updated Tests
+| 
+* commit 5c164bfc2b9c538ce7fe51a4918c7d4438d06308
+| Author: John Gerhardt <jag24@student.london.ac.uk>
+| Date:   Mon Feb 1 20:12:10 2021 +0100
+| 
+|     Neater Developer Mode
+| 
+* commit c6c9d944819cdbf8f30501cb7901215b94eb474e
+| Author: John Gerhardt <jag24@student.london.ac.uk>
+| Date:   Mon Feb 1 20:10:30 2021 +0100
+| 
+|     Turn on Developer mode in Bolt
+| 
+* commit 7367269ad34cacfebcee950d0c649d7a03f1fbfb
+| Author: John Gerhardt <jag24@student.london.ac.uk>
+| Date:   Mon Feb 1 20:01:13 2021 +0100
+| 
+|     Update index.js
+|   
+*   commit 9a03438f4406941d3ccc4b309bca077f97886bd7
+|\  Merge: 24754f5 10c2fd3
+| | Author: John Gerhardt <jag24@student.london.ac.uk>
+| | Date:   Mon Feb 1 19:59:32 2021 +0100
+| | 
+| |     Merge branch 'main' of https://github.com/UoL-Agile/agile-g1g2-zp9-CODE into main
+| |   
+| *   commit 10c2fd312f6a8147e3780ec8b03dc04da07e71e3
+| |\  Merge: 9de08aa 37fc840
+| | | Author: JohnGerhardt <50781029+JohnGerhardt@users.noreply.github.com>
+| | | Date:   Mon Feb 1 19:40:57 2021 +0100
+| | | 
+| | |     Merge pull request #22 from UoL-Agile/unit-tests
+| | |     
+| | |     Unit tests
+| | |   
+| | *   commit 37fc8402676ff408639bf7d6eed806cb00b7612f
+| | |\  Merge: a96f4ab 9de08aa
+| | |/  Author: John Gerhardt <jag24@student.london.ac.uk>
+| |/|   Date:   Mon Feb 1 19:39:36 2021 +0100
+| | |   
+| | |       Merge branch 'main' into unit-tests
+| | | 
+| | * commit a96f4ab1d517bc1a4202638b8b06c0fb07a10701
+| | | Author: John Gerhardt <jag24@student.london.ac.uk>
+| | | Date:   Mon Feb 1 19:39:07 2021 +0100
+| | | 
+| | |     Added basic test for bolt commands
+| | | 
+| | * commit 2184725b73795bb897f451831e94144c4f6d779b
+| | | Author: John Gerhardt <jag24@student.london.ac.uk>
+| | | Date:   Mon Feb 1 19:17:02 2021 +0100
+| | | 
+| | |     Install Mocha / Chai and Chai HTTP
+| | |     
+| | |     To allow for unit testing
+| | | 
+* | | commit 24754f527527a0827a43ee173f4632bf71fc9297
+|/ /  Author: John Gerhardt <jag24@student.london.ac.uk>
+| |   Date:   Mon Feb 1 19:59:14 2021 +0100
+| |   
+| |       Add DEBUG Log Level
+| |   
+* |   commit 9de08aa63fa47ee01fecfd56fc4c051e3103c1be
+|\ \  Merge: c8fc77d e875ac0
+| | | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | | Date:   Sun Jan 31 11:41:01 2021 +0000
+| | | 
+| | |     Merge pull request #20 from UoL-Agile/home/main-berta
+| | |     
+| | |     index.js - Removing home msg test
+| | | 
+| * | commit e875ac0afce9862055ab79a6bb5f8f30b3020556
+| | | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | | Date:   Sun Jan 31 11:40:07 2021 +0000
+| | | 
+| | |     index.js - Removing home msg test
+| | | 
+* | | commit c8fc77d343ea6ea174e75ef5fb8f741b135d27be
+|\| | Merge: 2f09bb1 7cc5248
+| | | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | | Date:   Sun Jan 31 11:31:17 2021 +0000
+| | | 
+| | |     Merge pull request #19 from UoL-Agile/home/main-berta
+| | |     
+| | |     index.js - Use the correct app object on home msg
+| | | 
+| * | commit 7cc52484d0667d6872b1bd0aea7019866b932683
+| | | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | | Date:   Sun Jan 31 11:30:18 2021 +0000
+| | | 
+| | |     index.js - Use the correct app object on home msg
+| | | 
+* | | commit 2f09bb144a8ce5a6efd97c86b9a5c0ce1f9801ea
+|\| | Merge: f99d82d 9008772
+| | | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | | Date:   Sun Jan 31 11:27:58 2021 +0000
+| | | 
+| | |     Merge pull request #18 from UoL-Agile/home/main-berta
+| | |     
+| | |     Home/main berta
+| | | 
+| * | commit 900877219f8349bc4729d61325d56a9710f36718
+| | | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | | Date:   Sun Jan 31 11:26:37 2021 +0000
+| | | 
+| | |     Testing a simple home page message
+| | | 
+| * | commit ff6e73784ca7ada5157682c5c6cd580e52ae6bf3
+| | | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | | Date:   Sun Jan 31 11:23:42 2021 +0000
+| | | 
+| | |     Delete testUser.js
+| | |     
+| | |     This doesn't work!
+| | | 
+* | | commit f99d82d63ecdb6e1cfce15ff3a7acb863e027d11
+|\| | Merge: 06f7f0b f77c2ac
+| | | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | | Date:   Sun Jan 31 11:20:36 2021 +0000
+| | | 
+| | |     Merge pull request #17 from UoL-Agile/home/main-berta
+| | |     
+| | |     Home/main berta
+| | | 
+| * | commit f77c2ac195c43a079b302d8b8a3d90af69611160
+| | | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | | Date:   Sun Jan 31 11:18:44 2021 +0000
+| | | 
+| | |     Added a message to the user from home page
+| | | 
+| * | commit 1d7b0a1b2fb64a47a370b5093c6f8c29a2138b57
+| | | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | | Date:   Sun Jan 31 11:15:53 2021 +0000
+| | | 
+| | |     Added a temp testUser.js file
+| | | 
+| * | commit ff9c94019b67f0352f715ebf22cc0c08de690ae9
+| | | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | | Date:   Sun Jan 31 11:14:39 2021 +0000
+| | | 
+| | |     Removing directory - wrong folder
+| | | 
+| * | commit b421a96b0d8280eab73b8373c79636ff3a742580
+| | | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | | Date:   Sun Jan 31 11:13:28 2021 +0000
+| | | 
+| | |     Added a testUser.js file
+| | |     
+| | |     This is just a test file to check how to load simple data from external files.
+| | | 
+| * | commit 5be168350df0eac9de905b509c4e745dc7026eb0
+| | | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | | Date:   Sun Jan 31 11:10:33 2021 +0000
+| | | 
+| | |     index.js - Re-adding the old app home code
+| | |     
+| | |     I haven't been able to figure out  how to load the app home code from a separate file!
+| | | 
+* | | commit 06f7f0b5b7631f6735bf34f58ce0383e52d2d821
+|\| | Merge: 7bac90f 27c29de
+| | | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | | Date:   Sun Jan 31 10:40:31 2021 +0000
+| | | 
+| | |     Merge pull request #16 from UoL-Agile/home/main-berta
+| | |     
+| | |     Home/main berta
+| | | 
+| * | commit 27c29de2af7966e63d0237700ac18d2de96e86a4
+| | | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | | Date:   Sun Jan 31 10:38:28 2021 +0000
+| | | 
+| | |     index.js -Attempt at loading the appHome module
+| | | 
+| * | commit e9beaef157c3175f2d13c8a6aa85128f5657d6a2
+|/ /  Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| |   Date:   Sun Jan 31 10:28:57 2021 +0000
+| |   
+| |       appHome.js - Added "module.exports" to the file
+| |       
+| |       Seems that module.exports tells the code which parts to export to other files. I think we need this in order to load the data from this file into the index.js
+| |   
+* |   commit 7bac90fdad599ac1f5dfc6786daa1683233d6f59
+|\ \  Merge: 6089c84 f0791df
+| | | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | | Date:   Sun Jan 31 04:02:47 2021 +0000
+| | | 
+| | |     Merge pull request #13 from UoL-Agile/home/main-berta
+| | |     
+| | |     index.js - Added icons to the home page buttons
+| | | 
+| * | commit f0791dfd04ef538215f213694306801fa1b86f0c
+| | | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | | Date:   Sun Jan 31 04:01:59 2021 +0000
+| | | 
+| | |     index.js - Added icons to the home page buttons
+| | | 
+* | | commit 6089c845224ec489bd4f5d4d992d74943c7ab636
+|\| | Merge: 64e63f5 9f31bbd
+| | | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | | Date:   Sun Jan 31 03:15:57 2021 +0000
+| | | 
+| | |     Merge pull request #12 from UoL-Agile/home/main-berta
+| | |     
+| | |     index.js - 3rd attempt at loading home from file
+| | | 
+| * | commit 9f31bbd8d398dd8c9da412547c3d2ee2ed9611bd
+| | | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | | Date:   Sun Jan 31 03:12:25 2021 +0000
+| | | 
+| | |     index.js - 3rd attempt at loading home from file
+| | | 
+* | | commit 64e63f5983773f69375945021a7d91f72c49de36
+|\| | Merge: abeb0b0 103c3d8
+| | | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | | Date:   Sun Jan 31 02:51:42 2021 +0000
+| | | 
+| | |     Merge pull request #11 from UoL-Agile/home/main-berta
+| | |     
+| | |     index.js - 2nd attempt at loading home from file
+| | | 
+| * | commit 103c3d8daefc24d7216bdce4c83a156843ac430c
+| | | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | | Date:   Sun Jan 31 02:50:20 2021 +0000
+| | | 
+| | |     index.js - 2nd attempt at loading home from file
+| | | 
+* | | commit abeb0b0166c2095c60ce52a074d792abddf9978b
+|\| | Merge: e899a73 1550d8c
+| | | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | | Date:   Sun Jan 31 02:42:32 2021 +0000
+| | | 
+| | |     Merge pull request #10 from UoL-Agile/home/main-berta
+| | |     
+| | |     index.js - Load the home app from a separate file
+| | | 
+| * | commit 1550d8ce35a5cf81e589fc2d2dd51284d0bcbede
+| | | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | | Date:   Sun Jan 31 02:41:23 2021 +0000
+| | | 
+| | |     index.js - Load the home app from a separate file
+| | | 
+* | | commit e899a73fddb79f6be702813a11e31eb2e493df8d
+|\| | Merge: d57369b c9de8f2
+| | | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | | Date:   Sun Jan 31 02:26:35 2021 +0000
+| | | 
+| | |     Merge pull request #9 from UoL-Agile/home/main-berta
+| | |     
+| | |     index.js - Added week and grades sections to home
+| | | 
+| * | commit c9de8f2391757c8a3d060923722b10b6eade8363
+| | | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | | Date:   Sun Jan 31 02:25:44 2021 +0000
+| | | 
+| | |     index.js - Added week and grades sections to home
+| | | 
+* | | commit d57369b305b15035a967758105ce6795060bc554
+|\| | Merge: 5ff1416 f012df9
+| | | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | | Date:   Sun Jan 31 02:20:16 2021 +0000
+| | | 
+| | |     Merge pull request #8 from UoL-Agile/home/main-berta
+| | |     
+| | |     index.js - Updated version number
+| | | 
+| * | commit f012df90cf65e94d21a467dc3152ee2fa5c25544
+| | | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | | Date:   Sun Jan 31 02:19:14 2021 +0000
+| | | 
+| | |     index.js - Updated version number
+| | | 
+* | | commit 5ff141686fe60194a05e2531ee1245df7b846457
+|\| | Merge: 76d2ca2 322f38b
+| | | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | | Date:   Sun Jan 31 02:17:03 2021 +0000
+| | | 
+| | |     Merge pull request #7 from UoL-Agile/home/main-berta
+| | |     
+| | |     index.js - Added deadlines section to home
+| | | 
+| * | commit 322f38b3e3a11f7a42715a3ff3a8902b79f76a8c
+|/ /  Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| |   Date:   Sun Jan 31 02:15:34 2021 +0000
+| |   
+| |       index.js - Added deadlines section to home
+| | 
+* | commit 76d2ca2de92ee3f831db9f2e5ed12ef03b4d765b
+| | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | Date:   Sun Jan 31 02:02:40 2021 +0000
+| | 
+| |     index.js - Re-adding old code for the home page
+| |     
+| |     Trying to understand why I can't see new changes in the app. Reverting back to the old app home page in case I introduced an error when I updated.
+| |   
+* |   commit e2031546f289701b7adfbf76e9f4492097e6db4b
+|\ \  Merge: 19e234d 69f4abf
+| | | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | | Date:   Sun Jan 31 01:43:27 2021 +0000
+| | | 
+| | |     Merge pull request #6 from UoL-Agile/home/main-berta
+| | |     
+| | |     appHome.js - Update test
+| | | 
+| * | commit 69f4abfe3a29b30cbb8b042fc302db083eb42f3d
+| | | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | | Date:   Sun Jan 31 01:41:44 2021 +0000
+| | | 
+| | |     appHome.js - Update test
+| | | 
+* | | commit 19e234da862fc550aea10b4cca7381ca10117920
+|\| | Merge: 7b13d5c 5df1236
+| | | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | | Date:   Sun Jan 31 01:28:50 2021 +0000
+| | | 
+| | |     Merge pull request #5 from UoL-Agile/home/main-berta
+| | |     
+| | |     Home/main berta
+| | | 
+| * | commit 5df12368c5d6916be342c7174dd833b2b476f5ed
+| | | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | | Date:   Sun Jan 31 01:18:35 2021 +0000
+| | | 
+| | |     appHome.js - Small change to text indentation
+| | | 
+| * | commit c152939f009d8d9f7b67dc7d9f65476f80a0a5b9
+| | | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | | Date:   Sun Jan 31 01:13:45 2021 +0000
+| | | 
+| | |     appHome.js - Added functionality buttons/sections
+| | |     
+| | |     Added the sections for the deadlines, week and grades functionality. This is just the interface and buttons without actual code logic hooked into them.
+| | | 
+| * | commit 721bdfbb94486cac65283d0b4226bfa1486ca9eb
+| | | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | | Date:   Sun Jan 31 00:30:29 2021 +0000
+| | | 
+| | |     index.js - Removed old app home code
+| | | 
+* | | commit 7b13d5caa5d43fde224b6f126a0ecf49484b227a
+|\| | Merge: e5f3975 50a2fbb
+| | | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | | Date:   Sun Jan 31 00:24:10 2021 +0000
+| | | 
+| | |     Merge pull request #4 from UoL-Agile/home/main-berta
+| | |     
+| | |     Home/main berta
+| | | 
+| * | commit 50a2fbb2e7dd7cdb9c4e2a23244b5f210f6fe280
+| | | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | | Date:   Sun Jan 31 00:20:14 2021 +0000
+| | | 
+| | |     Updated index.js with refactor of the app home
+| | |     
+| | |     1. Imported the app home .js file into the index.js
+| | |     2. Commenting the old app home for now
+| | |     3. Using an object instance of the app home to call the display home function inside the index.js
+| | | 
+| * | commit a73482ba533d2372978315b6795daa86dfbc1fbc
+| | | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | | Date:   Sun Jan 31 00:13:33 2021 +0000
+| | | 
+| | |     Create appHome.js
+| | |     
+| | |     Adding a specific file for the app home code.
+| | | 
+* | | commit e5f3975193100b856e74a07e09a8caa31a04ad91
+|\| | Merge: 0fbca15 271e14c
+| | | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | | Date:   Sat Jan 30 22:59:16 2021 +0000
+| | | 
+| | |     Merge pull request #3 from UoL-Agile/home/main-berta
+| | |     
+| | |     Update index.js with fix to home page code
+| | | 
+| * | commit 271e14cc096345a421cd961908201ff848508fa7
+| | | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | | Date:   Sat Jan 30 22:57:32 2021 +0000
+| | | 
+| | |     Update index.js with fix to home page code
+| | | 
+* | | commit 0fbca1599a66e21249d4ca0549108881fed2ef29
+|\| | Merge: 02e5e76 13cd426
+| | | Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| | | Date:   Sat Jan 30 22:53:04 2021 +0000
+| | | 
+| | |     Merge pull request #2 from UoL-Agile/home/main-berta
+| | |     
+| | |     Update index.js with a home page
+| | | 
+| * | commit 13cd426ed5cc1652e5157a383e921993e0d25f60
+|/ /  Author: BertaF <74141481+BertaF@users.noreply.github.com>
+| |   Date:   Sat Jan 30 22:41:46 2021 +0000
+| |   
+| |       Update index.js with home page
+| |       
+| |       First pass on setting up a home page for the app.
+| |       I want to try to split the home code from the index.js on a future submission. But for now I'm just trying to see if this works.
+| |   
+* |   commit 02e5e7641b8cbaea1f80d3c06b7b9e0ddbd70c62
+|\ \  Merge: 2c5c8a1 0f26de4
+| | | Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| | | Date:   Sun Jan 31 00:09:09 2021 +0300
+| | | 
+| | |     add weeks info
+| | | 
+| * | commit 0f26de423fb42c81ac7f9fe5595648975dd25ae8
+| | | Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| | | Date:   Sat Jan 30 23:55:50 2021 +0300
+| | | 
+| | |     Add week info
+| | | 
+* | | commit 2c5c8a1074abeee949b99dbc774377d1bbeb8c25
+| | | Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| | | Date:   Sat Jan 30 23:46:44 2021 +0300
+| | | 
+| | |     paragraph test
+| | | 
+* | | commit 06af64c2282b716b5d670418810c09b9982f8ad7
+|/ /  Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| |   Date:   Sat Jan 30 23:44:07 2021 +0300
+| |   
+| |       small test
+| | 
+* | commit 84e189e0d7ead4a3d525f14c19a4ba0d8f9d413a
+| | Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| | Date:   Sat Jan 30 22:40:40 2021 +0300
+| | 
+| |     Add current week functionality
+| | 
+* | commit 02c1ab565410b2afde15019937edd33d2093f3df
+| | Author: Maksim Grinberg <maxim.1229@yandex.ru>
+| | Date:   Sat Jan 30 21:43:16 2021 +0300
+| | 
+| |     checkout brebch to github
+| |   
+* |   commit 2ab91d250fc58aa6c25c04aeea0744d76006a262
+|\ \  Merge: 7230106 7c825f2
+| |/  Author: Sharene Lau Tsae Ying <tyl82@student.london.ac.uk>
+|/|   Date:   Sat Jan 30 19:54:08 2021 +0800
+| |   
+| |       Merge pull request #1 from UoL-Agile/feature/shortcut-sharene
+| |       
+| |       Feature/shortcut sharene
+| | 
+| * commit 7c825f27ca0b4983ba6762380732e4730e8e5df9
+| | Author: Sharene Lau <sharenelau21@outlook.com>
+| | Date:   Sat Jan 30 17:45:02 2021 +0800
+| | 
+| |      add shortcut
+| | 
+| * commit 9d86eff0a66bc1344da6ba5fb794cecb63985ed0
+| | Author: Sharene Lau <sharenelau21@outlook.com>
+| | Date:   Sat Jan 30 15:26:36 2021 +0800
+| | 
+| |     add slash command
+| | 
+| * commit b2ffca09bf27d8bb3cbda783baf0b1cdbffa2558
+|/  Author: Sharene Lau <sharenelau21@outlook.com>
+|   Date:   Sat Jan 30 15:25:12 2021 +0800
+|   
+|       add slash commands
+| 
+* commit 7230106177e8d8384b78ff0401560cbeee6cf355
+| Author: John Gerhardt <jag24@student.london.ac.uk>
+| Date:   Mon Jan 25 19:41:02 2021 +0100
+| 
+|     Update index.js
+| 
+* commit 89065543d3469cc29d6c6d4a06987d41e93ba783
+| Author: John Gerhardt <jag24@student.london.ac.uk>
+| Date:   Mon Jan 25 19:35:57 2021 +0100
+| 
+|     Update dbConnection.js
+| 
+* commit dbd758b4f916d3e7056bdc33444d44a39a7fdf11
+| Author: John Gerhardt <jag24@student.london.ac.uk>
+| Date:   Mon Jan 25 19:33:48 2021 +0100
+| 
+|     Install Mocah / Chai and Chai-http
+|     
+|     For tests
+| 
+* commit 264540cd80499828560dca45bf8fde90bb6a9142
+| Author: John Gerhardt <jag24@student.london.ac.uk>
+| Date:   Mon Jan 25 19:32:55 2021 +0100
+| 
+|     Added the DB connection
+| 
+* commit 34dc197c1eb2b81d02bfc9cc84276b360c040625
+| Author: John Gerhardt <jag24@student.london.ac.uk>
+| Date:   Sun Jan 24 21:18:50 2021 +0100
+| 
+|     Update index.js
+|     
+|     Added some console.log statements so that we can see in Heroku what slack is sending us.
+| 
+* commit af371b951d5e16cd236477893626087305ca93a2
+| Author: John Gerhardt <jag24@student.london.ac.uk>
+| Date:   Sun Jan 24 21:11:46 2021 +0100
+| 
+|     Update index.js
+|     
+|     Update some naming
+| 
+* commit ddc5565fe88a7a9b51cd6442161cddce0571b119
+| Author: John Gerhardt <jag24@student.london.ac.uk>
+| Date:   Sun Jan 24 21:08:12 2021 +0100
+| 
+|     Update index.js
+|     
+|     After looking at the slack interactions, There is a single POST request endpoint, refactored to take this into account: https://api.slack.com/apps/A01K7KM6XST/interactive-messages?
+| 
+* commit c90e78ec16fe8fd6d0cdfd71895b701ec64b82d3
+| Author: John Gerhardt <jag24@student.london.ac.uk>
+| Date:   Sun Jan 24 20:42:41 2021 +0100
+| 
+|     Update index.js
+| 
+* commit 0460b82d7c575cc62610135c26d214097affaaba
+| Author: John Gerhardt <jag24@student.london.ac.uk>
+| Date:   Sun Jan 24 20:36:55 2021 +0100
+| 
+|     Update index.js
+| 
+* commit de3cf8183a0d82db77919f88c25a87086233d24f
+| Author: John Gerhardt <jag24@student.london.ac.uk>
+| Date:   Sun Jan 24 20:15:20 2021 +0100
+| 
+|     Update index.js
+|     
+|     Added 3 other routes for the main functionalities in our MVP
+| 
+* commit 68a98b1c749401ed8ef63b2738b9cb40b34c30f8
+| Author: John Gerhardt <jag24@student.london.ac.uk>
+| Date:   Sun Jan 24 20:09:04 2021 +0100
+| 
+|     Update index.js
+|     
+|     Corrected the whichWeekAreWe route
+| 
+* commit c583204dbe3666c510ecb741c0679e2afc27a2ae
+| Author: John Gerhardt <jag24@student.london.ac.uk>
+| Date:   Sun Jan 24 19:52:17 2021 +0100
+| 
+|     Update index.js
+|     
+|     Added items to allow us to detect theport from Heroku, basic index.js structure
+| 
+* commit 4957ab40157d49ae876f5365660bd50f0dc608e1
+| Author: John Gerhardt <jag24@student.london.ac.uk>
+| Date:   Sun Jan 24 19:49:38 2021 +0100
+| 
+|     Update index.js
+| 
+* commit d3e62c3004a6afce7b238d2c4898c3422e43b55a
+| Author: John Gerhardt <jag24@student.london.ac.uk>
+| Date:   Sun Jan 24 19:48:13 2021 +0100
+| 
+|     Update package.json
+|     
+|     To include a start script
+| 
+* commit 5403504ebbffba9efcb4f9bf53862a1ab151b757
+| Author: John Gerhardt <jag24@student.london.ac.uk>
+| Date:   Sun Jan 24 19:45:29 2021 +0100
+| 
+|     Create Node and Express
+|     
+|     Crate Node and express to allow heroku to be able to run....
+| 
+* commit 9ef0b354f5d7c7c53fb8bd3df45f2b78fb7a3bd9
+  Author: JohnGerhardt <50781029+JohnGerhardt@users.noreply.github.com>
+  Date:   Sun Nov 22 11:13:25 2020 +0100
+  
+      Initial commit
